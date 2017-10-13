@@ -6,9 +6,8 @@ define(
 
         var mixin = {
             initialize: function () {
-                this.visible = ko.observable(false); // set visible to be initially false to have your step show first
+                this.visible = ko.observable(false);
                 this._super();
-
                 return this;
             }
         };

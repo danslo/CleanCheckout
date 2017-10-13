@@ -6,6 +6,9 @@ var config = {
             },
             'Magento_Checkout/js/view/payment': {
                 'Rubic_SimpleCheckout/js/view/shipping-payment-mixin': true
+            },
+            'Magento_Checkout/js/view/summary/cart-items': {
+                'Rubic_SimpleCheckout/js/view/cart-items-mixin': true
             }
         }
     }
