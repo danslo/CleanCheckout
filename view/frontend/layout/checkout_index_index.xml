@@ -4,9 +4,14 @@
         <css src="Rubic_SimpleCheckout::css/simple-checkout.css" media="screen and (min-width: 768px)"/>
     </head>
     <body>
+        <!--
         <referenceContainer name="header.container" remove="true" />
         <referenceContainer name="footer-container" remove="true" />
-        <referenceBlock name="copyright" remove="true" />
+        <referenceBlock name="copyright" remove="true" />-->
+
+        <referenceContainer name="root">
+
+        </referenceContainer>
 
         <referenceBlock name="checkout.root">
             <arguments>
@@ -52,13 +57,6 @@
                                                         <item name="customer-email" xsi:type="array">
                                                             <item name="config" xsi:type="array">
                                                                 <item name="componentDisabled" xsi:type="boolean">true</item>
-                                                            </item>
-                                                        </item>
-                                                        <item name="shipping-address-fieldset" xsi:type="array">
-                                                            <item name="children" xsi:type="array">
-                                                                <item name="company" xsi:type="array">
-                                                                    <item name="visible" xsi:type="boolean">false</item>
-                                                                </item>
                                                             </item>
                                                         </item>
                                                     </item>

@@ -28,6 +28,10 @@ define([
                 return this;
             },
 
+            shouldHideShipping: function() {
+                return window.checkoutConfig.hideShippingMethods && this.rates().length === 1;
+            },
+
             /**
              * Removed email validation as we do that in a previous step.
              */

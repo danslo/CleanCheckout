@@ -26,6 +26,7 @@
         <!-- Inline address form -->
         <render if="isFormInline" args="shippingFormTemplate" />
     </div>
+    <br class="clearfix" />
 </li>
 
 <li id="opc-shipping_method"
@@ -34,7 +35,7 @@
     role="presentation">
     <div class="checkout-shipping-method">
 
-        <!-- ko if: rates().length > 1 -->
+        <!-- ko ifnot: shouldHideShipping() -->
         <div class="step-title"
              translate="'Shipping Methods'"
              data-role="title" />
@@ -53,7 +54,7 @@
                   submit="setShippingInformation"
                   novalidate="novalidate">
 
-                <!-- ko if: rates().length > 1 -->
+                <!-- ko ifnot: shouldHideShipping() -->
                 <render args="shippingMethodListTemplate"/>
                 <!-- /ko -->
 

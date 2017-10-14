@@ -49,7 +49,7 @@
 }
 
 .page-main {
-    max-width: 960px;
+    max-width: 1000px;
 }
 
 .authentication-wrapper {
@@ -58,4 +58,19 @@
 
 .opc-wrapper .shipping-address-item {
     width: 50%;
+}
+
+#welcome-step .actions-toolbar .primary {
+    float: right;
+    line-height: 2.2rem;
+    padding: 14px 17px;
+    font-size: 1.8rem;
+}
+
+.opc-sidebar {
+    width: 40%;
+}
+
+.opc-wrapper {
+    width: 60%;
 }

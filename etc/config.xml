@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <simple_checkout>
+            <general>
+                <disable_company>1</disable_company>
+                <disable_telephone>0</disable_telephone>
+                <disable_header>1</disable_header>
+                <disable_footer>1</disable_footer>
+                <disable_copyright>1</disable_copyright>
+                <hide_shipping_methods>1</hide_shipping_methods>
+            </general>
+        </simple_checkout>
+    </default>
+</config>
