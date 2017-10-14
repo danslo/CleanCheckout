@@ -9,6 +9,7 @@
                 <disable_footer>1</disable_footer>
                 <disable_copyright>1</disable_copyright>
                 <hide_shipping_methods>1</hide_shipping_methods>
+                <display_logo>1</display_logo>
             </general>
         </simple_checkout>
     </default>

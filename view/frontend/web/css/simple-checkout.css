@@ -41,6 +41,7 @@
     padding: 50px;
     border: solid 1px #ccc;
     padding-bottom: 0px;
+    clear: both;
 }
 
 .opc-progress-bar {
@@ -94,4 +95,9 @@
 
 .opc-block-summary .table-totals {
     border-top: none;
+}
+
+.page-main > .logo {
+    display: block;
+    margin-top: 25px;
 }
