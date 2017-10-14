@@ -1,8 +1,10 @@
-<li id="introduction" data-bind="fadeVisible: isVisible">
-    <div class="step-title" data-bind="i18n: 'Introduction'" data-role="title"></div>
+<li id="welcome-step" data-bind="fadeVisible: isVisible">
+    <div class="step-title" data-bind="i18n: 'Welcome'" data-role="title"></div>
     <div id="checkout-step-title"
          class="step-content"
          data-role="content">
+
+        <each args="getRegion('customer-email')" render="" />
 
         <form data-bind="submit: navigateToNextStep" novalidate="novalidate">
             <div class="actions-toolbar">
