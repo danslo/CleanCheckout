@@ -40,12 +40,14 @@
     background: #f5f5f5;
     padding: 50px;
     border: solid 1px #ccc;
+    padding-bottom: 0px;
 }
 
 .opc-progress-bar {
     display: table;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 50px;
 }
 
 .page-main {
@@ -69,8 +71,27 @@
 
 .opc-sidebar {
     width: 40%;
+    margin-top: 0px;
 }
 
 .opc-wrapper {
     width: 60%;
+    margin-bottom: 0px;
+}
+
+.opc-block-summary {
+    padding-top: 0px;
+    padding-right: 0px;
+}
+
+.opc-wrapper .step-title {
+    border-bottom: none;
+}
+
+.opc-block-shipping-information {
+    padding-right: 0px;
+}
+
+.opc-block-summary .table-totals {
+    border-top: none;
 }
