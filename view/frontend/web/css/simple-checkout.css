@@ -1,0 +1,32 @@
+#shipping-new-address-form .field .label {
+    width: 25%;
+    float: left;
+    margin-bottom: 0px;
+    line-height: 30px;
+}
+
+#shipping-new-address-form .field .control {
+    width: 70%;
+    float: right;
+}
+
+#shipping-new-address-form .field {
+    clear: both;
+    padding: 10px 0px;
+}
+
+#shipping-new-address-form .street {
+    margin-bottom: 0px;
+}
+
+#shipping-new-address-form .street .field .control {
+    width: 100%;
+}
+
+.opc-wrapper .form-login {
+    margin-bottom: 0px;
+}
+
+.checkout-shipping-method {
+    padding-top: 10px;
+}

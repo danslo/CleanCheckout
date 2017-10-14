@@ -3,13 +3,15 @@ define(
         'ko',
         'uiComponent',
         'underscore',
-        'Magento_Checkout/js/model/step-navigator'
+        'Magento_Checkout/js/model/step-navigator',
+        'Magento_Customer/js/customer-data'
     ],
     function (
         ko,
         Component,
         _,
-        stepNavigator
+        stepNavigator,
+        customerData
     ) {
         'use strict';
 
@@ -20,11 +22,18 @@ define(
 
             isVisible: ko.observable(true),
 
+            currentlyLoggedIn: function() {
+                var customer = customerData.get('customer')();
+                return customer && customer.firstname;
+            },
+
             /**
              *
              * @returns {*}
              */
             initialize: function () {
+                console.log();
+
                 this._super();
                 stepNavigator.registerStep('introduction', null, 'Introduction', this.isVisible, _.bind(this.navigate, this), 5);
                 return this;
@@ -36,7 +45,7 @@ define(
              * for switching to your custom step
              */
             navigate: function () {
-
+                console.log(1);
             },
 
             /**
