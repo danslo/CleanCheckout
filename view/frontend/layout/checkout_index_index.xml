@@ -5,7 +5,7 @@
     </head>
     <body>
         <referenceContainer name="main.content">
-            <block class="Magento\Theme\Block\Html\Header\Logo" name="logo" before="-" ifconfig="simple_checkout/general/display_logo">
+            <block class="Magento\Theme\Block\Html\Header\Logo" name="simple_checkout_logo" before="-" ifconfig="simple_checkout/general/display_logo">
                 <arguments>
                     <argument name="logo_img_width" xsi:type="number">189</argument>
                     <argument name="logo_img_height" xsi:type="number">64</argument>
