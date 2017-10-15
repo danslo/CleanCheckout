@@ -48,7 +48,10 @@ define([
 
                 if (this.isFormInline) {
                     this.source.set('params.invalid', false);
-                    this.triggerShippingDataValidateEvent();
+
+                    if (typeof this.triggerShippingDataValidateEvent !== 'undefined') {
+                        this.triggerShippingDataValidateEvent();
+                    }
 
                     if (this.source.get('params.invalid') ||
                         !quote.shippingMethod()['method_code'] ||
