@@ -101,3 +101,7 @@
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+#checkout-step-payment .fieldset > br {
+    display: none;
+}
