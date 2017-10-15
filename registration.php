@@ -7,3 +7,9 @@ ComponentRegistrar::register(
     'Rubic_SimpleCheckout',
     __DIR__
 );
+
+ComponentRegistrar::register(
+    ComponentRegistrar::LIBRARY,
+    'GeoIp2',
+    __DIR__ . '/../../../vendor/geoip2/geoip2/src'
+);
