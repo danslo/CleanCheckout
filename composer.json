@@ -1,5 +1,5 @@
 {
-  "name": "rubic/magento2-simple-checkout",
+  "name": "rubic/magento2-module-simple-checkout",
   "description": "The amazing Simple Checkout module for Magento 2.",
   "type": "magento2-module",
   "license": [
