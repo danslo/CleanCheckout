@@ -12,6 +12,11 @@
                 <display_logo>1</display_logo>
                 <disable_login_popup>1</disable_login_popup>
             </general>
+            <colors>
+                <body_background>transparent</body_background>
+                <checkout_background>#f5f5f5</checkout_background>
+                <checkout_border>#cccccc</checkout_border>
+            </colors>
         </simple_checkout>
     </default>
 </config>

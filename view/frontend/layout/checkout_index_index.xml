@@ -13,6 +13,10 @@
             </block>
         </referenceContainer>
 
+        <referenceBlock name="head.additional">
+            <block class="Rubic\SimpleCheckout\Block\Customizer" name="simple_checkout_customizer" template="customizer.phtml"/>
+        </referenceBlock>
+
         <referenceBlock name="checkout.root">
             <arguments>
                 <argument name="jsLayout" xsi:type="array">

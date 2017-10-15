@@ -43,6 +43,18 @@
                                       Existing customers can still login when providing their e-mail in the checkout, regardless of this setting.]]></comment>
                 </field>
             </group>
+            <group id="colors" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Colors</label>
+                <field id="checkout_background" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Checkout Background Color</label>
+                </field>
+                <field id="checkout_border" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Checkout Border Color</label>
+                </field>
+                <field id="body_background" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Body Background Color</label>
+                </field>
+            </group>
         </section>
     </system>
 </config>
