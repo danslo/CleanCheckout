@@ -1,0 +1,16 @@
+{
+  "name": "rubic/magento2-simple-checkout",
+  "description": "The amazing Simple Checkout module for Magento 2.",
+  "type": "magento2-module",
+  "license": [
+    "OSL-3.0"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Rubic\\SimpleCheckout\\": ""
+    }
+  }
+}
