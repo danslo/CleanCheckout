@@ -17,6 +17,9 @@
                 <checkout_background>#f5f5f5</checkout_background>
                 <checkout_border>#cccccc</checkout_border>
             </colors>
+            <geo_ip>
+                <enabled>1</enabled>
+            </geo_ip>
         </simple_checkout>
     </default>
 </config>

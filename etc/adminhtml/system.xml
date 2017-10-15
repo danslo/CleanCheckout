@@ -43,7 +43,7 @@
                                       Existing customers can still login when providing their e-mail in the checkout, regardless of this setting.]]></comment>
                 </field>
             </group>
-            <group id="colors" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <group id="colors" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Colors</label>
                 <field id="checkout_background" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Checkout Background Color</label>
@@ -53,6 +53,14 @@
                 </field>
                 <field id="body_background" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Body Background Color</label>
+                </field>
+            </group>
+            <group id="geo_ip" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Geo IP</label>
+                <field id="enabled" translate="label" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable Geo IP</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[Attempts to automatically detect customer's country.]]></comment>
                 </field>
             </group>
         </section>
