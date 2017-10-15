@@ -33,6 +33,13 @@ define([
             },
 
             /**
+             * Oddly, these steps don't set itself to visible on refresh.
+             */
+            navigate: function () {
+                this.visible(true);
+            },
+
+            /**
              * Removed email validation as we do that in a previous step.
              */
             validateShippingInformation: function () {
