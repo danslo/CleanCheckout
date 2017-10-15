@@ -36,6 +36,12 @@
                     <label>Display Logo</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
+                <field id="disable_login_popup" translate="label" type="select" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Disable Login Popup</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[Disables the login pop-up in the top-right corner of checkout.
+                                      Existing customers can still login when providing their e-mail in the checkout, regardless of this setting.]]></comment>
+                </field>
             </group>
         </section>
     </system>
