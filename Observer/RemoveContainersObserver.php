@@ -1,6 +1,6 @@
 <?php
 
-namespace Rubic\SimpleCheckout\Observer;
+namespace Rubic\CleanCheckout\Observer;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\Event\Observer;
@@ -9,7 +9,7 @@ use Magento\Framework\View\Layout;
 
 class RemoveContainersObserver implements ObserverInterface
 {
-    const CONFIG_DISABLE_PATH = 'simple_checkout/general/disable_%s';
+    const CONFIG_DISABLE_PATH = 'clean_checkout/general/disable_%s';
 
     /**
      * Elements that can be disabled on the checkout page.

@@ -7,7 +7,7 @@ define(
 
         return Component.extend({
             defaults: {
-                template: 'Rubic_SimpleCheckout/newsletter'
+                template: 'Rubic_CleanCheckout/newsletter'
             },
 
             isEnabled: function () {

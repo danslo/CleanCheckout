@@ -1,6 +1,6 @@
 <?php
 
-namespace Rubic\SimpleCheckout\Plugin;
+namespace Rubic\CleanCheckout\Plugin;
 
 use GeoIp2\Database\Reader;
 use GeoIp2\Database\ReaderFactory;
@@ -32,7 +32,7 @@ class GeoIpCountryPlugin
     )
     {
         $this->reader = $readerFactory->create([
-            'filename' => $moduleDirectory->getDir('Rubic_SimpleCheckout') . '/var/GeoLite2-Country.mmdb'
+            'filename' => $moduleDirectory->getDir('Rubic_CleanCheckout') . '/var/GeoLite2-Country.mmdb'
         ]);
         $this->remoteAddress = $remoteAddress;
     }

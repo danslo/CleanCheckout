@@ -1,14 +1,14 @@
 <?php
 
-namespace Rubic\SimpleCheckout\Plugin;
+namespace Rubic\CleanCheckout\Plugin;
 
 use Magento\Checkout\Block\Checkout\LayoutProcessor;
 use Magento\Framework\App\Config\ScopeConfigInterface;
 
 class DisableCheckoutFieldsPlugin
 {
-    const CONFIG_DISABLE_LOGIN_PATH = 'simple_checkout/general/disable_login_popup';
-    const CONFIG_DISABLE_FIELD_PATH = 'simple_checkout/general/disable_%s';
+    const CONFIG_DISABLE_LOGIN_PATH = 'clean_checkout/general/disable_login_popup';
+    const CONFIG_DISABLE_FIELD_PATH = 'clean_checkout/general/disable_%s';
 
     /**
      * Shipping address fields that can be disabled by backend configuration.

@@ -1,12 +1,12 @@
 <?php
 
-namespace Rubic\SimpleCheckout\Block;
+namespace Rubic\CleanCheckout\Block;
 
 use Magento\Framework\View\Element\Template;
 
 class Customizer extends Template
 {
-    const CONFIG_PATH_COLORS = 'simple_checkout/colors/%s';
+    const CONFIG_PATH_COLORS = 'clean_checkout/colors/%s';
 
     /**
      * @return string

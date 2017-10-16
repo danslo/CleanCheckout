@@ -16,7 +16,7 @@ define([
              * @returns {initialize}
              */
             defaults: {
-                template: 'Rubic_SimpleCheckout/shipping',
+                template: 'Rubic_CleanCheckout/shipping',
                 shippingFormTemplate: 'Magento_Checkout/shipping-address/form',
                 shippingMethodListTemplate: 'Magento_Checkout/shipping-address/shipping-method-list',
                 shippingMethodItemTemplate: 'Magento_Checkout/shipping-address/shipping-method-item'

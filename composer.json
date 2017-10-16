@@ -1,6 +1,6 @@
 {
-  "name": "rubic/magento2-module-simple-checkout",
-  "description": "The amazing Simple Checkout module for Magento 2.",
+  "name": "rubic/magento2-module-clean-checkout",
+  "description": "The amazing Clean Checkout module for Magento 2.",
   "type": "magento2-module",
   "license": [
     "OSL-3.0"
@@ -10,7 +10,7 @@
       "registration.php"
     ],
     "psr-4": {
-      "Rubic\\SimpleCheckout\\": ""
+      "Rubic\\CleanCheckout\\": ""
     }
   },
   "require": {

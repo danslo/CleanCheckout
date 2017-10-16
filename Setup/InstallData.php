@@ -1,6 +1,6 @@
 <?php
 
-namespace Rubic\SimpleCheckout\Setup;
+namespace Rubic\CleanCheckout\Setup;
 
 use Magento\Framework\App\Config\ConfigResource\ConfigInterface;
 use Magento\Framework\App\Config\ScopeConfigInterface;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Rubic\SimpleCheckout\Model;
+namespace Rubic\CleanCheckout\Model;
 
 use Magento\Checkout\Model\ConfigProviderInterface;
 use Magento\Framework\App\Config\ScopeConfigInterface;
@@ -8,11 +8,11 @@ use Magento\Framework\UrlInterface;
 
 class CheckoutConfigProvider implements ConfigProviderInterface
 {
-    const CONFIG_PATH_HIDE_SHIPPING_METHODS  = 'simple_checkout/general/hide_shipping_methods';
-    const CONFIG_PATH_FORCE_TOTALS_FULL_MODE = 'simple_checkout/general/force_totals_full_mode';
-    const CONFIG_PATH_NEWSLETTER_ENABLED     = 'simple_checkout/newsletter/enabled';
-    const CONFIG_PATH_NEWSLETTER_CHECKED     = 'simple_checkout/newsletter/checked';
-    const CONFIG_PATH_NEWSLETTER_LABEL       = 'simple_checkout/newsletter/label';
+    const CONFIG_PATH_HIDE_SHIPPING_METHODS  = 'clean_checkout/general/hide_shipping_methods';
+    const CONFIG_PATH_FORCE_TOTALS_FULL_MODE = 'clean_checkout/general/force_totals_full_mode';
+    const CONFIG_PATH_NEWSLETTER_ENABLED     = 'clean_checkout/newsletter/enabled';
+    const CONFIG_PATH_NEWSLETTER_CHECKED     = 'clean_checkout/newsletter/checked';
+    const CONFIG_PATH_NEWSLETTER_LABEL       = 'clean_checkout/newsletter/label';
 
     /**
      * @var ScopeConfigInterface
@@ -43,7 +43,7 @@ class CheckoutConfigProvider implements ConfigProviderInterface
             'hideShippingMethods' => (bool)$this->scopeConfig->getValue(self::CONFIG_PATH_HIDE_SHIPPING_METHODS),
             'forceTotalsFullMode' => (bool)$this->scopeConfig->getValue(self::CONFIG_PATH_FORCE_TOTALS_FULL_MODE),
             'newsletterEnabled'   => (bool)$this->scopeConfig->getValue(self::CONFIG_PATH_NEWSLETTER_ENABLED),
-            'newsletterUrl'       => $this->url->getUrl('simple_checkout/newsletter/subscribe'),
+            'newsletterUrl'       => $this->url->getUrl('clean_checkout/newsletter/subscribe'),
             'newsletterChecked'   => (bool)$this->scopeConfig->getValue(self::CONFIG_PATH_NEWSLETTER_CHECKED),
             'newsletterLabel'     => $this->scopeConfig->getValue(self::CONFIG_PATH_NEWSLETTER_LABEL)
         ];

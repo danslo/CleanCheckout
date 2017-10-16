@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <section id="simple_checkout" translate="label" type="text" sortOrder="1500" showInDefault="1" showInWebsite="1" showInStore="1">
-            <label>Simple Checkout</label>
+        <section id="clean_checkout" translate="label" type="text" sortOrder="1500" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Clean Checkout</label>
             <tab>sales</tab>
-            <resource>Rubic_SimpleCheckout::simple_checkout</resource>
+            <resource>Rubic_CleanCheckout::clean_checkout</resource>
             <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>General</label>
                 <field id="disable_telephone" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
@@ -55,15 +55,15 @@
                 <label>Colors</label>
                 <field id="checkout_background" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Checkout Background Color</label>
-                    <frontend_model>Rubic\SimpleCheckout\Block\Colorpicker</frontend_model>
+                    <frontend_model>Rubic\CleanCheckout\Block\Colorpicker</frontend_model>
                 </field>
                 <field id="checkout_border" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Checkout Border Color</label>
-                    <frontend_model>Rubic\SimpleCheckout\Block\Colorpicker</frontend_model>
+                    <frontend_model>Rubic\CleanCheckout\Block\Colorpicker</frontend_model>
                 </field>
                 <field id="body_background" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Body Background Color</label>
-                    <frontend_model>Rubic\SimpleCheckout\Block\Colorpicker</frontend_model>
+                    <frontend_model>Rubic\CleanCheckout\Block\Colorpicker</frontend_model>
                 </field>
             </group>
             <group id="geo_ip" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">

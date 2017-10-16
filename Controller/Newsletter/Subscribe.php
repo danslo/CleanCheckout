@@ -1,6 +1,6 @@
 <?php
 
-namespace Rubic\SimpleCheckout\Controller\Newsletter;
+namespace Rubic\CleanCheckout\Controller\Newsletter;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;

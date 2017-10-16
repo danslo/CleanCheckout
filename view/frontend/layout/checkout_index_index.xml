@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
-        <css src="Rubic_SimpleCheckout::css/simple-checkout.css" media="screen and (min-width: 768px)"/>
+        <css src="Rubic_CleanCheckout::css/clean-checkout.css" media="screen and (min-width: 768px)"/>
     </head>
     <body>
         <referenceContainer name="main.content">
-            <block class="Magento\Theme\Block\Html\Header\Logo" name="simple_checkout_logo" before="-" ifconfig="simple_checkout/general/display_logo">
+            <block class="Magento\Theme\Block\Html\Header\Logo" name="clean_checkout_logo" before="-" ifconfig="clean_checkout/general/display_logo">
                 <arguments>
                     <argument name="logo_img_width" xsi:type="number">189</argument>
                     <argument name="logo_img_height" xsi:type="number">64</argument>
@@ -14,7 +14,7 @@
         </referenceContainer>
 
         <referenceBlock name="head.additional">
-            <block class="Rubic\SimpleCheckout\Block\Customizer" name="simple_checkout_customizer" template="customizer.phtml"/>
+            <block class="Rubic\CleanCheckout\Block\Customizer" name="clean_checkout_customizer" template="customizer.phtml"/>
         </referenceBlock>
 
         <referenceBlock name="checkout.root">
@@ -26,7 +26,7 @@
                                 <item name="steps" xsi:type="array">
                                     <item name="children" xsi:type="array">
                                         <item name="welcome-step" xsi:type="array">
-                                            <item name="component" xsi:type="string">Rubic_SimpleCheckout/js/view/welcome</item>
+                                            <item name="component" xsi:type="string">Rubic_CleanCheckout/js/view/welcome</item>
                                             <item name="sortOrder" xsi:type="string">0</item>
                                             <item name="children" xsi:type="array">
                                                 <item name="customer-email" xsi:type="array">
@@ -74,7 +74,7 @@
                                                         <item name="afterMethods" xsi:type="array">
                                                             <item name="children" xsi:type="array">
                                                                 <item name="newsletter" xsi:type="array">
-                                                                    <item name="component" xsi:type="string">Rubic_SimpleCheckout/js/view/newsletter</item>
+                                                                    <item name="component" xsi:type="string">Rubic_CleanCheckout/js/view/newsletter</item>
                                                                 </item>
                                                             </item>
                                                         </item>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
     <event name="layout_render_before_checkout_index_index">
-        <observer name="remove_containers_observer" instance="Rubic\SimpleCheckout\Observer\RemoveContainersObserver" />
+        <observer name="remove_containers_observer" instance="Rubic\CleanCheckout\Observer\RemoveContainersObserver" />
     </event>
 </config>

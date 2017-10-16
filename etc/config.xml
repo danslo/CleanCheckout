@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
-        <simple_checkout>
+        <clean_checkout>
             <general>
                 <disable_company>1</disable_company>
                 <disable_telephone>0</disable_telephone>
@@ -26,6 +26,6 @@
                 <checked>1</checked>
                 <label>Subscribe to our newsletter to receive exclusive offers and the latest news on our products and services.</label>
             </newsletter>
-        </simple_checkout>
+        </clean_checkout>
     </default>
 </config>

@@ -4,7 +4,7 @@ use Magento\Framework\Component\ComponentRegistrar;
 
 ComponentRegistrar::register(
     ComponentRegistrar::MODULE,
-    'Rubic_SimpleCheckout',
+    'Rubic_CleanCheckout',
     __DIR__
 );
 

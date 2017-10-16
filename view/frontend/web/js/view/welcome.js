@@ -21,7 +21,7 @@ define(
 
         return Component.extend({
             defaults: {
-                template: 'Rubic_SimpleCheckout/welcome'
+                template: 'Rubic_CleanCheckout/welcome'
             },
 
             loginFormSelector: 'form[data-role=email-with-possible-login]',
