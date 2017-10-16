@@ -42,6 +42,12 @@
                     <comment><![CDATA[Disables the login pop-up in the top-right corner of checkout.
                                       Existing customers can still login when providing their e-mail in the checkout, regardless of this setting.]]></comment>
                 </field>
+                <field id="force_totals_full_mode" translate="label" type="select" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Force Totals Full Mode</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[By default, a full summary of cart totals is not shown until the shipping step has been completed.
+                                      This can result in incorrect expectations because discounts are not displayed in the first step of the checkout.]]></comment>
+                </field>
             </group>
             <group id="colors" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Colors</label>

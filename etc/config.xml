@@ -11,6 +11,7 @@
                 <hide_shipping_methods>1</hide_shipping_methods>
                 <display_logo>1</display_logo>
                 <disable_login_popup>1</disable_login_popup>
+                <force_totals_full_mode>1</force_totals_full_mode>
             </general>
             <colors>
                 <body_background>transparent</body_background>
