@@ -7,6 +7,9 @@ var config = {
             'Magento_Checkout/js/view/payment': {
                 'Rubic_SimpleCheckout/js/view/payment-mixin': true
             },
+            'Magento_Checkout/js/view/payment/default': {
+                'Rubic_SimpleCheckout/js/view/payment-default-mixin': true
+            },
             'Magento_Checkout/js/view/summary/cart-items': {
                 'Rubic_SimpleCheckout/js/view/cart-items-mixin': true
             },

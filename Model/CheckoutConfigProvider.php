@@ -4,6 +4,8 @@ namespace Rubic\SimpleCheckout\Model;
 
 use Magento\Checkout\Model\ConfigProviderInterface;
 use Magento\Framework\App\Config\ScopeConfigInterface;
+use Magento\Framework\UrlInterface;
+use Rubic\SimpleCheckout\Plugin\AddNewsletterComponentPlugin;
 
 class CheckoutConfigProvider implements ConfigProviderInterface
 {
@@ -16,11 +18,18 @@ class CheckoutConfigProvider implements ConfigProviderInterface
     private $scopeConfig;
 
     /**
-     * @param ScopeConfigInterface $scopeConfig
+     * @var UrlInterface
      */
-    public function __construct(ScopeConfigInterface $scopeConfig)
+    private $url;
+
+    /**
+     * @param ScopeConfigInterface $scopeConfig
+     * @param UrlInterface $url
+     */
+    public function __construct(ScopeConfigInterface $scopeConfig, UrlInterface $url)
     {
         $this->scopeConfig = $scopeConfig;
+        $this->url = $url;
     }
 
     /**
@@ -30,7 +39,9 @@ class CheckoutConfigProvider implements ConfigProviderInterface
     {
         return [
             'hideShippingMethods' => (bool)$this->scopeConfig->getValue(self::CONFIG_PATH_HIDE_SHIPPING_METHODS),
-            'forceTotalsFullMode' => (bool)$this->scopeConfig->getValue(self::CONFIG_PATH_FORCE_TOTALS_FULL_MODE)
+            'forceTotalsFullMode' => (bool)$this->scopeConfig->getValue(self::CONFIG_PATH_FORCE_TOTALS_FULL_MODE),
+            'newsletterEnabled'   => (bool)$this->scopeConfig->getValue(AddNewsletterComponentPlugin::CONFIG_PATH_NEWSLETTER_ENABLED),
+            'newsletterUrl'       => $this->url->getUrl('simple_checkout/newsletter/subscribe')
         ];
     }
 }

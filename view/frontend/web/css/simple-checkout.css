@@ -116,3 +116,13 @@
 #checkout-step-shipping {
     margin-bottom: 0px;
 }
+
+.opc-wrapper .newsletter-title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.newsletter-subscribe label {
+    float: right;
+    width: 95%;
+}

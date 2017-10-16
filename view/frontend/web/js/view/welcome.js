@@ -20,11 +20,11 @@ define(
         'use strict';
 
         return Component.extend({
-            loginFormSelector: 'form[data-role=email-with-possible-login]',
-
             defaults: {
                 template: 'Rubic_SimpleCheckout/welcome'
             },
+
+            loginFormSelector: 'form[data-role=email-with-possible-login]',
 
             isVisible: ko.observable(!customer.isLoggedIn()),
 

@@ -21,6 +21,9 @@
             <geo_ip>
                 <enabled>1</enabled>
             </geo_ip>
+            <newsletter>
+                <enabled>1</enabled>
+            </newsletter>
         </simple_checkout>
     </default>
 </config>
