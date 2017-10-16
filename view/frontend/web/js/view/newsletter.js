@@ -2,9 +2,7 @@ define(
     [
         'uiComponent'
     ],
-    function (
-        Component
-    ) {
+    function (Component) {
         'use strict';
 
         return Component.extend({
@@ -12,12 +10,16 @@ define(
                 template: 'Rubic_SimpleCheckout/newsletter'
             },
 
+            isEnabled: function () {
+                return window.checkoutConfig.newsletterEnabled;
+            },
+
             isCheckedByDefault: function () {
-                return true;
+                return window.checkoutConfig.newsletterChecked;
             },
 
             getCheckoutLabel: function () {
-                return 'Subscribe to our newsletter to receive exclusive offers and the latest news on our products and services.';
+                return window.checkoutConfig.newsletterLabel;
             }
         });
     }

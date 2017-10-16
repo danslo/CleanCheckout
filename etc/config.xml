@@ -23,6 +23,8 @@
             </geo_ip>
             <newsletter>
                 <enabled>1</enabled>
+                <checked>1</checked>
+                <label>Subscribe to our newsletter to receive exclusive offers and the latest news on our products and services.</label>
             </newsletter>
         </simple_checkout>
     </default>
