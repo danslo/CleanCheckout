@@ -17,6 +17,8 @@ define([
             if (!this.isProcessed(code)) {
                 return;
             }
+
+            window.location = window.checkoutConfig.checkoutUrl + '#' + code;
             sortedItems.forEach(function (element) {
                 if (element.code === code) {
                     element.isVisible(true);
