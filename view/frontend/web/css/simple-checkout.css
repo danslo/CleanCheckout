@@ -3,6 +3,8 @@
     float: left;
     margin-bottom: 0px;
     line-height: 30px;
+    text-align: left;
+    padding: 0px;
 }
 
 #shipping-new-address-form .field .control {
@@ -13,6 +15,8 @@
 #shipping-new-address-form > .field {
     clear: both;
     padding: 10px 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
 
 #shipping-new-address-form .street {
@@ -83,6 +87,8 @@
     padding-top: 0px;
     padding-right: 0px;
     background-color: transparent;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
 
 .opc-wrapper .step-title {
@@ -105,4 +111,8 @@
 
 #checkout-step-payment .fieldset > br {
     display: none;
+}
+
+#checkout-step-shipping {
+    margin-bottom: 0px;
 }
