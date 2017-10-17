@@ -12,6 +12,7 @@
                 <display_logo>1</display_logo>
                 <disable_login_popup>1</disable_login_popup>
                 <force_totals_full_mode>1</force_totals_full_mode>
+                <move_cart_items>1</move_cart_items>
             </general>
             <colors>
                 <body_background>transparent</body_background>

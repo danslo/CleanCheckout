@@ -50,6 +50,11 @@
                     <comment><![CDATA[By default, a full summary of cart totals is not shown until the shipping step has been completed.
                                       This can result in incorrect expectations because discounts are not displayed in the first step of the checkout.]]></comment>
                 </field>
+                <field id="move_cart_items" translate="label" type="select" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Move Cart Items</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[This moves the location of the cart items in the checkout summary sidebar to be above the totals.]]></comment>
+                </field>
             </group>
             <group id="colors" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Colors</label>
