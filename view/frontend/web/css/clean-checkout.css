@@ -1,29 +1,30 @@
-#shipping-new-address-form .field .label {
-    width: 25%;
+fieldset.address .field .label {
+    width: 30%;
     float: left;
     margin-bottom: 0px;
     line-height: 30px;
     text-align: left;
     padding: 0px;
+    font-weight: normal;
 }
 
-#shipping-new-address-form .field .control {
+fieldset.address .field .control {
     width: 70%;
     float: right;
 }
 
-#shipping-new-address-form > .field {
+fieldset.address > .field {
     clear: both;
     padding: 10px 0px;
     margin-bottom: 0px;
     padding-bottom: 0px;
 }
 
-#shipping-new-address-form .street {
+fieldset.address .street {
     margin-bottom: 0px;
 }
 
-#shipping-new-address-form .street .field .control {
+fieldset.address .street .field .control {
     width: 100%;
 }
 
@@ -129,4 +130,8 @@
 .newsletter-subscribe label {
     float: right;
     width: 95%;
+}
+
+.billing-address-form {
+    margin-bottom: 20px;
 }
