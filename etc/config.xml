@@ -13,6 +13,7 @@
                 <disable_login_popup>1</disable_login_popup>
                 <force_totals_full_mode>1</force_totals_full_mode>
                 <move_cart_items>1</move_cart_items>
+                <force_luma_checkout>0</force_luma_checkout>
             </general>
             <colors>
                 <body_background>transparent</body_background>
