@@ -103,6 +103,10 @@
     border-top: none;
 }
 
+.opc-block-summary .items-in-cart {
+    margin-bottom: 20px;
+}
+
 .page-main > .logo {
     display: block;
     margin-top: 20px;
