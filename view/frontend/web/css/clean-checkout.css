@@ -45,6 +45,7 @@ fieldset.address .street .field .control {
     padding: 50px;
     padding-bottom: 0px;
     clear: both;
+    margin-bottom: 10px;
 }
 
 .opc-progress-bar {
