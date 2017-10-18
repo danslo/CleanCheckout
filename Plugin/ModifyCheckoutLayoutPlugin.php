@@ -57,14 +57,8 @@ class ModifyCheckoutLayoutPlugin
     private function changeCartItemsSortOrder($jsLayout)
     {
         if ($this->scopeConfig->getValue(self::CONFIG_MOVE_CART_ITEMS)) {
-            $jsLayout['components']['checkout']
-            ['children']
-            ['sidebar']
-            ['children']
-            ['summary']
-            ['children']
-            ['cart_items']
-            ['sortOrder'] = 0;
+            $jsLayout['components']['checkout']['children']['sidebar']['children']['summary']['children']['cart_items']
+                ['sortOrder'] = 0;
         }
         return $jsLayout;
     }
@@ -75,24 +69,35 @@ class ModifyCheckoutLayoutPlugin
      * @param $jsLayout
      * @return array
      */
-    private function disableFields($jsLayout)
+    private function disableShippingFields($jsLayout)
     {
         foreach (self::DISABLE_FIELDS as $field) {
             $configPath = sprintf(self::CONFIG_DISABLE_FIELD_PATH, $field);
             if ($this->scopeConfig->getValue($configPath)) {
-                unset(
-                    $jsLayout['components']['checkout']
-                    ['children']
-                    ['steps']
-                    ['children']
-                    ['shipping-step']
-                    ['children']
-                    ['shippingAddress']
-                    ['children']
-                    ['shipping-address-fieldset']
-                    ['children']
-                    [$field]
-                );
+                unset($jsLayout['components']['checkout']['children']['steps']['children']['shipping-step']
+                    ['children']['shippingAddress']['children']['shipping-address-fieldset']['children'][$field]);
+            }
+        }
+        return $jsLayout;
+    }
+
+    /**
+     * Disables specific input fields in billing address fieldset.
+     *
+     * @param $jsLayout
+     * @return array
+     */
+    private function disableBillingFields($jsLayout)
+    {
+        foreach ($jsLayout['components']['checkout']['children']['steps']['children']['billing-step']['children']
+                 ['payment']['children']['payments-list']['children'] as $code => &$payment) {
+            if (isset($payment['children']['form-fields'])) {
+                foreach (self::DISABLE_FIELDS as $field) {
+                    $configPath = sprintf(self::CONFIG_DISABLE_FIELD_PATH, $field);
+                    if ($this->scopeConfig->getValue($configPath)) {
+                        unset($payment['children']['form-fields']['children'][$field]);
+                    }
+                }
             }
         }
         return $jsLayout;
@@ -109,7 +114,8 @@ class ModifyCheckoutLayoutPlugin
         $jsLayout = $proceed(...$args);
 
         $jsLayout = $this->disableAuthentication($jsLayout);
-        $jsLayout = $this->disableFields($jsLayout);
+        $jsLayout = $this->disableShippingFields($jsLayout);
+        $jsLayout = $this->disableBillingFields($jsLayout);
         $jsLayout = $this->changeCartItemsSortOrder($jsLayout);
 
         return $jsLayout;
