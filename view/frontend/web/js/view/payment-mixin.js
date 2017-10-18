@@ -1,7 +1,9 @@
 define(
     [
-        'ko'
-    ], function (ko) {
+        'ko',
+        'Magento_Checkout/js/model/quote',
+        'Magento_Customer/js/model/customer'
+    ], function (ko, quote, customer) {
         'use strict';
 
         /**
@@ -14,7 +16,7 @@ define(
                     activeMethod: ''
                 },
 
-                isVisible: ko.observable(false)
+                isVisible: ko.observable(customer.isLoggedIn() && quote.isVirtual())
             });
         };
     }
