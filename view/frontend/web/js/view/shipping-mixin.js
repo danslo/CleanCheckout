@@ -22,11 +22,7 @@ define([
                 shippingMethodItemTemplate: 'Magento_Checkout/shipping-address/shipping-method-item'
             },
 
-            initialize: function () {
-                this.visible = ko.observable(customer.isLoggedIn());
-                this._super();
-                return this;
-            },
+            visible: ko.observable(false),
 
             shouldHideShipping: function() {
                 return window.checkoutConfig.hideShippingMethods && this.rates().length === 1;
