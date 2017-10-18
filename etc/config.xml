@@ -28,6 +28,10 @@
                 <checked>1</checked>
                 <label>Subscribe to our newsletter to receive exclusive offers and the latest news on our products and services.</label>
             </newsletter>
+            <back_to_store>
+                <enabled>0</enabled>
+                <label>Back to Store</label>
+            </back_to_store>
         </clean_checkout>
     </default>
 </config>

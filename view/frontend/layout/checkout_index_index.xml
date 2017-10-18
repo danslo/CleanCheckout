@@ -5,7 +5,10 @@
     </head>
     <body>
         <referenceContainer name="main.content">
-            <block class="Magento\Theme\Block\Html\Header\Logo" name="clean_checkout_logo" before="-" ifconfig="clean_checkout/general/display_logo">
+            <block class="Magento\Theme\Block\Html\Header\Logo"
+                   name="clean_checkout_logo"
+                   before="-"
+                   ifconfig="clean_checkout/general/display_logo">
                 <arguments>
                     <argument name="logo_img_width" xsi:type="number">189</argument>
                     <argument name="logo_img_height" xsi:type="number">64</argument>
@@ -14,8 +17,18 @@
         </referenceContainer>
 
         <referenceBlock name="head.additional">
-            <block class="Rubic\CleanCheckout\Block\Customizer" name="clean_checkout_customizer" template="customizer.phtml"/>
+            <block class="Rubic\CleanCheckout\Block\Customizer"
+                   name="clean_checkout_customizer"
+                   template="customizer.phtml" />
         </referenceBlock>
+
+        <referenceContainer name="content">
+            <block class="Rubic\CleanCheckout\Block\BackToStore"
+                   name="clean_checkout_back_to_store"
+                   after="checkout.root"
+                   template="back-to-store.phtml"
+                   ifconfig="clean_checkout/back_to_store/enabled" />
+        </referenceContainer>
 
         <referenceBlock name="checkout.root">
             <arguments>

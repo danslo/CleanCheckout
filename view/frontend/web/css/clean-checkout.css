@@ -135,3 +135,7 @@ fieldset.address .street .field .control {
 .billing-address-form {
     margin-bottom: 20px;
 }
+
+.back-to-store {
+    padding: 0px 5px;
+}
