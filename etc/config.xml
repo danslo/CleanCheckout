@@ -9,6 +9,7 @@
                 <disable_footer>1</disable_footer>
                 <disable_copyright>1</disable_copyright>
                 <hide_shipping_methods>1</hide_shipping_methods>
+                <hide_shipping_title>1</hide_shipping_title>
                 <display_logo>1</display_logo>
                 <disable_login_popup>1</disable_login_popup>
                 <force_totals_full_mode>1</force_totals_full_mode>

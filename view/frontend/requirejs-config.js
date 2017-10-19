@@ -13,6 +13,9 @@ var config = {
             'Magento_Checkout/js/view/summary/cart-items': {
                 'Rubic_CleanCheckout/js/view/cart-items-mixin': true
             },
+            'Magento_Checkout/js/view/summary/shipping': {
+                'Rubic_CleanCheckout/js/view/summary-shipping-mixin': true
+            },
             'Magento_Checkout/js/view/summary/abstract-total': {
                 'Rubic_CleanCheckout/js/view/abstract-total-mixin': true
             },
