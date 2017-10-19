@@ -36,28 +36,6 @@
     padding-top: 10px;
 }
 
-.opc-wrapper .form-login {
-    border-bottom: none;
-}
-
-#checkout {
-    margin-top: 50px;
-    padding: 50px;
-    padding-bottom: 0px;
-    clear: both;
-    margin-bottom: 10px;
-}
-
-.opc-progress-bar {
-    display: table;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 50px;
-}
-
-.page-main {
-    max-width: 1000px;
-}
 
 .authentication-wrapper {
     margin-top: -85px;
@@ -75,15 +53,6 @@
     font-size: 1.8rem;
 }
 
-.opc-sidebar {
-    width: 40%;
-    margin-top: 0px;
-}
-
-.opc-wrapper {
-    width: 60%;
-    margin-bottom: 0px;
-}
 
 .opc-block-summary {
     padding-top: 0px;
@@ -106,14 +75,10 @@
     border-top: none;
 }
 
-.opc-block-summary .items-in-cart {
-    margin-bottom: 20px;
-}
-
-.page-main > .logo {
+.checkout-index-index .logo {
     display: block;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 15px;
+    margin-left: 0px;
 }
 
 #checkout-step-payment .fieldset > br {

@@ -1,10 +1,11 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
-        <css src="Rubic_CleanCheckout::css/clean-checkout.css" media="screen and (min-width: 768px)"/>
+        <css src="Rubic_CleanCheckout::css/clean-checkout-m.css" />
+        <css src="Rubic_CleanCheckout::css/clean-checkout-l.css" media="screen and (min-width: 768px)"/>
     </head>
     <body>
-        <referenceContainer name="main.content">
+        <referenceContainer name="main">
             <block class="Magento\Theme\Block\Html\Header\Logo"
                    name="clean_checkout_logo"
                    before="-"

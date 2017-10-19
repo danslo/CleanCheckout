@@ -1,0 +1,40 @@
+.page-main {
+    max-width: 1000px;
+}
+
+.opc-progress-bar {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+.opc-wrapper .form-login {
+    border-bottom: none;
+}
+
+.opc-sidebar {
+    width: 40%;
+    margin-top: 0px;
+}
+
+.opc-wrapper {
+    width: 60%;
+    margin-bottom: 0px;
+}
+
+.opc-block-summary .items-in-cart {
+    margin-bottom: 20px;
+}
+
+.opc-wrapper .step-title {
+    padding-bottom: 0px;
+}
+
+#checkout {
+    margin-top: 50px;
+    padding: 50px;
+    padding-bottom: 0px;
+    clear: both;
+    margin-bottom: 10px;
+}
