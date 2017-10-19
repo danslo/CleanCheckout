@@ -1,4 +1,4 @@
-fieldset.address .field .label {
+.fieldset.address .field .label {
     width: 30%;
     float: left;
     margin-bottom: 0px;
@@ -8,23 +8,23 @@ fieldset.address .field .label {
     font-weight: normal;
 }
 
-fieldset.address .field .control {
+.fieldset.address .field .control {
     width: 70%;
     float: right;
 }
 
-fieldset.address > .field {
+.fieldset.address > .field {
     clear: both;
     padding: 10px 0px;
     margin-bottom: 0px;
     padding-bottom: 0px;
 }
 
-fieldset.address .street {
+.fieldset.address .street {
     margin-bottom: 0px;
 }
 
-fieldset.address .street .field .control {
+.fieldset.address .street .field .control {
     width: 100%;
 }
 
