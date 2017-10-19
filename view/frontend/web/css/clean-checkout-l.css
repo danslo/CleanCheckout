@@ -38,3 +38,11 @@
     clear: both;
     margin-bottom: 10px;
 }
+
+.opc-block-summary {
+    padding-top: 0px;
+    padding-right: 0px;
+    background-color: transparent;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}

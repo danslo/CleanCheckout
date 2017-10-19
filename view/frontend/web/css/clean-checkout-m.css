@@ -54,21 +54,8 @@
 }
 
 
-.opc-block-summary {
-    padding-top: 0px;
-    padding-right: 0px;
-    background-color: transparent;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-}
-
 .opc-wrapper .step-title {
     border-bottom: none;
-}
-
-.opc-block-shipping-information {
-    padding-right: 0px;
-    margin-top: 10px;
 }
 
 .opc-block-summary .table-totals {
@@ -105,4 +92,13 @@
 
 .back-to-store {
     padding: 0px 5px;
+}
+
+.opc-estimated-wrapper {
+    margin-bottom: 20px;
+    padding-bottom: 0px;
+}
+
+.opc-estimated-wrapper .estimated-block {
+    margin-top: 13px;
 }
