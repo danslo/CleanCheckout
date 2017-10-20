@@ -1,3 +1,7 @@
+/**
+ * Copyright © 2017 Rubic. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
 var config = {
     'config': {
         'mixins': {

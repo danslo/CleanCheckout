@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * Copyright © 2017 Rubic. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
 namespace Rubic\CleanCheckout\Controller\Newsletter;
 
 use Magento\Framework\App\Action\Action;

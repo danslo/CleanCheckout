@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright © 2017 Rubic. All rights reserved.
+    See LICENSE.txt for license details.
+-->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
     <head>
         <css src="jquery/colorpicker/css/colorpicker.css" />

@@ -1,3 +1,7 @@
+/**
+ * Copyright © 2017 Rubic. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
 define([
     'jquery',
     'Magento_Checkout/js/model/full-screen-loader',

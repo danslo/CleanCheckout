@@ -1,0 +1,102 @@
+Copyright (c) 2017, Rubic (rubic.nl).
+All rights reserved.
+
+This document contains the terms and (license) conditions of the extensions/software of Rubic, registered at the Kamer van Koophandel with the number: 56863217, trading as Rubic. These terms and conditions apply on all legal relationships(paid extensions/software, free extensions/software and services) between Rubic and client, acting in the course of a business.
+Definitions
+In the user license and the terms and conditions, the following definitions shall apply:
+-	Rubic: Software/ extension producer and the seller of the software/extensions and services.
+-	Client: instructing party, acting in the course of a business, to purchase any digital product or service of Rubic.
+-	Product(s): Extension(s)/ software products. 
+-	Service(s): Installation service. 
+-	Agreement: the agreement between Rubic and client.
+-	Parties: with parties refers to the contracting parties in the agreement, being Rubic and client.
+-	Support: Questions concerning the extension and bug/error fixes that are related to the extension.
+
+User License
+
+Article 1 License
+1.1	By purchasing the product, client obtains a License, which will remain valid until client stops using the product or until Rubic terminates this license because of client’s failure to comply with any of the terms and conditions which are included in this document.
+1.2	A purchased license does not include ownership of any original products, part of thereof, or any documentation or products derived from the original product. 
+1.3	Client has the right to translate, adapt, alter, transform, modify, or arrange the original product, thereby creating derivative products based upon the original product for internal deployment purposes only.
+1.4	Any external deployment is prohibited. The term "external deployment" herein means: the use, distribution, or communication of the original product or derivative products in any way such that the original product or derivative products may be used by anyone other than client, whether those products are distributed or communicated to those persons or made available as an application intended for use over a network. As an express condition for the grants of license hereunder, Rubic must treat any external deployment by client of the original product or a derivative product as unauthorized distribution.
+1.5	Rubic offers a single installation license for its Magento extensions. Each license can only be used on one Magento production. Per purchased license will be created up to 2 development/test environment licenses in the account of client. It is possible to request multiple development/test licenses through the mail.
+1.6	The created license codes for the development/test environment should never be used on a live and/or product environment and vice versa.
+1.7	Editing the license file in any way by client or any third party, other than Rubic, will result in license revocation, client’s deprivation of the right to a refund, product update and license upgrade. Rubic does not bear any responsibility for any personal or business data losses or damages of any sort in the case of license editing attempts.
+1.8	Client shall not sell, lease, sublicense, allow to use, or otherwise assign or transfer any of client’s rights, duties or obligations under this agreement, in whole or in part, to any person or entity.
+
+Article 2 Software Updates
+2.1	Rubic's extensions and integrations include complimentary updates and support for the period of 6 months, or longer when additionally bought. After the first 6 months and for every following 6 months, it is possible to purchase an update license which is 30% of the original extension price, which entitles client for another 6 months of updates, support and any additional purchased updates.
+2.2	It is not required to purchase an update license to continue to use the extension after the first 6 months, all licenses issued are valid for lifetime. An update license might have to be purchased for example if client wanted to get the latest version of the extension or needed support after the expiration of the support period. The extension won't ever be disabled if client doesn't purchase an update license.
+
+Other terms and conditions
+
+Article 1 Applicability 
+1.1 The conditions in this document apply to all legal relationships between Rubic and client, including every offer, tender and agreement between Rubic and client which Rubic has declared the present terms and conditions applicable, insofar as parties have not explicitly deviate of these terms and conditions in writing.
+1.2	The terms in this document also apply to all agreements with Rubic, for the implementation of which third parties should be involved.
+1.3	The applicability of any other conditions of client is explicitly rejected.
+1.4	If one or more provisions in these terms and conditions at any time in whole or in part should be null and void or declared, the other in these terms and conditions apply in full. Rubic and client will then discuss new stipulations replacing the null and void or to agree upon, in which as much as possible the purpose and intent of the original provisions.
+1.5	If uncertainty exists regarding the interpretation of one or more provisions of these general terms and conditions, the explanation needs to be carried out ' to the spirit ' of these provisions.
+1.6	If a situation arises between parties which is not regulated by these terms and conditions, the situation should be judged ‘according to the spirit’ of these terms and conditions.
+1.7	If Rubic does not require strict compliance of these conditions, it does not mean that its provisions do not apply, or that Rubic, in any degree, would lose the right to require strict compliance with the provisions of these terms and conditions in other cases.
+
+Article 2 Cost and payment
+2.1 All prices and rates do not include installation cost, taxes, and other possible fees which are imposed by the government;.
+2.2	Payment can only be made by means of one of the payment methods offered in the order process on the website.
+2.3	Rubic reserves the right to charge administration costs for deliveries that remain below a particular monetary value.
+
+Article 3 Offers
+3.1	All quotations and offers of Rubic are without obligation, unless a period for acceptance is stated in the offer. A quotation or offer is voidable if the product to which the offer or the offer relates is no longer available in the meantime.
+3.2	Rubic cannot be held to his quotations or offers if client can reasonably understand that the quotations or offers, or any part thereof, are an obvious mistake or error.
+
+Article 4 Warranty
+4.1	Client expressly agrees to use the products and services at his own risk and without any warranty whatsoever.
+4.2	Client is the sole party responsible for damage to any system, hardware or any other device or data or information losses.
+4.3	Rubic, to the fullest extent permitted by law, disclaims all warranties and conditions, whether express, implied or otherwise, included, but not limited to implied warranties and conditions regarding the marketability, fitness for a particular purpose and its non-infringement of any other person’s proprietary rights, regarding the products and services.
+4.4	The purchased extension contains a free update of 6 months included its associated buxfixes under the conditions as shown in article 2 of the user license.
+
+Article 5 Installation service
+5.1 If client wishes to use the possibility of installing an extension by Rubic, Rubic will install the extension on the server for client.
+5.2	If client wishes to use the installation service, client is responsible for making a recent backup of the Magento store.
+
+Article 6 Revoke
+6.1 For every order at Rubic, tailor made products excluded, there is a 14-day trial period. Client should request revocation within 15 days after the purchase in writing, subsequently, after showing the original invoice, client will be refunded within 21 days.
+6.2	If client already has installed the extension, Rubic demands complete deletion of the extensions from the server by client, and client cease to use the extensions.
+6.3	The right of withdrawal, as stated in article 7.1, does not apply to provided services by Rubic, such as the installation service. For this services client cannot get a refund under any circumstances.
+
+Article 7 Confidential information
+7.1 Both parties oblige themselves to secrecy of confidential information of the other party. Both parties shall take every reasonable measure in order to ensure this obligation.
+7.2 Client is aware that the software contains confidential information and business secrets of Rubic and his licensor and client undertakes not to disclose this information to any third party.
+
+Article 8 Cooperation client 
+8.1 Because of the need for cooperation of client in the implementation of the agreement by Rubic, client will disclose all useful and necessary information to Rubic in a timely manner, which need to be correct and complete.
+8.1 Client is responsible for: the appropriate use and correct application of the products and services of Rubic; the implementation in his organization and the and the necessary procedures; as well as the protection of the data, such as regular backup copies of data files. The latter applies only in the case if files are delivered to client.
+8.3	If information of client that is necessary in order to execute the agreement is not, not timely, or not in conformity with the agreements at the disposal of Rubic or if the place where Rubic must deliver or provide respective service is not in conformity with the agreements available to Rubic or if client in any other way does not meet their obligations towards Rubic, shall lead towards the suspension of Rubic's obligations and extra cost could be charged to client in accordance with Rubic's usual rates.
+
+Article 9 Liability
+9.1 Client expressly agrees to that Rubic shall not be liable of any direct, indirect, incidental, special, moral or any form of consequential damage suffered by client from the use of the products or services, which included but not limited to data or information loss or damage to any system, hardware or any other device, regardless of whether Rubic was or should be notified of the potential for such damages, and which also included but not limited to damage in the form of income foregone.
+9.2	The in this article mentioned limitations of liability are not valid if the damage is caused by Rubic with gross negligence, willful misconduct or intentional recklessness.
+
+Article 10 Malfunctions and force majeure
+10.1 Neither of the parties can be obliged to perform when every reasonable attempt to perform is not possible due to circumstances beyond their control and which they could not have foreseen at the time when the agreement was concluded. Either Party may only rely on force majeure towards the other Party if the Party in question notifies the other party in writing as soon as possible, after the force majeure occurred, and together with the necessary evidence.
+10.2 Under the circumstances referred to in paragraph 17.1 of these terms and conditions can be defined as for example: (a) internet failure, computer network failure or telecommunications failure, (b) shortcomings by parties of which Rubic depends on in the provision of service, c) defectiveness of goods, equipment, software, or materials of which client has prescribed the use to Rubic, (d) non-availability of one or more employees (due illness or other causes) (e) governmental measures.
+10.3 The obligations under the agreement shall be suspended partially or entirely for the duration of any period of force majeure, without the parties being liable to each other for any compensation. Either party may rely on force majeure towards the other party, if the party in question notifies the other party of such invocation in writing as soon as possible, on submission of the necessary evidence.
+10.4 When the force majeure situation continues for longer than thirty days, or as soon as it has been established that that period will be longer than three months, the parties have the right to terminate the agreement in writing, unless the nature or scope of the shortcoming does not justify dissolution. Performances already delivered under the Agreement shall in that case be settled proportionately, without the parties otherwise owing each other anything.
+
+Article 11 Rights of intellectual property
+11.1 All rights of intellectual property on products supplied or held available by Rubic belong exclusively to Rubic or his supplier or licensor, except if Rubic and client agreed otherwise in writing. Client only gets the rights of use and competences that are declared in these terms and conditions, the agreement or otherwise explicit in writing. For the remainder client may not publish or replicate the software, services or other materials.
+11.2 Client is not allowed to delete or change any indication on the products concerning copyrights, brands, trademarks or other rights of intellectual property, which included indications concerning the confidential character and the confidentiality of the products.
+11.3 Rubic is allowed to take technical measures concerning the protection of the products. If Rubic has used technical protection to secure the products, client is not allowed to delete or avoid this technical protection.
+11.4 Every use, duplication or publication of the products as beyond the remit of the agreement or the granted rights of use, constitutes a breach of the rights of intellectual property of Rubic.
+11.5 Client will pay an immediately payable fine to Rubic of € 5000,- per breach and € 25000,- per intentional breach, without prejudice to the right of Rubic to get compensation or to take other legal measures to end the infringement and/or recover the damages. After the termination of one working day after client reported the breach to Rubic, client is also obligated to pay Rubic an immediately payable fine of € 5000,- per day that the infringement continues.
+
+Article 12 Statute of limitations
+12.1 By way of derogation from the statutory limitation periods, the statute of limitations for all claims and defenses against Rubic and by Rubic hired third parties for executing the agreement contains one year.
+12.2 Paragraph 12.1 shall not apply to legal claims and defenses that are based on facts that would justify the assertion that the delivered product do not comply with the agreement. Such claims and defenses barred by two years after client has informed Rubic of such nonconformance.
+
+Article 13 Indemnification
+13.1 Client indemnifies Rubic against third-party claims, that in connection with the executions of the agreement caused damage and the cause of which is attributable to other than to Rubic.
+13.2 If a claim for damages is made against Rubic by a third party, client is supposed to support Rubic in and outside the courthouse and take all the actions that are to be expected of him. If client neglects his duty to take appropriate measures, Rubic can, without any notice of default, take the appropriate measures himself. All costs and damages on the side of Rubic and third-parties shall be for account of client.
+
+Article 14 Applicable law and conflicts
+14.1 All legal relationships in which Rubic is a party are solely governed by Dutch law, also if an agreement is partially or in whole carried out outside the Netherlands or if the party that is involved or if the legal relationship is with a party domiciled abroad. The applicability of the Vienna Sales Convention(CISG) is expressly excluded.
+14.2 Parties will only take their conflict to court after they have put effort to do its utmost to settle a dispute in mutual consultations.

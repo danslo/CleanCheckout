@@ -2,9 +2,7 @@
   "name": "rubic/magento2-module-clean-checkout",
   "description": "The amazing Clean Checkout module for Magento 2.",
   "type": "magento2-module",
-  "license": [
-    "OSL-3.0"
-  ],
+  "license": ["proprietary"],
   "autoload": {
     "files": [
       "registration.php"

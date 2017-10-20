@@ -1,4 +1,8 @@
 <?xml version="1.0"?>
+<!--
+    Copyright © 2017 Rubic. All rights reserved.
+    See LICENSE.txt for license details.
+-->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
         <section id="clean_checkout" translate="label" type="text" sortOrder="1500" showInDefault="1" showInWebsite="1" showInStore="1">

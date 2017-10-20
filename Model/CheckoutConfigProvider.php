@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * Copyright © 2017 Rubic. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
 namespace Rubic\CleanCheckout\Model;
 
 use Magento\Checkout\Model\ConfigProviderInterface;
