@@ -177,6 +177,10 @@ class SocialLoginService
      */
     public function login($provider)
     {
+        if (!$this->scopeConfig->getValue(self::CONFIG_PATH_SOCIAL_LOGIN_ENABLED)) {
+            return;
+        }
+
         $provider = ucfirst($provider);
         $hybridAuth = $this->hybridauthFactory->create([
             'config' => [
