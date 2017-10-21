@@ -66,3 +66,7 @@
     margin-top: 25px;
     margin-bottom: -25px;
 }
+
+.opc-wrapper .form-login {
+    padding-bottom: 0px;
+}

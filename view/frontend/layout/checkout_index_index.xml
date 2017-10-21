@@ -7,6 +7,7 @@
     <head>
         <css src="Rubic_CleanCheckout::css/clean-checkout-m.css" />
         <css src="Rubic_CleanCheckout::css/clean-checkout-l.css" media="screen and (min-width: 768px)"/>
+        <css src="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" src_type="url" />
     </head>
     <body>
         <referenceContainer name="main">
@@ -54,7 +55,7 @@
                                             <item name="children" xsi:type="array">
                                                 <item name="customer-email" xsi:type="array">
                                                     <item name="component" xsi:type="string">Magento_Checkout/js/view/form/element/email</item>
-                                                    <item name="displayArea" xsi:type="string">customer-email</item>
+                                                    <item name="displayArea" xsi:type="string">login-methods</item>
                                                     <item name="tooltip" xsi:type="array">
                                                         <item name="description" xsi:type="string" translate="true">We'll send your order confirmation here.</item>
                                                     </item>
@@ -74,6 +75,10 @@
                                                             </item>
                                                         </item>
                                                     </item>
+                                                </item>
+                                                <item name="social-login" xsi:type="array">
+                                                    <item name="component" xsi:type="string">Rubic_CleanCheckout/js/view/social-login</item>
+                                                    <item name="displayArea" xsi:type="string">login-methods</item>
                                                 </item>
                                             </item>
                                         </item>

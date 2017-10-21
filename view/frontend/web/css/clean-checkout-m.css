@@ -136,3 +136,19 @@
 .action-edit-address {
     margin-top: 15px;
 }
+
+.fa-facebook-square {
+    color: #3b5998;
+}
+
+.fa-twitter-square {
+    color: #1da1f2;
+}
+
+.fa-google-plus-square {
+    color: #dd4b39;
+}
+
+.social-login i {
+    margin-right: 5px;
+}

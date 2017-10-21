@@ -17,9 +17,10 @@ use Magento\Store\Model\StoreManagerInterface;
 
 class SocialLoginService
 {
-    const CONFIG_PATH_PROVIDER_ENABLED = 'clean_checkout/social_login/enable_%s';
-    const CONFIG_PATH_PROVIDER_KEY     = 'clean_checkout/social_login/%s_key';
-    const CONFIG_PATH_PROVIDER_SECRET  = 'clean_checkout/social_login/%s_secret';
+    const CONFIG_PATH_SOCIAL_LOGIN_ENABLED          = 'clean_checkout/social_login/enabled';
+    const CONFIG_PATH_SOCIAL_LOGIN_PROVIDER_ENABLED = 'clean_checkout/social_login/enable_%s';
+    const CONFIG_PATH_SOCIAL_LOGIN_PROVIDER_KEY     = 'clean_checkout/social_login/%s_key';
+    const CONFIG_PATH_SOCIAL_LOGIN_PROVIDER_SECRET  = 'clean_checkout/social_login/%s_secret';
 
     /**
      * The providers we currently support.
@@ -102,10 +103,10 @@ class SocialLoginService
         $config = [];
         foreach (self::PROVIDERS as $provider) {
             $config[ucfirst($provider)] = [
-                'enabled' => (bool)$this->scopeConfig->getValue(sprintf(self::CONFIG_PATH_PROVIDER_ENABLED, $provider)),
+                'enabled' => (bool)$this->scopeConfig->getValue(sprintf(self::CONFIG_PATH_SOCIAL_LOGIN_PROVIDER_ENABLED, $provider)),
                 'keys' => [
-                    'key' => $this->scopeConfig->getValue(sprintf(self::CONFIG_PATH_PROVIDER_KEY, $provider)),
-                    'secret' => $this->scopeConfig->getValue(sprintf(self::CONFIG_PATH_PROVIDER_SECRET, $provider)),
+                    'key' => $this->scopeConfig->getValue(sprintf(self::CONFIG_PATH_SOCIAL_LOGIN_PROVIDER_KEY, $provider)),
+                    'secret' => $this->scopeConfig->getValue(sprintf(self::CONFIG_PATH_SOCIAL_LOGIN_PROVIDER_SECRET, $provider)),
                 ]
             ];
         }
@@ -176,6 +177,7 @@ class SocialLoginService
      */
     public function login($provider)
     {
+        $provider = ucfirst($provider);
         $hybridAuth = $this->hybridauthFactory->create([
             'config' => [
                 'callback'  => $this->getCallbackUrl($provider),

@@ -4,9 +4,9 @@
          class="step-content"
          data-role="content">
 
-        <each args="getRegion('customer-email')" render="" />
+        <each args="getRegion('login-methods')" render="" />
 
-        <form data-bind="submit: navigateToNextStep" novalidate="novalidate">
+        <form data-bind="submit: navigateToNextStep" class="form-next-step" novalidate="novalidate">
             <div class="actions-toolbar">
                 <div class="primary">
                     <button data-role="opc-continue" type="submit" class="button action continue primary">
