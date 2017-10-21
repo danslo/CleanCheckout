@@ -20,5 +20,8 @@
     <type name="Magento\Theme\Model\View\Design">
         <plugin name="force_luma_checkout" type="Rubic\CleanCheckout\Plugin\ForceLumaCheckoutPlugin" />
     </type>
+    <type name="Magento\Framework\View\Result\Layout">
+        <plugin name="remove_containers" type="Rubic\CleanCheckout\Plugin\RemoveContainersPlugin" />
+    </type>
     <preference for="Magento\Directory\Helper\Data" type="Rubic\CleanCheckout\Helper\Directory\Data" />
 </config>
