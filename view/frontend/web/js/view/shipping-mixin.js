@@ -22,11 +22,11 @@ define([
             defaults: {
                 template: 'Rubic_CleanCheckout/shipping',
                 shippingFormTemplate: 'Magento_Checkout/shipping-address/form',
-                shippingMethodListTemplate: 'Magento_Checkout/shipping-address/shipping-method-list',
-                shippingMethodItemTemplate: 'Magento_Checkout/shipping-address/shipping-method-item'
+                shippingMethodListTemplate: 'Rubic_CleanCheckout/shipping-address/shipping-method-list',
+                shippingMethodItemTemplate: 'Rubic_CleanCheckout/shipping-address/shipping-method-item'
             },
 
-            visible: ko.observable(false),
+            visible: ko.observable(customer.isLoggedIn() && !quote.isVirtual()),
 
             shouldHideShipping: function() {
                 return window.checkoutConfig.hideShippingMethods && this.rates().length === 1;
