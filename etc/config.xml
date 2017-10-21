@@ -37,6 +37,9 @@
                 <enabled>0</enabled>
                 <label>Back to Store</label>
             </back_to_store>
+            <social_login>
+                <enabled>0</enabled>
+            </social_login>
         </clean_checkout>
     </default>
 </config>

@@ -120,6 +120,77 @@
                     <label>Label</label>
                 </field>
             </group>
+            <group id="social_login" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Social Login</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable Social Login</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Allows customers to login using their Social Media accounts from inside the checkout.</comment>
+                </field>
+                <field id="enable_twitter" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable Twitter</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="twitter_key" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Twitter Key</label>
+                    <depends>
+                        <field id="enable_twitter">1</field>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="twitter_secret" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Twitter Secret</label>
+                    <depends>
+                        <field id="enable_twitter">1</field>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="enable_facebook" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable Facebook</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="facebook_key" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Facebook Key</label>
+                    <depends>
+                        <field id="enable_facebook">1</field>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="facebook_secret" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Facebook Secret</label>
+                    <depends>
+                        <field id="enable_facebook">1</field>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="enable_google" translate="label" type="select" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable Google</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="google_key" translate="label" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Google Key</label>
+                    <depends>
+                        <field id="enable_google">1</field>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="google_secret" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Google Secret</label>
+                    <depends>
+                        <field id="enable_google">1</field>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+            </group>
         </section>
     </system>
 </config>
