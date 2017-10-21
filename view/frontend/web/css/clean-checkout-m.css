@@ -97,15 +97,17 @@
 
 .back-to-store {
     padding: 0px 5px;
+    margin-bottom: 30px;
 }
 
 .opc-estimated-wrapper {
     margin-bottom: 20px;
-    padding-bottom: 0px;
+    margin-top: 0px;
+    padding: 0px 20px;
 }
 
 .opc-estimated-wrapper .estimated-block {
-    margin-top: 13px;
+    margin: 10px 0px;
 }
 
 .opc-wrapper .form-login,
@@ -125,4 +127,8 @@
 
 .columns .column.main {
     padding-bottom: 0px;
+}
+
+.checkout-index-index .logo {
+    float: none;
 }

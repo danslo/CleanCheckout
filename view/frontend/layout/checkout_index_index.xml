@@ -10,6 +10,11 @@
     </head>
     <body>
         <referenceContainer name="main">
+            <container name="checkout.messages" htmlTag="div" htmlClass="checkout-messages" before="clean_checkout_logo">
+                <block class="Magento\Framework\View\Element\Template" name="ajax.message.placeholder" template="Magento_Theme::html/messages.phtml"/>
+                <block class="Magento\Framework\View\Element\Messages" name="messages" as="messages" template="Magento_Theme::messages.phtml"/>
+            </container>
+
             <block class="Magento\Theme\Block\Html\Header\Logo"
                    name="clean_checkout_logo"
                    before="-"

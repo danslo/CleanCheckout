@@ -61,3 +61,8 @@
 .opc-block-shipping-information {
     padding-right: 0px;
 }
+
+.checkout-index-index .logo {
+    margin-top: 25px;
+    margin-bottom: -25px;
+}
