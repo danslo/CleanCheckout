@@ -1,17 +1,18 @@
 {
-  "name": "rubic/magento2-module-clean-checkout",
-  "description": "The amazing Clean Checkout module for Magento 2.",
-  "type": "magento2-module",
-  "license": ["proprietary"],
-  "autoload": {
-    "files": [
-      "registration.php"
-    ],
-    "psr-4": {
-      "Rubic\\CleanCheckout\\": ""
+    "name": "rubic/magento2-module-clean-checkout",
+    "description": "The amazing Clean Checkout module for Magento 2.",
+    "type": "magento2-module",
+    "license": ["proprietary"],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Rubic\\CleanCheckout\\": ""
+        }
+    },
+    "require": {
+        "geoip2/geoip2": "^2.0",
+        "magento/product-community-edition": "^2.1"
     }
-  },
-  "require": {
-    "geoip2/geoip2": "^2.0"
-  }
 }
