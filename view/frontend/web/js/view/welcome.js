@@ -47,7 +47,11 @@ define(
              * during checkout. You can add custom logic, for example some conditions
              * for switching to your custom step
              */
-            navigate: function () {},
+            navigate: function () {
+                if (customer.isLoggedIn()) {
+                    this.navigateToNextStep();
+                }
+            },
 
             validateEmail: function () {
                 var emailValidationResult = customer.isLoggedIn();
