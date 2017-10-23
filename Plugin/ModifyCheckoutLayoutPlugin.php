@@ -10,8 +10,8 @@ use Magento\Framework\App\Config\ScopeConfigInterface;
 
 class ModifyCheckoutLayoutPlugin
 {
-    const CONFIG_DISABLE_LOGIN_PATH = 'clean_checkout/general/disable_login_popup';
-    const CONFIG_DISABLE_FIELD_PATH = 'clean_checkout/general/disable_%s';
+    const CONFIG_DISABLE_LOGIN_PATH = 'clean_checkout/cleanup/disable_login_popup';
+    const CONFIG_DISABLE_FIELD_PATH = 'clean_checkout/cleanup/disable_%s';
     const CONFIG_MOVE_CART_ITEMS    = 'clean_checkout/general/move_cart_items';
 
     /**

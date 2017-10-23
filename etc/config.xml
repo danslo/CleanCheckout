@@ -7,19 +7,24 @@
     <default>
         <clean_checkout>
             <general>
+                <force_totals_full_mode>1</force_totals_full_mode>
+                <move_cart_items>1</move_cart_items>
+                <force_luma_checkout>0</force_luma_checkout>
+                <redirect_to_checkout>0</redirect_to_checkout>
+            </general>
+            <cleanup>
                 <disable_company>1</disable_company>
                 <disable_telephone>0</disable_telephone>
                 <disable_header>1</disable_header>
                 <disable_footer>1</disable_footer>
                 <disable_copyright>1</disable_copyright>
-                <hide_shipping_methods>1</hide_shipping_methods>
-                <hide_shipping_title>1</hide_shipping_title>
                 <display_logo>1</display_logo>
                 <disable_login_popup>1</disable_login_popup>
-                <force_totals_full_mode>1</force_totals_full_mode>
-                <move_cart_items>1</move_cart_items>
-                <force_luma_checkout>0</force_luma_checkout>
-            </general>
+            </cleanup>
+            <shipping>
+                <hide_shipping_methods>1</hide_shipping_methods>
+                <hide_shipping_title>1</hide_shipping_title>
+            </shipping>
             <colors>
                 <body_background>transparent</body_background>
                 <checkout_background>#f5f5f5</checkout_background>

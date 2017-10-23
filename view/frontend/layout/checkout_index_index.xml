@@ -19,7 +19,7 @@
             <block class="Magento\Theme\Block\Html\Header\Logo"
                    name="clean_checkout_logo"
                    before="-"
-                   ifconfig="clean_checkout/general/display_logo">
+                   ifconfig="clean_checkout/cleanup/display_logo">
                 <arguments>
                     <argument name="logo_img_width" xsi:type="number">189</argument>
                     <argument name="logo_img_height" xsi:type="number">64</argument>

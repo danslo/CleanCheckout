@@ -11,7 +11,7 @@ use Magento\Framework\View\Result\Layout;
 
 class RemoveContainersPlugin
 {
-    const CONFIG_DISABLE_PATH = 'clean_checkout/general/disable_%s';
+    const CONFIG_DISABLE_PATH = 'clean_checkout/cleanup/disable_%s';
 
     /**
      * Elements that can be disabled on the checkout page.

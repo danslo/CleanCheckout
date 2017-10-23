@@ -11,6 +11,30 @@
             <resource>Rubic_CleanCheckout::clean_checkout</resource>
             <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>General</label>
+                <field id="force_totals_full_mode" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Force Totals Full Mode</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[By default, a full summary of cart totals is not shown until the shipping step has been completed.
+                                      This can result in incorrect expectations because discounts are not displayed in the first step of the checkout.]]></comment>
+                </field>
+                <field id="move_cart_items" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Move Cart Items</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[This moves the location of the cart items in the checkout summary sidebar to be above the totals.]]></comment>
+                </field>
+                <field id="force_luma_checkout" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Force Luma Checkout</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[Forces the Luma theme to be loaded for checkout pages, instead of the currently configured one. This may solve some incompatibility issues with custom themes.]]></comment>
+                </field>
+                <field id="redirect_to_checkout" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Redirect To Checkout</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[Sends the customer to the checkout immediately after adding a product to cart.]]></comment>
+                </field>
+            </group>
+            <group id="cleanup" translate="label" type="text" sortOrder="13" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Cleanup</label>
                 <field id="disable_telephone" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Disable Telephone Field</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
@@ -32,16 +56,6 @@
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <comment><![CDATA[Disables the copyright bar in the bottom part of the page.]]></comment>
                 </field>
-                <field id="hide_shipping_methods" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
-                    <label>Hide Shipping Methods</label>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    <comment><![CDATA[Shipping methods are not shown when there is only a single available rate.]]></comment>
-                </field>
-                <field id="hide_shipping_title" translate="label" type="select" sortOrder="65" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
-                    <label>Hide Shipping Method Title</label>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    <comment><![CDATA[Shipping method title is not shown in the summary sidebar. Note that it will still display a price for shipping.]]></comment>
-                </field>
                 <field id="display_logo" translate="label" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Display Logo</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
@@ -53,21 +67,18 @@
                     <comment><![CDATA[Disables the login pop-up in the top-right corner of checkout.
                                       Existing customers can still login when providing their e-mail in the checkout, regardless of this setting.]]></comment>
                 </field>
-                <field id="force_totals_full_mode" translate="label" type="select" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
-                    <label>Force Totals Full Mode</label>
+            </group>
+            <group id="shipping" translate="label" type="text" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Shipping</label>
+                <field id="hide_shipping_methods" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Hide Shipping Methods</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    <comment><![CDATA[By default, a full summary of cart totals is not shown until the shipping step has been completed.
-                                      This can result in incorrect expectations because discounts are not displayed in the first step of the checkout.]]></comment>
+                    <comment><![CDATA[Shipping methods are not shown when there is only a single available rate.]]></comment>
                 </field>
-                <field id="move_cart_items" translate="label" type="select" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
-                    <label>Move Cart Items</label>
+                <field id="hide_shipping_title" translate="label" type="select" sortOrder="65" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Hide Shipping Method Title</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    <comment><![CDATA[This moves the location of the cart items in the checkout summary sidebar to be above the totals.]]></comment>
-                </field>
-                <field id="force_luma_checkout" translate="label" type="select" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
-                    <label>Force Luma Checkout</label>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    <comment><![CDATA[Forces the Luma theme to be loaded for checkout pages, instead of the currently configured one. This may solve some incompatibility issues with custom themes.]]></comment>
+                    <comment><![CDATA[Shipping method title is not shown in the summary sidebar. Note that it will still display a price for shipping.]]></comment>
                 </field>
             </group>
             <group id="colors" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
