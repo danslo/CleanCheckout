@@ -41,7 +41,7 @@
     padding: 50px;
     padding-bottom: 0px;
     clear: both;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
 }
 
 .opc-block-summary {
@@ -69,4 +69,9 @@
 
 .opc-wrapper .form-login {
     padding-bottom: 0px;
+}
+
+.back-to-store {
+    margin-top: -35px;
+    margin-bottom: 50px;
 }
