@@ -7,6 +7,7 @@ namespace Rubic\CleanCheckout\Plugin;
 
 use Magento\Checkout\Block\Checkout\LayoutProcessor;
 use Magento\Framework\App\Config\ScopeConfigInterface;
+use Magento\Store\Model\ScopeInterface;
 
 class ModifyCheckoutLayoutPlugin
 {
@@ -45,7 +46,7 @@ class ModifyCheckoutLayoutPlugin
      */
     private function disableAuthentication($jsLayout)
     {
-        if ($this->scopeConfig->getValue(self::CONFIG_DISABLE_LOGIN_PATH)) {
+        if ($this->scopeConfig->getValue(self::CONFIG_DISABLE_LOGIN_PATH, ScopeInterface::SCOPE_STORE)) {
             unset($jsLayout['components']['checkout']['children']['authentication']);
         }
         return $jsLayout;
@@ -59,7 +60,7 @@ class ModifyCheckoutLayoutPlugin
      */
     private function changeCartItemsSortOrder($jsLayout)
     {
-        if ($this->scopeConfig->getValue(self::CONFIG_MOVE_CART_ITEMS)) {
+        if ($this->scopeConfig->getValue(self::CONFIG_MOVE_CART_ITEMS, ScopeInterface::SCOPE_STORE)) {
             $jsLayout['components']['checkout']['children']['sidebar']['children']['summary']['children']['cart_items']
                 ['sortOrder'] = 0;
         }
@@ -76,7 +77,7 @@ class ModifyCheckoutLayoutPlugin
     {
         foreach (self::DISABLE_FIELDS as $field) {
             $configPath = sprintf(self::CONFIG_DISABLE_FIELD_PATH, $field);
-            if ($this->scopeConfig->getValue($configPath)) {
+            if ($this->scopeConfig->getValue($configPath, ScopeInterface::SCOPE_STORE)) {
                 unset($jsLayout['components']['checkout']['children']['steps']['children']['shipping-step']
                     ['children']['shippingAddress']['children']['shipping-address-fieldset']['children'][$field]);
             }
@@ -97,7 +98,7 @@ class ModifyCheckoutLayoutPlugin
             if (isset($payment['children']['form-fields'])) {
                 foreach (self::DISABLE_FIELDS as $field) {
                     $configPath = sprintf(self::CONFIG_DISABLE_FIELD_PATH, $field);
-                    if ($this->scopeConfig->getValue($configPath)) {
+                    if ($this->scopeConfig->getValue($configPath, ScopeInterface::SCOPE_STORE)) {
                         unset($payment['children']['form-fields']['children'][$field]);
                     }
                 }

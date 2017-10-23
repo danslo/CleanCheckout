@@ -6,6 +6,7 @@
 namespace Rubic\CleanCheckout\Block;
 
 use Magento\Framework\View\Element\Template;
+use Magento\Store\Model\ScopeInterface;
 
 class Customizer extends Template
 {
@@ -16,7 +17,10 @@ class Customizer extends Template
      */
     public function getCheckoutBorderColor()
     {
-        return $this->_scopeConfig->getValue(sprintf(self::CONFIG_PATH_COLORS, 'checkout_border'));
+        return $this->_scopeConfig->getValue(
+            sprintf(self::CONFIG_PATH_COLORS, 'checkout_border'),
+            ScopeInterface::SCOPE_STORE
+        );
     }
 
     /**
@@ -24,7 +28,10 @@ class Customizer extends Template
      */
     public function getCheckoutBackgroundColor()
     {
-        return $this->_scopeConfig->getValue(sprintf(self::CONFIG_PATH_COLORS, 'checkout_background'));
+        return $this->_scopeConfig->getValue(
+            sprintf(self::CONFIG_PATH_COLORS, 'checkout_background'),
+            ScopeInterface::SCOPE_STORE
+        );
     }
 
     /**
@@ -32,6 +39,9 @@ class Customizer extends Template
      */
     public function getBodyBackgroundColor()
     {
-        return $this->_scopeConfig->getValue(sprintf(self::CONFIG_PATH_COLORS, 'body_background'));
+        return $this->_scopeConfig->getValue(
+            sprintf(self::CONFIG_PATH_COLORS, 'body_background'),
+            ScopeInterface::SCOPE_STORE
+        );
     }
 }

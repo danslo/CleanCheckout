@@ -8,6 +8,7 @@ namespace Rubic\CleanCheckout\Plugin;
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\App\Request\Http;
 use Magento\Framework\View\Result\Layout;
+use Magento\Store\Model\ScopeInterface;
 
 class RemoveContainersPlugin
 {
@@ -60,7 +61,7 @@ class RemoveContainersPlugin
             $layout = $subject->getLayout();
             foreach (self::DISABLE_ELEMENTS as $type => $element) {
                 $configPath = sprintf(self::CONFIG_DISABLE_PATH, $type);
-                if ($this->scopeConfig->getValue($configPath)) {
+                if ($this->scopeConfig->getValue($configPath, ScopeInterface::SCOPE_STORE)) {
                     $layout->unsetElement($element);
                 }
             }

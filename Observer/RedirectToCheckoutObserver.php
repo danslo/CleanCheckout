@@ -9,6 +9,7 @@ use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\Event\Observer;
 use Magento\Framework\Event\ObserverInterface;
 use Magento\Framework\UrlInterface;
+use Magento\Store\Model\ScopeInterface;
 
 class RedirectToCheckoutObserver implements ObserverInterface
 {
@@ -42,7 +43,7 @@ class RedirectToCheckoutObserver implements ObserverInterface
      */
     public function execute(Observer $observer)
     {
-        if (!$this->scopeConfig->getValue(self::CONFIG_PATH_REDIRECT_TO_CHECKOUT)) {
+        if (!$this->scopeConfig->getValue(self::CONFIG_PATH_REDIRECT_TO_CHECKOUT, ScopeInterface::SCOPE_STORE)) {
             return;
         }
 

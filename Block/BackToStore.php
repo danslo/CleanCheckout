@@ -9,6 +9,7 @@ use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\View\Element\Template;
 use Magento\Framework\View\Element\Template\Context;
 use Magento\Store\App\Response\Redirect;
+use Magento\Store\Model\ScopeInterface;
 
 class BackToStore extends Template
 {
@@ -46,7 +47,7 @@ class BackToStore extends Template
      */
     public function getBackToStoreLabel()
     {
-        return $this->scopeConfig->getValue(self::CONFIG_PATH_BACK_TO_STORE_LABEL);
+        return $this->scopeConfig->getValue(self::CONFIG_PATH_BACK_TO_STORE_LABEL, ScopeInterface::SCOPE_STORE);
     }
 
     /**

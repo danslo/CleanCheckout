@@ -13,6 +13,7 @@ use Magento\Customer\Model\ResourceModel\Customer as CustomerResource;
 use Magento\Customer\Model\Session as CustomerSession;
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\UrlInterface;
+use Magento\Store\Model\ScopeInterface;
 use Magento\Store\Model\StoreManagerInterface;
 
 class SocialLoginService
@@ -103,10 +104,19 @@ class SocialLoginService
         $config = [];
         foreach (self::PROVIDERS as $provider) {
             $config[ucfirst($provider)] = [
-                'enabled' => (bool)$this->scopeConfig->getValue(sprintf(self::CONFIG_PATH_SOCIAL_LOGIN_PROVIDER_ENABLED, $provider)),
+                'enabled' => (bool)$this->scopeConfig->getValue(
+                    sprintf(self::CONFIG_PATH_SOCIAL_LOGIN_PROVIDER_ENABLED, $provider),
+                    ScopeInterface::SCOPE_STORE
+                ),
                 'keys' => [
-                    'key' => $this->scopeConfig->getValue(sprintf(self::CONFIG_PATH_SOCIAL_LOGIN_PROVIDER_KEY, $provider)),
-                    'secret' => $this->scopeConfig->getValue(sprintf(self::CONFIG_PATH_SOCIAL_LOGIN_PROVIDER_SECRET, $provider)),
+                    'key' => $this->scopeConfig->getValue(
+                        sprintf(self::CONFIG_PATH_SOCIAL_LOGIN_PROVIDER_KEY, $provider),
+                        ScopeInterface::SCOPE_STORE
+                    ),
+                    'secret' => $this->scopeConfig->getValue(
+                        sprintf(self::CONFIG_PATH_SOCIAL_LOGIN_PROVIDER_SECRET, $provider),
+                        ScopeInterface::SCOPE_STORE
+                    ),
                 ]
             ];
         }
@@ -201,7 +211,7 @@ class SocialLoginService
      */
     public function login($provider)
     {
-        if (!$this->scopeConfig->getValue(self::CONFIG_PATH_SOCIAL_LOGIN_ENABLED)) {
+        if (!$this->scopeConfig->getValue(self::CONFIG_PATH_SOCIAL_LOGIN_ENABLED, ScopeInterface::SCOPE_STORE)) {
             return;
         }
 
