@@ -151,12 +151,35 @@ class SocialLoginService
     }
 
     /**
+     * Some providers don't really put data in the right fields.
+     *
+     * @param string $provider
+     * @param Customer $customer
+     */
+    private function handleProviderQuirks($provider, $customer)
+    {
+        switch ($provider) {
+            case 'Twitter':
+                if ($customer->getData('lastname') === '-') {
+                    $nameParts = explode(' ', $customer->getData('firstname'));
+                    if (count($nameParts) > 1) {
+                        $customer->setData('firstname', $nameParts[0]);
+                        $lastName = implode(' ', array_slice($nameParts, 1));
+                        $customer->setData('lastname', $lastName);
+                    }
+                }
+                break;
+        }
+    }
+
+    /**
      * Loads or creates a customer for a hybridauth profile.
      *
+     * @param string $provider
      * @param Profile $profile
      * @return Customer
      */
-    private function getCustomerForProfile(Profile $profile)
+    private function getCustomerForProfile($provider, Profile $profile)
     {
         /** @var Customer $customer */
         $customer = $this->customerFactory->create();
@@ -165,6 +188,7 @@ class SocialLoginService
         if (!$customer->getId()) {
             $customer->setData('email', $profile->emailVerified);
             $customer->addData($this->getCustomerData($profile));
+            $this->handleProviderQuirks($provider, $customer);
             $this->customerResource->save($customer);
         }
         return $customer;
@@ -193,7 +217,7 @@ class SocialLoginService
         if (!$this->customerSession->isLoggedIn() && $adapter->isConnected()) {
             $profile = $adapter->getUserProfile();
             if ($profile->emailVerified) {
-                $customer = $this->getCustomerForProfile($profile);
+                $customer = $this->getCustomerForProfile($provider, $profile);
                 $this->customerSession->setCustomerAsLoggedIn($customer);
             }
         }

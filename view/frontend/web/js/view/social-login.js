@@ -15,8 +15,6 @@ define(
     ) {
         'use strict';
 
-        console.log(_);
-
         return Component.extend({
             defaults: {
                 template: 'Rubic_CleanCheckout/social-login'
