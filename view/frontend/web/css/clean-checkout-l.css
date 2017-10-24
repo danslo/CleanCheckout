@@ -79,3 +79,8 @@
 .opc-wrapper .shipping-address-item {
     width: 50%;
 }
+
+.opc-wrapper .fieldset > .field.required > label:after {
+    margin-left: 0px;
+    position: inherit;
+}
