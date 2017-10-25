@@ -19,6 +19,7 @@ class CheckoutConfigProvider implements ConfigProviderInterface
     const CONFIG_PATH_NEWSLETTER_ENABLED      = 'clean_checkout/newsletter/enabled';
     const CONFIG_PATH_NEWSLETTER_CHECKED      = 'clean_checkout/newsletter/checked';
     const CONFIG_PATH_NEWSLETTER_LABEL        = 'clean_checkout/newsletter/label';
+    const CONFIG_PATH_STEP_TRANSITION_SPEED   = 'clean_checkout/general/step_transition_speed';
 
     /**
      * @var ScopeConfigInterface
@@ -67,6 +68,7 @@ class CheckoutConfigProvider implements ConfigProviderInterface
             'newsletterUrl'       => $this->url->getUrl('clean_checkout/newsletter/subscribe'),
             'newsletterChecked'   => (bool)$this->scopeConfig->getValue(self::CONFIG_PATH_NEWSLETTER_CHECKED, ScopeInterface::SCOPE_STORE),
             'newsletterLabel'     => $this->scopeConfig->getValue(self::CONFIG_PATH_NEWSLETTER_LABEL, ScopeInterface::SCOPE_STORE),
+            'stepTransitionSpeed' => (int)$this->scopeConfig->getValue(self::CONFIG_PATH_STEP_TRANSITION_SPEED, ScopeInterface::SCOPE_STORE),
             'socialLogin'         => [
                 'enabled'  => (bool)$this->scopeConfig->getValue(SocialLoginService::CONFIG_PATH_SOCIAL_LOGIN_ENABLED, ScopeInterface::SCOPE_STORE),
                 'url'      => $this->url->getUrl('clean_checkout/social/authenticate'),

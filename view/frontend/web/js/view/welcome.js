@@ -10,7 +10,8 @@ define(
         'underscore',
         'Magento_Checkout/js/model/step-navigator',
         'Magento_Customer/js/customer-data',
-        'Magento_Customer/js/model/customer'
+        'Magento_Customer/js/model/customer',
+        'Rubic_CleanCheckout/js/bindings/transitions'
     ],
     function (
         $,

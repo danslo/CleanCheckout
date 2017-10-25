@@ -11,6 +11,7 @@
                 <move_cart_items>1</move_cart_items>
                 <force_luma_checkout>0</force_luma_checkout>
                 <redirect_to_checkout>0</redirect_to_checkout>
+                <step_transition_speed>500</step_transition_speed>
             </general>
             <cleanup>
                 <disable_company>1</disable_company>

@@ -32,6 +32,10 @@
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <comment><![CDATA[Sends the customer to the checkout immediately after adding a product to cart.]]></comment>
                 </field>
+                <field id="step_transition_speed" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Step Transition Speed</label>
+                    <comment><![CDATA[How fast (in milliseconds) checkout steps should fade in.]]></comment>
+                </field>
             </group>
             <group id="cleanup" translate="label" type="text" sortOrder="13" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Cleanup</label>
