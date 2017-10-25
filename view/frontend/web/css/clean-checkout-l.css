@@ -14,6 +14,19 @@
     margin-bottom: 50px;
 }
 
+.opc-progress-bar-item > span:after {
+    height: 40px;
+    width: 40px;
+}
+
+.opc-progress-bar-item {
+    font: normal normal normal 14px/1 FontAwesome;
+}
+
+.opc-progress-bar-item .opc-progress-bar-item-shipping:after {
+    content: '\f0d1';
+}
+
 .opc-wrapper .form-login {
     border-bottom: none;
 }

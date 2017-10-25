@@ -13,6 +13,9 @@ var config = {
             'Magento_Checkout/js/view/shipping': {
                 'Rubic_CleanCheckout/js/mixin/shipping-mixin': true
             },
+            'Magento_Checkout/js/view/progress-bar': {
+                'Rubic_CleanCheckout/js/view/progress-bar-mixin': true
+            },
             'Magento_Checkout/js/view/payment': {
                 'Rubic_CleanCheckout/js/mixin/payment-mixin': true
             },
