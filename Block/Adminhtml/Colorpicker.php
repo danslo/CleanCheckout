@@ -3,7 +3,7 @@
  * Copyright © 2017 Rubic. All rights reserved.
  * See LICENSE.txt for license details.
  */
-namespace Rubic\CleanCheckout\Block;
+namespace Rubic\CleanCheckout\Block\Adminhtml;
 
 use Magento\Config\Block\System\Config\Form\Field;
 use Magento\Framework\Data\Form\Element\AbstractElement;

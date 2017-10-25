@@ -33,11 +33,17 @@
         </referenceBlock>
 
         <referenceContainer name="content">
-            <block class="Rubic\CleanCheckout\Block\BackToStore"
-                   name="clean_checkout_back_to_store"
-                   after="checkout.root"
-                   template="back-to-store.phtml"
-                   ifconfig="clean_checkout/back_to_store/enabled" />
+            <container name="cleancheckout_footer_wrapper" after="checkout.root" htmlTag="div" htmlClass="clean-checkout-footer-wrapper">
+                <block class="Rubic\CleanCheckout\Block\BackToStore"
+                       name="clean_checkout_back_to_store"
+                       template="back-to-store.phtml"
+                       ifconfig="clean_checkout/back_to_store/enabled" />
+
+                <block class="Rubic\CleanCheckout\Block\Footer"
+                       name="clean_checkout_footer"
+                       after="clean_checkout_back_to_store"
+                       template="footer.phtml" />
+            </container>
         </referenceContainer>
 
         <referenceBlock name="checkout.root">

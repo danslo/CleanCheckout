@@ -36,6 +36,11 @@
                     <label>Step Transition Speed</label>
                     <comment><![CDATA[How fast (in milliseconds) checkout steps should fade in.]]></comment>
                 </field>
+                <field id="footer_content" translate="label comment" sortOrder="50" type="editor" showInStore="1" showInDefault="1" >
+                    <label>Footer Content</label>
+                    <frontend_model>Rubic\CleanCheckout\Block\Adminhtml\Editor</frontend_model>
+                    <comment><![CDATA[You can edit this field to add content to the bottom right of your checkout. This is useful for displaying things such as supported payment methods.]]></comment>
+                </field>
             </group>
             <group id="cleanup" translate="label" type="text" sortOrder="13" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Cleanup</label>
@@ -89,15 +94,15 @@
                 <label>Colors</label>
                 <field id="checkout_background" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Checkout Background Color</label>
-                    <frontend_model>Rubic\CleanCheckout\Block\Colorpicker</frontend_model>
+                    <frontend_model>Rubic\CleanCheckout\Block\Adminhtml\Colorpicker</frontend_model>
                 </field>
                 <field id="checkout_border" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Checkout Border Color</label>
-                    <frontend_model>Rubic\CleanCheckout\Block\Colorpicker</frontend_model>
+                    <frontend_model>Rubic\CleanCheckout\Block\Adminhtml\Colorpicker</frontend_model>
                 </field>
                 <field id="body_background" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Body Background Color</label>
-                    <frontend_model>Rubic\CleanCheckout\Block\Colorpicker</frontend_model>
+                    <frontend_model>Rubic\CleanCheckout\Block\Adminhtml\Colorpicker</frontend_model>
                 </field>
             </group>
             <group id="geo_ip" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">

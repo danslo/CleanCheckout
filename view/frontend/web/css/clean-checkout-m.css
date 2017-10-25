@@ -91,9 +91,18 @@
     margin-bottom: 20px;
 }
 
-.back-to-store {
+.clean-checkout-footer {
     padding: 0px 5px;
     margin-bottom: 25px;
+}
+
+.clean-checkout-footer-wrapper > div {
+    display: inline-block;
+    float: left;
+}
+
+.clean-checkout-footer-wrapper .clean-checkout-footer {
+    float: right;
 }
 
 .opc-estimated-wrapper {
