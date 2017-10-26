@@ -61,16 +61,40 @@ class CheckoutConfigProvider implements ConfigProviderInterface
     public function getConfig()
     {
         return [
-            'hideShippingMethods' => (bool)$this->scopeConfig->getValue(self::CONFIG_PATH_HIDE_SHIPPING_METHODS, ScopeInterface::SCOPE_STORE),
-            'hideShippingTitle'   => (bool)$this->scopeConfig->getValue(self::CONFIG_PATH_HIDE_SHIPPING_TITLE, ScopeInterface::SCOPE_STORE),
-            'forceTotalsFullMode' => (bool)$this->scopeConfig->getValue(self::CONFIG_PATH_FORCE_TOTALS_FULL_MODE, ScopeInterface::SCOPE_STORE),
-            'newsletterEnabled'   => (bool)$this->scopeConfig->getValue(self::CONFIG_PATH_NEWSLETTER_ENABLED, ScopeInterface::SCOPE_STORE),
+            'hideShippingMethods' => (bool)$this->scopeConfig->getValue(
+                self::CONFIG_PATH_HIDE_SHIPPING_METHODS,
+                ScopeInterface::SCOPE_STORE
+            ),
+            'hideShippingTitle'   => (bool)$this->scopeConfig->getValue(
+                self::CONFIG_PATH_HIDE_SHIPPING_TITLE,
+                ScopeInterface::SCOPE_STORE
+            ),
+            'forceTotalsFullMode' => (bool)$this->scopeConfig->getValue(
+                self::CONFIG_PATH_FORCE_TOTALS_FULL_MODE,
+                ScopeInterface::SCOPE_STORE
+            ),
+            'newsletterEnabled'   => (bool)$this->scopeConfig->getValue(
+                self::CONFIG_PATH_NEWSLETTER_ENABLED,
+                ScopeInterface::SCOPE_STORE
+            ),
             'newsletterUrl'       => $this->url->getUrl('clean_checkout/newsletter/subscribe'),
-            'newsletterChecked'   => (bool)$this->scopeConfig->getValue(self::CONFIG_PATH_NEWSLETTER_CHECKED, ScopeInterface::SCOPE_STORE),
-            'newsletterLabel'     => $this->scopeConfig->getValue(self::CONFIG_PATH_NEWSLETTER_LABEL, ScopeInterface::SCOPE_STORE),
-            'stepTransitionSpeed' => (int)$this->scopeConfig->getValue(self::CONFIG_PATH_STEP_TRANSITION_SPEED, ScopeInterface::SCOPE_STORE),
+            'newsletterChecked'   => (bool)$this->scopeConfig->getValue(
+                self::CONFIG_PATH_NEWSLETTER_CHECKED,
+                ScopeInterface::SCOPE_STORE
+            ),
+            'newsletterLabel'     => $this->scopeConfig->getValue(
+                self::CONFIG_PATH_NEWSLETTER_LABEL,
+                ScopeInterface::SCOPE_STORE
+            ),
+            'stepTransitionSpeed' => (int)$this->scopeConfig->getValue(
+                self::CONFIG_PATH_STEP_TRANSITION_SPEED,
+                ScopeInterface::SCOPE_STORE
+            ),
             'socialLogin'         => [
-                'enabled'  => (bool)$this->scopeConfig->getValue(SocialLoginService::CONFIG_PATH_SOCIAL_LOGIN_ENABLED, ScopeInterface::SCOPE_STORE),
+                'enabled'  => (bool)$this->scopeConfig->getValue(
+                    SocialLoginService::CONFIG_PATH_SOCIAL_LOGIN_ENABLED,
+                    ScopeInterface::SCOPE_STORE
+                ),
                 'url'      => $this->url->getUrl('clean_checkout/social/authenticate'),
                 'twitter'  => $this->isProviderEnabled('twitter'),
                 'facebook' => $this->isProviderEnabled('facebook'),

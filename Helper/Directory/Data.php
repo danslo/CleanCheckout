@@ -46,7 +46,15 @@ class Data extends \Magento\Directory\Helper\Data
         CurrencyFactory $currencyFactory,
         GeoService $geoService
     ) {
-        parent::__construct($context, $configCacheType, $countryCollection, $regCollectionFactory, $jsonHelper, $storeManager, $currencyFactory);
+        parent::__construct(
+            $context,
+            $configCacheType,
+            $countryCollection,
+            $regCollectionFactory,
+            $jsonHelper,
+            $storeManager,
+            $currencyFactory
+        );
         $this->geoService = $geoService;
     }
 

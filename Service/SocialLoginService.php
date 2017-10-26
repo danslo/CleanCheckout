@@ -10,7 +10,7 @@ use Hybridauth\User\Profile;
 use Magento\Customer\Model\Customer;
 use Magento\Customer\Model\CustomerFactory;
 use Magento\Customer\Model\ResourceModel\Customer as CustomerResource;
-use Magento\Customer\Model\Session as CustomerSession;
+use Magento\Customer\Model\Session\Proxy as CustomerSession;
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\UrlInterface;
 use Magento\Store\Model\ScopeInterface;

@@ -23,6 +23,16 @@ class GeoService
     private $remoteAddress;
 
     /**
+     * @var ModuleDirectory
+     */
+    private $moduleDirectory;
+
+    /**
+     * @var ReaderFactory
+     */
+    private $readerFactory;
+
+    /**
      * @param ModuleDirectory $moduleDirectory
      * @param ReaderFactory $readerFactory
      * @param RemoteAddress $remoteAddress
@@ -32,10 +42,23 @@ class GeoService
         ReaderFactory $readerFactory,
         RemoteAddress $remoteAddress
     ) {
-        $this->reader = $readerFactory->create([
-            'filename' => $moduleDirectory->getDir('Rubic_CleanCheckout') . '/var/GeoLite2-Country.mmdb'
-        ]);
         $this->remoteAddress = $remoteAddress;
+        $this->moduleDirectory = $moduleDirectory;
+        $this->readerFactory = $readerFactory;
+    }
+
+    /**
+     * @return Reader
+     */
+    private function getReader()
+    {
+        if ($this->reader === null) {
+            $this->reader = $this->readerFactory->create([
+                'filename' => $this->moduleDirectory->getDir('Rubic_CleanCheckout') .
+                    '/var/GeoLite2-Country.mmdb'
+            ]);
+        }
+        return $this->reader;
     }
 
     /**
@@ -47,7 +70,7 @@ class GeoService
     {
         try {
             $address = $this->remoteAddress->getRemoteAddress();
-            return $this->reader->country($address)->country->isoCode;
+            return $this->getReader()->country($address)->country->isoCode;
         } catch (\Exception $e) {
             return null;
         }

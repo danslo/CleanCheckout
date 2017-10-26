@@ -63,18 +63,20 @@ class InstallData implements InstallDataInterface
     {
         $setup->startSetup();
 
-        foreach ($this->configSettings as $path => $value) {
-            $this->configResource->saveConfig(
-                $path,
-                $value,
-                ScopeConfigInterface::SCOPE_TYPE_DEFAULT,
-                Store::DEFAULT_STORE_ID
-            );
-        }
+        if (version_compare($context->getVersion(), '1.0.0') < 0) {
+            foreach ($this->configSettings as $path => $value) {
+                $this->configResource->saveConfig(
+                    $path,
+                    $value,
+                    ScopeConfigInterface::SCOPE_TYPE_DEFAULT,
+                    Store::DEFAULT_STORE_ID
+                );
+            }
 
-        $attribute = $this->eavConfig->getAttribute('customer_address', 'street');
-        $attribute->setData('multiline_count', 1);
-        $this->customerAttributeResource->save($attribute);
+            $attribute = $this->eavConfig->getAttribute('customer_address', 'street');
+            $attribute->setData('multiline_count', 1);
+            $this->customerAttributeResource->save($attribute);
+        }
 
         $setup->endSetup();
     }
