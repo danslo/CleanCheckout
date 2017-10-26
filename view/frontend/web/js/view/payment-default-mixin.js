@@ -30,7 +30,7 @@ define([
                             url: window.checkoutConfig.newsletterUrl,
                             data: {'email': this.getEmail()},
                             async: false
-                        }).always(function() {
+                        }).always(function () {
                             fullScreenLoader.stopLoader();
                         });
                     }

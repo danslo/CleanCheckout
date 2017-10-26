@@ -5,7 +5,8 @@
 define(
     [
         'Magento_Checkout/js/model/quote'
-    ], function (quote) {
+    ],
+    function (quote) {
         'use strict';
 
         /**

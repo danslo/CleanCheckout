@@ -7,7 +7,8 @@ define(
         'ko',
         'Magento_Checkout/js/model/quote',
         'Magento_Customer/js/model/customer'
-    ], function (ko, quote, customer) {
+    ],
+    function (ko, quote, customer) {
         'use strict';
 
         /**

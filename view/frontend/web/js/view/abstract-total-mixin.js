@@ -5,7 +5,8 @@
 define(
     [
         'Magento_Checkout/js/model/step-navigator'
-    ], function (stepNavigator) {
+    ],
+    function (stepNavigator) {
         'use strict';
 
         /**

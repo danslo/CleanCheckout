@@ -28,7 +28,7 @@ define([
 
             visible: ko.observable(customer.isLoggedIn() && !quote.isVirtual()),
 
-            shouldHideShipping: function() {
+            shouldHideShipping: function () {
                 return window.checkoutConfig.hideShippingMethods && this.rates().length === 1;
             },
 
@@ -76,7 +76,7 @@ define([
 
                     //Copy form data to quote shipping address object
                     for (field in addressData) {
-                        if (addressData.hasOwnProperty(field) &&  //eslint-disable-line max-depth
+                        if (addressData.hasOwnProperty(field) && //eslint-disable-line max-depth
                             shippingAddress.hasOwnProperty(field) &&
                             typeof addressData[field] != 'function' &&
                             _.isEqual(shippingAddress[field], addressData[field])
