@@ -14,7 +14,7 @@ define([
      */
     return function (target) {
         target.navigateTo = function (code, scrollToElementId) {
-            if (customer.isLoggedIn() && code === 'welcome-step') {
+            if (customer.isLoggedIn() && code === 'welcome') {
                 return;
             }
             var sortedItems = target.steps.sort(this.sortItems);

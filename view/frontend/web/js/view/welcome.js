@@ -39,7 +39,7 @@ define(
              */
             initialize: function () {
                 this._super();
-                stepNavigator.registerStep('welcome-step', null, 'Welcome', this.isVisible, _.bind(this.navigate, this), 5);
+                stepNavigator.registerStep('welcome', null, 'Welcome', this.isVisible, _.bind(this.navigate, this), 5);
                 return this;
             },
 

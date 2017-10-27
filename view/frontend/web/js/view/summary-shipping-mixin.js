@@ -15,12 +15,7 @@ define(
         return function (target) {
             return target.extend({
                 getShippingMethodTitle: function () {
-                    if (window.checkoutConfig.hideShippingTitle || !this.isCalculated()) {
-                        return '';
-                    }
-                    var shippingMethod = quote.shippingMethod();
-
-                    return shippingMethod ? shippingMethod['carrier_title'] + ' - ' + shippingMethod['method_title'] : '';
+                    return window.checkoutConfig.hideShippingTitle ? '' : this._super();
                 }
             });
         };
