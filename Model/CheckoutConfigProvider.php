@@ -20,6 +20,8 @@ class CheckoutConfigProvider implements ConfigProviderInterface
     const CONFIG_PATH_NEWSLETTER_CHECKED      = 'clean_checkout/newsletter/checked';
     const CONFIG_PATH_NEWSLETTER_LABEL        = 'clean_checkout/newsletter/label';
     const CONFIG_PATH_STEP_TRANSITION_SPEED   = 'clean_checkout/general/step_transition_speed';
+    const CONFIG_PATH_AUTO_COMPLETE_ENABLED   = 'clean_checkout/auto_complete/enabled';
+    const CONFIG_PATH_AUTO_COMPLETE_API_KEY   = 'clean_checkout/auto_complete/api_key';
 
     /**
      * @var ScopeConfigInterface
@@ -65,7 +67,7 @@ class CheckoutConfigProvider implements ConfigProviderInterface
                 self::CONFIG_PATH_HIDE_SHIPPING_METHODS,
                 ScopeInterface::SCOPE_STORE
             ),
-            'hideShippingTitle'   => (bool)$this->scopeConfig->getValue(
+            'hideShippingTitle' => (bool)$this->scopeConfig->getValue(
                 self::CONFIG_PATH_HIDE_SHIPPING_TITLE,
                 ScopeInterface::SCOPE_STORE
             ),
@@ -73,16 +75,16 @@ class CheckoutConfigProvider implements ConfigProviderInterface
                 self::CONFIG_PATH_FORCE_TOTALS_FULL_MODE,
                 ScopeInterface::SCOPE_STORE
             ),
-            'newsletterEnabled'   => (bool)$this->scopeConfig->getValue(
+            'newsletterEnabled' => (bool)$this->scopeConfig->getValue(
                 self::CONFIG_PATH_NEWSLETTER_ENABLED,
                 ScopeInterface::SCOPE_STORE
             ),
-            'newsletterUrl'       => $this->url->getUrl('clean_checkout/newsletter/subscribe'),
-            'newsletterChecked'   => (bool)$this->scopeConfig->getValue(
+            'newsletterUrl' => $this->url->getUrl('clean_checkout/newsletter/subscribe'),
+            'newsletterChecked' => (bool)$this->scopeConfig->getValue(
                 self::CONFIG_PATH_NEWSLETTER_CHECKED,
                 ScopeInterface::SCOPE_STORE
             ),
-            'newsletterLabel'     => $this->scopeConfig->getValue(
+            'newsletterLabel' => $this->scopeConfig->getValue(
                 self::CONFIG_PATH_NEWSLETTER_LABEL,
                 ScopeInterface::SCOPE_STORE
             ),
@@ -90,15 +92,25 @@ class CheckoutConfigProvider implements ConfigProviderInterface
                 self::CONFIG_PATH_STEP_TRANSITION_SPEED,
                 ScopeInterface::SCOPE_STORE
             ),
-            'socialLogin'         => [
-                'enabled'  => (bool)$this->scopeConfig->getValue(
+            'socialLogin' => [
+                'enabled' => (bool)$this->scopeConfig->getValue(
                     SocialLoginService::CONFIG_PATH_SOCIAL_LOGIN_ENABLED,
                     ScopeInterface::SCOPE_STORE
                 ),
-                'url'      => $this->url->getUrl('clean_checkout/social/authenticate'),
-                'twitter'  => $this->isProviderEnabled('twitter'),
+                'url' => $this->url->getUrl('clean_checkout/social/authenticate'),
+                'twitter' => $this->isProviderEnabled('twitter'),
                 'facebook' => $this->isProviderEnabled('facebook'),
-                'google'   => $this->isProviderEnabled('google')
+                'google' => $this->isProviderEnabled('google')
+            ],
+            'autoComplete' => [
+                'enabled' => (bool)$this->scopeConfig->getValue(
+                    self::CONFIG_PATH_AUTO_COMPLETE_ENABLED,
+                    ScopeInterface::SCOPE_STORE
+                ),
+                'apiKey' => $this->scopeConfig->getValue(
+                    self::CONFIG_PATH_AUTO_COMPLETE_API_KEY,
+                    ScopeInterface::SCOPE_STORE
+                )
             ]
         ];
     }

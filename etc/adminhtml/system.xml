@@ -211,6 +211,20 @@
                     </depends>
                 </field>
             </group>
+            <group id="auto_complete" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Address Autocomplete</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="api_key" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Google Maps API Key</label>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                    <comment><![CDATA[Find your API Key here: https://developers.google.com/maps/documentation/javascript/get-api-key]]></comment>
+                </field>
+            </group>
         </section>
     </system>
 </config>

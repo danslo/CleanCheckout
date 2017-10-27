@@ -3,8 +3,13 @@
  * See LICENSE.txt for license details.
  */
 var config = {
-    'config': {
-        'mixins': {
+    map: {
+        '*': {
+            async: 'Rubic_CleanCheckout/js/async'
+        }
+    },
+    config: {
+        mixins: {
             'Magento_Checkout/js/view/shipping': {
                 'Rubic_CleanCheckout/js/view/shipping-mixin': true
             },

@@ -96,6 +96,13 @@
                                                                 <item name="componentDisabled" xsi:type="boolean">true</item>
                                                             </item>
                                                         </item>
+                                                        <item name="before-form" xsi:type="array">
+                                                            <item name="children" xsi:type="array">
+                                                                <item name="autocomplete" xsi:type="array">
+                                                                    <item name="component" xsi:type="string">Rubic_CleanCheckout/js/view/autocomplete</item>
+                                                                </item>
+                                                            </item>
+                                                        </item>
                                                     </item>
                                                 </item>
                                             </item>

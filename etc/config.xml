@@ -46,6 +46,9 @@
             <social_login>
                 <enabled>0</enabled>
             </social_login>
+            <auto_complete>
+                <enabled>0</enabled>
+            </auto_complete>
         </clean_checkout>
     </default>
 </config>
