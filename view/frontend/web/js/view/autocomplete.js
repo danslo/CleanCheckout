@@ -35,29 +35,31 @@ if (window.checkoutConfig.autoComplete.enabled) {
 
                 findComponentValue: function (place, type) {
                     for (var i = 0; i < place.address_components.length; i++) {
-                        var addressType = place.address_components[i].types[0];
-                        if (addressType === type) {
-                            return place.address_components[i].short_name;
+                        for (var j = 0; j < place.address_components[i].types.length; j++) {
+                            var addressType = place.address_components[i].types[j];
+                            if (addressType === type) {
+                                return place.address_components[i].short_name;
+                            }
                         }
+
                     }
                     return null;
                 },
 
                 fillAddressFields: function () {
                     var place = this.autocomplete.getPlace();
-
+                    if (typeof place === 'undefined') {
+                        return;
+                    }
                     for (var key in this.fields) {
                         if (this.fields.hasOwnProperty(key)) {
                             var field = $(this.fields[key]);
                             var value = this.findComponentValue(place, key);
-
-                            if (field.length) {
-                                if (value !== null) {
+                            if (value !== null) {
+                                if (field.length) {
                                     field.val(value).change();
-                                }
-                            } else if (key === 'street_number') {
-                                // Couldn't find second address field, just append it to the address.
-                                if (value !== null) {
+                                } else if (key === 'street_number') {
+                                    // Couldn't find second address field, just append it to the address.
                                     $(this.fields.route).val($(this.fields.route).val() + ' ' + value).change();
                                 }
                             }
