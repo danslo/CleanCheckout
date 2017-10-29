@@ -79,7 +79,7 @@ class ModifyCheckoutLayoutPlugin
     }
 
     /**
-     * Disables specific input fields in shipping address fieldset.
+     * Disables / reorders specific input fields in shipping address fieldset.
      *
      * @param $jsLayout
      * @return array
@@ -106,7 +106,7 @@ class ModifyCheckoutLayoutPlugin
     }
 
     /**
-     * Disables specific input fields in billing address fieldset.
+     * Disables / reorders specific input fields in billing address fieldset.
      *
      * @param $jsLayout
      * @return array
@@ -121,7 +121,7 @@ class ModifyCheckoutLayoutPlugin
 
                 foreach ($billingFields as $fieldName => $billingField) {
                     if (isset($fieldOrder[$fieldName])) {
-                        $billingField[$fieldName]['sortOrder'] = $fieldOrder[$fieldName];
+                        $billingFields[$fieldName]['sortOrder'] = $fieldOrder[$fieldName];
                     }
                 }
 
