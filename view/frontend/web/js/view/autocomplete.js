@@ -18,7 +18,7 @@ define(
 
             fields: {
                 postal_code: { short_name: "input[name='postcode']" },
-                locality:    { short_name: "input[name='city']" },
+                locality:    { long_name:  "input[name='city']" },
                 postal_town: { short_name: "input[name='city']" },
                 country:     { short_name: "select[name='country_id']" },
                 administrative_area_level_1: { long_name: "input[name='region']:visible" }
