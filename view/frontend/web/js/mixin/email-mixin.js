@@ -13,7 +13,7 @@ define([], function () {
     return function (target) {
         target.template = 'Rubic_CleanCheckout/form/element/email';
         return target.extend({
-            initialize: function() {
+            initialize: function () {
                 this.checkDelay = 500;
                 return this._super();
             }
