@@ -9,6 +9,7 @@
             <general>
                 <force_totals_full_mode>1</force_totals_full_mode>
                 <move_cart_items>1</move_cart_items>
+                <always_show_cart_items>0</always_show_cart_items>
                 <force_luma_checkout>0</force_luma_checkout>
                 <redirect_to_checkout>0</redirect_to_checkout>
                 <step_transition_speed>500</step_transition_speed>

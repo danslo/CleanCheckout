@@ -13,7 +13,7 @@ define([], function () {
     return function (target) {
         return target.extend({
             isItemsBlockExpanded: function () {
-                return true;
+                return window.checkoutConfig.alwaysShowCartItems ? true : this._super();
             }
         });
     };

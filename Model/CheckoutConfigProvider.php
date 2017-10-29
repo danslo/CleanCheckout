@@ -20,6 +20,7 @@ class CheckoutConfigProvider implements ConfigProviderInterface
     const CONFIG_PATH_NEWSLETTER_ENABLED      = 'clean_checkout/newsletter/enabled';
     const CONFIG_PATH_NEWSLETTER_CHECKED      = 'clean_checkout/newsletter/checked';
     const CONFIG_PATH_NEWSLETTER_LABEL        = 'clean_checkout/newsletter/label';
+    const CONFIG_PATH_ALWAYS_SHOW_CART_ITEMS  = 'clean_checkout/general/always_show_cart_items';
     const CONFIG_PATH_STEP_TRANSITION_SPEED   = 'clean_checkout/general/step_transition_speed';
     const CONFIG_PATH_AUTO_COMPLETE_ENABLED   = 'clean_checkout/auto_complete/enabled';
     const CONFIG_PATH_AUTO_COMPLETE_API_KEY   = 'clean_checkout/auto_complete/api_key';
@@ -91,6 +92,10 @@ class CheckoutConfigProvider implements ConfigProviderInterface
             ),
             'newsletterLabel' => $this->scopeConfig->getValue(
                 self::CONFIG_PATH_NEWSLETTER_LABEL,
+                ScopeInterface::SCOPE_STORE
+            ),
+            'alwaysShowCartItems' => (bool)$this->scopeConfig->getValue(
+                self::CONFIG_PATH_ALWAYS_SHOW_CART_ITEMS,
                 ScopeInterface::SCOPE_STORE
             ),
             'stepTransitionSpeed' => (int)$this->scopeConfig->getValue(

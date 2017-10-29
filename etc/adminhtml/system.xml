@@ -22,6 +22,11 @@
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <comment><![CDATA[This moves the location of the cart items in the checkout summary sidebar to be above the totals.]]></comment>
                 </field>
+                <field id="always_show_cart_items" translate="label" type="select" sortOrder="25" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Always Show Cart Items</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[By default, the item block in the sidebar isn't expanded until shipping step has been processed. Use this option to always show items.]]></comment>
+                </field>
                 <field id="force_luma_checkout" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Force Luma Checkout</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
