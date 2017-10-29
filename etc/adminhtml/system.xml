@@ -79,15 +79,19 @@
             </group>
             <group id="shipping" translate="label" type="text" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Shipping</label>
-                <field id="hide_shipping_methods" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                <field id="hide_shipping_methods" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Hide Shipping Methods</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <comment><![CDATA[Shipping methods are not shown when there is only a single available rate.]]></comment>
                 </field>
-                <field id="hide_shipping_title" translate="label" type="select" sortOrder="65" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                <field id="hide_shipping_title" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Hide Shipping Method Title</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <comment><![CDATA[Shipping method title is not shown in the summary sidebar. Note that it will still display a price for shipping.]]></comment>
+                </field>
+                <field id="shipping_validate_delay" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Shipping Validate Delay</label>
+                    <comment><![CDATA[How fast (in milliseconds) to validate entered shipping information and request shipping rates. Magento 2 default is 2000 (2 seconds).]]></comment>
                 </field>
             </group>
             <group id="colors" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">

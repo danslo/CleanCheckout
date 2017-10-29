@@ -30,6 +30,9 @@ var config = {
             },
             'Magento_Checkout/js/model/step-navigator': {
                 'Rubic_CleanCheckout/js/model/navigator-mixin': true
+            },
+            'Magento_Checkout/js/model/shipping-rates-validator': {
+                'Rubic_CleanCheckout/js/model/shipping-rates-validator-mixin': true
             }
         }
     }

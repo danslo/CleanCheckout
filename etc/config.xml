@@ -25,6 +25,7 @@
             <shipping>
                 <hide_shipping_methods>1</hide_shipping_methods>
                 <hide_shipping_title>1</hide_shipping_title>
+                <shipping_validate_delay>500</shipping_validate_delay>
             </shipping>
             <colors>
                 <body_background>transparent</body_background>

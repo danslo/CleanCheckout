@@ -15,6 +15,7 @@ class CheckoutConfigProvider implements ConfigProviderInterface
 {
     const CONFIG_PATH_HIDE_SHIPPING_METHODS   = 'clean_checkout/shipping/hide_shipping_methods';
     const CONFIG_PATH_HIDE_SHIPPING_TITLE     = 'clean_checkout/shipping/hide_shipping_title';
+    const CONFIG_PATH_SHIPPING_VALIDATE_DELAY = 'clean_checkout/shipping/shipping_validate_delay';
     const CONFIG_PATH_FORCE_TOTALS_FULL_MODE  = 'clean_checkout/general/force_totals_full_mode';
     const CONFIG_PATH_NEWSLETTER_ENABLED      = 'clean_checkout/newsletter/enabled';
     const CONFIG_PATH_NEWSLETTER_CHECKED      = 'clean_checkout/newsletter/checked';
@@ -69,6 +70,10 @@ class CheckoutConfigProvider implements ConfigProviderInterface
             ),
             'hideShippingTitle' => (bool)$this->scopeConfig->getValue(
                 self::CONFIG_PATH_HIDE_SHIPPING_TITLE,
+                ScopeInterface::SCOPE_STORE
+            ),
+            'shippingValidateDelay' => $this->scopeConfig->getValue(
+                self::CONFIG_PATH_SHIPPING_VALIDATE_DELAY,
                 ScopeInterface::SCOPE_STORE
             ),
             'forceTotalsFullMode' => (bool)$this->scopeConfig->getValue(
