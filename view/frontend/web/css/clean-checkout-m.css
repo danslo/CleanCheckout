@@ -83,8 +83,13 @@
 }
 
 .newsletter-subscribe label {
-    float: right;
-    width: 95%;
+    float: left;
+    width: 90%;
+}
+
+.newsletter-subscribe input[type="checkbox"] {
+    margin: 4px 8px 0px 0px;
+    float: left;
 }
 
 .billing-address-form {
