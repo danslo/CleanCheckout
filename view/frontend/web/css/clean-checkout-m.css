@@ -162,3 +162,7 @@
 .social-login i {
     margin-right: 5px;
 }
+
+.checkout-payment-method .payment-methods {
+    margin: 0px;
+}
