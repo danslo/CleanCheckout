@@ -79,7 +79,7 @@ define(
                                     } else if (type === 'administrative_area_level_1') {
                                         // Couldn't find visible region input, dealing with a dropdown.
                                         var regionSelector = "select[name='region_id'] option";
-                                        $(regionSelector).filter(function () {
+                                        form.find(regionSelector).filter(function () {
                                             return $(this).text() === value;
                                         }).prop('selected', true).change();
                                     }
