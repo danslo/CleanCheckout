@@ -52,8 +52,12 @@
     line-height: 2.2rem;
     padding: 14px 17px;
     font-size: 1.8rem;
+    margin: 0px;
 }
 
+#welcome .actions-toolbar div.primary {
+    padding: 0px;
+}
 
 .opc-wrapper .step-title {
     border-bottom: none;
@@ -165,4 +169,29 @@
 
 .checkout-payment-method .payment-methods {
     margin: 0px;
+}
+
+.form-next-step {
+    margin-top: 20px;
+}
+
+.form-login .hidden-fields > .field {
+    width: calc(100% - 75px);
+    margin: 0px;
+    float: left;
+}
+
+.form-login .hidden-fields .actions-toolbar {
+    float: right;
+    width: 70px;
+    margin-top: 28px;
+}
+
+.form-login .hidden-fields .secondary {
+    clear: both;
+    padding-top: 10px;
+}
+
+.form-login .hidden-fields .actions-toolbar button.login {
+    margin-right: 0px;
 }
