@@ -79,3 +79,8 @@
 .opc-wrapper .shipping-address-item {
     width: 50%;
 }
+
+.opc-wrapper .form-shipping-address {
+    margin-top: 28px;
+    margin-bottom: 28px;
+}
