@@ -12,7 +12,7 @@ define(
         'use strict';
 
         return Component.extend({
-            autocomplete: null,
+            autocomplete: [],
 
             streetFieldSelector: "input[name='street[0]']",
 
@@ -31,9 +31,12 @@ define(
                         requirejs,
                         function () {
                             $(document).on('keypress', this.streetFieldSelector, function (e) {
-                                if (this.autocomplete === null) {
-                                    this.autocomplete = new google.maps.places.Autocomplete(e.target, {types: ['geocode']});
-                                    this.autocomplete.addListener('place_changed', this.fillAddressFields.bind(this));
+                                if (typeof this.autocomplete[e.target.id] === 'undefined') {
+                                    var autocomplete = new google.maps.places.Autocomplete(e.target, {types: ['geocode']});
+                                    autocomplete.addListener('place_changed', this.fillAddressFields);
+                                    autocomplete.e = e.target;
+                                    autocomplete.c = this;
+                                    this.autocomplete[e.target.id] = autocomplete;
                                 }
                             }.bind(this));
                         }.bind(this),
@@ -57,19 +60,20 @@ define(
             },
 
             fillAddressFields: function () {
-                var place = this.autocomplete.getPlace();
+                var place = this.getPlace();
                 if (typeof place === 'undefined') {
                     return;
                 }
 
-                $(this.streetFieldSelector).val(place.name).change();
-                for (var type in this.fields) {
-                    if (this.fields.hasOwnProperty(type)) {
-                        for (var subtype in this.fields[type]) {
-                            if (this.fields[type].hasOwnProperty(subtype)) {
-                                var selector = this.fields[type][subtype];
-                                var field = $(selector);
-                                var value = this.findComponentValue(place, type, subtype);
+                $(this.e).val(place.name).change();
+                for (var type in this.c.fields) {
+                    if (this.c.fields.hasOwnProperty(type)) {
+                        for (var subtype in this.c.fields[type]) {
+                            if (this.c.fields[type].hasOwnProperty(subtype)) {
+                                var selector = this.c.fields[type][subtype];
+                                var form = $(this.e).closest('form');
+                                var field = form.find(selector);
+                                var value = this.c.findComponentValue(place, type, subtype);
                                 if (value !== null) {
                                     if (field.length) {
                                         field.val(value).change();
