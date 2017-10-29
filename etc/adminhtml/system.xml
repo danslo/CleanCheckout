@@ -225,6 +225,42 @@
                     <comment><![CDATA[Find your API Key here: https://developers.google.com/maps/documentation/javascript/get-api-key]]></comment>
                 </field>
             </group>
+            <group id="field_order" translate="label" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Field Order</label>
+                <field id="firstname" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>First Name</label>
+                </field>
+                <field id="middlename" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Middle Name</label>
+                </field>
+                <field id="lastname" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Last Name</label>
+                </field>
+                <field id="company" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Company</label>
+                </field>
+                <field id="street" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Street</label>
+                </field>
+                <field id="city" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>City</label>
+                </field>
+                <field id="region_id" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Region</label>
+                </field>
+                <field id="postcode" translate="label" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Postal Code</label>
+                </field>
+                <field id="country_id" translate="label" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Country</label>
+                </field>
+                <field id="telephone" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Telephone</label>
+                </field>
+                <field id="vat_id" translate="label" type="text" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>VAT ID</label>
+                </field>
+            </group>
         </section>
     </system>
 </config>

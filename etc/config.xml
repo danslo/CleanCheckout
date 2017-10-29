@@ -49,6 +49,19 @@
             <auto_complete>
                 <enabled>0</enabled>
             </auto_complete>
+            <field_order>
+                <firstname>20</firstname>
+                <middlename>30</middlename>
+                <lastname>40</lastname>
+                <company>60</company>
+                <street>70</street>
+                <city>80</city>
+                <region_id>100</region_id>
+                <postcode>110</postcode>
+                <country_id>115</country_id>
+                <telephone>120</telephone>
+                <vat_id>140</vat_id>
+            </field_order>
         </clean_checkout>
     </default>
 </config>
