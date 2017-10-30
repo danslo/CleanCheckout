@@ -37,16 +37,19 @@
     font: normal normal normal 20px/1 FontAwesome;
 }
 
-.opc-progress-bar-item .opc-progress-bar-item-shipping:after {
+.opc-progress-bar-item > span.opc-progress-bar-item-welcome:after {
+    content: "\f007";
+}
+
+.opc-progress-bar-item > span.opc-progress-bar-item-shipping:after {
     content: "\f0d1";
 }
 
-.opc-progress-bar-item .opc-progress-bar-item-payment:after {
+.opc-progress-bar-item > span.opc-progress-bar-item-payment:after {
     content: "\f09d";
 }
 
-.opc-progress-bar-item._complete > span:after,
-.opc-progress-bar-item._active > span:after {
+.opc-progress-bar-item._complete > span:after {
     content: "\f00c";
 }
 
