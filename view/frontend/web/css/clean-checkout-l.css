@@ -17,13 +17,13 @@
 .opc-progress-bar-item > span:before {
     height: 46px;
     width: 46px;
-    margin-left: -24px;
+    margin-left: -22px;
 }
 
 .opc-progress-bar-item > span:after {
     height: 28px;
     width: 34px;
-    margin-left: -18px;
+    margin-left: -16px;
     padding-top: 6px;
 }
 
