@@ -17,13 +17,13 @@
 .opc-progress-bar-item > span:before {
     height: 46px;
     width: 46px;
-    margin-left: -26px;
+    margin-left: -24px;
 }
 
 .opc-progress-bar-item > span:after {
     height: 28px;
     width: 34px;
-    margin-left: -20px;
+    margin-left: -18px;
     padding-top: 6px;
 }
 
@@ -76,9 +76,10 @@
 }
 
 #checkout {
-    margin-top: 40px;
+    margin-top: 50px;
     padding: 50px;
     padding-bottom: 0px;
+    padding-top: 40px;
     clear: both;
     margin-bottom: 40px;
 }
