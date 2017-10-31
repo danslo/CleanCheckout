@@ -37,6 +37,10 @@
     margin-bottom: 0px;
 }
 
+.opc-wrapper .loading-mask {
+    background-color: transparent;
+}
+
 .checkout-shipping-method {
     padding-top: 10px;
 }
