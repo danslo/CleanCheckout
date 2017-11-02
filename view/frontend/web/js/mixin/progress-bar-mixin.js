@@ -5,13 +5,11 @@
 define([], function () {
     'use strict';
 
+    /**
+     * Override progress bar template so we can style the step icons.
+     */
     return function (target) {
         return target.extend({
-            /**
-             * Override progress bar template so we can style the step icons.
-             *
-             * @returns {initialize}
-             */
             defaults: {
                 template: 'Rubic_CleanCheckout/progress-bar',
                 visible: true

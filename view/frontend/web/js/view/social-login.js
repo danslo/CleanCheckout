@@ -5,13 +5,11 @@
 define(
     [
         'ko',
-        'uiComponent',
-        'underscore'
+        'uiComponent'
     ],
     function (
         ko,
-        Component,
-        _
+        Component
     ) {
         'use strict';
 

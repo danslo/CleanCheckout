@@ -12,7 +12,7 @@ define(
         'use strict';
 
         /**
-         * Disable visibility on shipping/billing, since they're no longer the first step.
+         * Disable visibility on billing, since it's no longer the first step.
          */
         return function (target) {
             return target.extend({

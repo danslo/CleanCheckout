@@ -6,9 +6,8 @@ define([], function () {
     'use strict';
 
     /**
-     * We do two things here:
      * - Set our own email (login) template.
-     * - Reduce the check delay down from the ridiculous 2 seconds.
+     * - Reduce the check delay down from 2 seconds.
      */
     return function (target) {
         target.template = 'Rubic_CleanCheckout/form/element/email';

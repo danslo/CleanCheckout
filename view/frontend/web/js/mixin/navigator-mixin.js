@@ -9,8 +9,8 @@ define([
     'use strict';
 
     /**
-     * Disallow going back to Welcome step when we're logged in.
-     * Stop jerky animations between steps by removing body animations.
+     * - Disallow going back to Welcome step when we're logged in.
+     * - Stop jerky animations between steps by removing body animations.
      */
     return function (target) {
         target.navigateTo = function (code, scrollToElementId) {
@@ -24,11 +24,7 @@ define([
 
             window.location = window.checkoutConfig.checkoutUrl + '#' + code;
             sortedItems.forEach(function (element) {
-                if (element.code === code) {
-                    element.isVisible(true);
-                } else {
-                    element.isVisible(false);
-                }
+                element.isVisible(element.code === code);
             });
         };
         return target;

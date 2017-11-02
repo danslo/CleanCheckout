@@ -10,9 +10,6 @@ define([
 
     /**
      * Hide an element immediately and fade in with a configurable value.
-     *
-     * @param element
-     * @param valueAccessor
      */
     ko.bindingHandlers.fadeVisible.update = function (element, valueAccessor) {
         var value = valueAccessor();

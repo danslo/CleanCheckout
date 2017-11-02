@@ -16,8 +16,6 @@ define([
         return target.extend({
             /**
              * Override shipping template so we can hide rates when there's only 1 available.
-             *
-             * @returns {initialize}
              */
             defaults: {
                 template: 'Rubic_CleanCheckout/shipping',
@@ -26,6 +24,9 @@ define([
                 shippingMethodItemTemplate: 'Rubic_CleanCheckout/shipping-address/shipping-method-item'
             },
 
+            /**
+             * Disable visibility on shipping, since it's no longer the first step.
+             */
             visible: ko.observable(customer.isLoggedIn() && !quote.isVirtual()),
 
             shouldHideShipping: function () {
@@ -33,7 +34,7 @@ define([
             },
 
             /**
-             * Oddly, these steps don't set itself to visible on refresh.
+             * These steps don't set itself to visible on refresh.
              */
             navigate: function () {
                 this.visible(true);

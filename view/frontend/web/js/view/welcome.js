@@ -33,21 +33,12 @@ define(
 
             isVisible: ko.observable(!customer.isLoggedIn()),
 
-            /**
-             *
-             * @returns {*}
-             */
             initialize: function () {
                 this._super();
                 stepNavigator.registerStep('welcome', null, 'Welcome', this.isVisible, _.bind(this.navigate, this), 5);
                 return this;
             },
 
-            /**
-             * The navigate() method is responsible for navigation between checkout step
-             * during checkout. You can add custom logic, for example some conditions
-             * for switching to your custom step
-             */
             navigate: function () {
                 if (customer.isLoggedIn()) {
                     this.navigateToNextStep();
@@ -64,9 +55,6 @@ define(
                 return emailValidationResult;
             },
 
-            /**
-             * @returns void
-             */
             navigateToNextStep: function () {
                 if (this.validateEmail()) {
                     stepNavigator.next();
