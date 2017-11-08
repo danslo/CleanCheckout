@@ -47,7 +47,6 @@
                            name="password"
                            id="customer-password"
                            data-validate="{required:true}" autocomplete="off"/>
-                    <span class="note" data-bind="i18n: 'You already have an account with us. Sign in or continue as guest.'"></span>
                 </div>
 
             </div>
@@ -57,13 +56,14 @@
             <div class="actions-toolbar">
                 <input name="context" type="hidden" value="checkout" />
                 <div class="primary">
-                    <button type="submit" class="action login primary" data-action="checkout-method-login"><span data-bind="i18n: 'Login'"></span></button>
+                    <button type="submit" class="action login" data-action="checkout-method-login"><span data-bind="i18n: 'Login'"></span></button>
                 </div>
-                <div class="secondary">
-                    <a class="action remind" data-bind="attr: { href: forgotPasswordUrl }">
-                        <span data-bind="i18n: 'Forgot Your Password?'"></span>
-                    </a>
-                </div>
+            </div>
+            <div class="secondary">
+                <span class="note" data-bind="i18n: 'You already have an account with us. Sign in or continue as guest.'"></span><br>
+                <a class="action remind" data-bind="attr: { href: forgotPasswordUrl }">
+                    <span data-bind="i18n: 'Forgot Your Password?'"></span>
+                </a>
             </div>
         </fieldset>
         <!--Hidden fields -->
