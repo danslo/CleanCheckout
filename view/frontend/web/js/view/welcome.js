@@ -11,6 +11,7 @@ define(
         'Magento_Checkout/js/model/step-navigator',
         'Magento_Customer/js/customer-data',
         'Magento_Customer/js/model/customer',
+        'mage/translate',
         'Rubic_CleanCheckout/js/bindings/transitions'
     ],
     function (
@@ -20,7 +21,8 @@ define(
         _,
         stepNavigator,
         customerData,
-        customer
+        customer,
+        $t
     ) {
         'use strict';
 
@@ -35,7 +37,7 @@ define(
 
             initialize: function () {
                 this._super();
-                stepNavigator.registerStep('welcome', null, 'Welcome', this.isVisible, _.bind(this.navigate, this), 5);
+                stepNavigator.registerStep('welcome', null, $t('Welcome'), this.isVisible, _.bind(this.navigate, this), 5);
                 return this;
             },
 
