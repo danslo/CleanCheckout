@@ -6,6 +6,7 @@
 namespace Rubic\CleanCheckout\Plugin;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
+use Magento\Framework\App\Request\Http;
 use Magento\Framework\App\RequestInterface;
 use Magento\Framework\View\Design\Theme\ThemeProviderInterface;
 use Magento\Store\Model\ScopeInterface;
@@ -21,7 +22,7 @@ class ForceLumaCheckoutPlugin
     private $themeProvider;
 
     /**
-     * @var RequestInterface
+     * @var Http
      */
     private $request;
 
@@ -65,7 +66,9 @@ class ForceLumaCheckoutPlugin
     public function aroundGetConfigurationDesignTheme(Design $subject, callable $proceed, ...$args)
     {
         $forceLuma = $this->scopeConfig->getValue(self::CONFIG_PATH_FORCE_LUMA_CHECKOUT, ScopeInterface::SCOPE_STORE);
-        if ($forceLuma && $this->request->getModuleName() === 'checkout') {
+        if ($forceLuma &&
+            $this->request->getModuleName() === 'checkout' &&
+            $this->request->getControllerName() === 'index') {
             return $this->getLumaThemeId();
         }
         return $proceed(...$args);
