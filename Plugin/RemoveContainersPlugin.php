@@ -20,9 +20,9 @@ class RemoveContainersPlugin
      * @var array
      */
     const DISABLE_ELEMENTS = [
-        'header'    => 'header.container',
-        'footer'    => 'footer-container',
-        'copyright' => 'copyright'
+        'header'    => ['header.container', 'checkout.header.container'],
+        'footer'    => ['footer-container'],
+        'copyright' => ['copyright']
     ];
 
     /**
@@ -59,10 +59,12 @@ class RemoveContainersPlugin
     {
         if ($this->httpRequest->getFullActionName() === 'checkout_index_index') {
             $layout = $subject->getLayout();
-            foreach (self::DISABLE_ELEMENTS as $type => $element) {
+            foreach (self::DISABLE_ELEMENTS as $type => $elements) {
                 $configPath = sprintf(self::CONFIG_DISABLE_PATH, $type);
                 if ($this->scopeConfig->getValue($configPath, ScopeInterface::SCOPE_STORE)) {
-                    $layout->unsetElement($element);
+                    foreach ($elements as $element) {
+                        $layout->unsetElement($element);
+                    }
                 }
             }
         }
