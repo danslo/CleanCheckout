@@ -1,0 +1,40 @@
+# Clean Checkout for Magento 2
+
+A drop-in replacement for the Magento 2 checkout.
+
+## Features
+
+- Overall checkout improvements, such as;
+    - Show input labels next to the fields
+    - Allow disabling checkout fields like telephone, company, etc.
+    - Remove the header and footer from the checkout entirely.
+    - Force totals mode, so the customer is aware of totals during entire checkout.
+    - In addition to the above, always show cart items for additional clarity.
+    - Move cart/totals blocks to more logical places.
+    - Remove jerkiness when switching between checkout steps, and allow setting of step transaction speed.
+    - Allow disabling of useless shipping method step with just 1 available option.
+    - Allow changing of checkout colors using useful colorpickers.
+    - Uses [Font Awesome](http://fontawesome.io/) to provider better icons.
+- Geo IP: Customer country is detected and immediately injected in the right places so it will be used for Shipping and Billing country fields and for calculating tax estimates.
+- Social Login: Uses [Hybridauth](https://hybridauth.github.io/) to allow customers to login with their favorite social media.
+- Newsletter: Lets customers immediately subscribe to the newsletter from the final step in the checkout.
+- Address Autocompletion: Using the [Google Maps Autocomplete API](https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform), we can significantly reduce the number of fields required by the customer. 
+- Field Order: Allow administrators to choose their own order of checkout fields.
+    
+All of these features are highly customizable from the backend.
+
+## Installation
+
+```bash
+$ composer require rubic/magento2-module-clean-checkout
+```
+
+## License
+
+Copyright 2017 Rubic
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
