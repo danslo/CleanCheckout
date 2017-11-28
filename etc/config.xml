@@ -8,6 +8,7 @@
         <clean_checkout>
             <general>
                 <force_totals_full_mode>1</force_totals_full_mode>
+                <default_shipping_method>flatrate_flatrate</default_shipping_method>
                 <move_cart_items>1</move_cart_items>
                 <always_show_cart_items>0</always_show_cart_items>
                 <force_luma_checkout>0</force_luma_checkout>
