@@ -13,6 +13,6 @@
     },
     "require": {
         "geoip2/geoip2": "^2.0",
-        "hybridauth/hybridauth" : "^3.0"
+        "hybridauth/hybridauth" : "^2.10"
     }
 }
