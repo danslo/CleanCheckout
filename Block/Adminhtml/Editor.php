@@ -36,8 +36,10 @@ class Editor extends Field
      */
     protected function _getElementHtml(AbstractElement $element)
     {
-        $element->setWysiwyg(true);
-        $element->setConfig($this->wysiwygConfig->getConfig($element));
+        $element->addData([
+            'wysiwyg' => true,
+            'config'  => $this->wysiwygConfig->getConfig($element)
+        ]);
         return parent::_getElementHtml($element);
     }
 }

@@ -6,6 +6,7 @@
 namespace Rubic\CleanCheckout\Observer;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
+use Magento\Framework\App\Request\Http;
 use Magento\Framework\Event\Observer;
 use Magento\Framework\Event\ObserverInterface;
 use Magento\Framework\UrlInterface;
@@ -47,7 +48,8 @@ class RedirectToCheckoutObserver implements ObserverInterface
             return;
         }
 
-        $request = $observer->getRequest();
+        /** @var Http $request */
+        $request = $observer->getData('request');
         $request->setParam('return_url', $this->url->getUrl('checkout'));
     }
 }

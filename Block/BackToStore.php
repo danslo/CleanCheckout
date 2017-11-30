@@ -24,11 +24,8 @@ class BackToStore extends Template
      * @param Redirect $redirect
      * @param array $data
      */
-    public function __construct(
-        Context $context,
-        Redirect $redirect,
-        array $data = []
-    ) {
+    public function __construct(Context $context, Redirect $redirect, array $data = [])
+    {
         parent::__construct($context, $data);
         $this->redirect = $redirect;
     }
@@ -38,7 +35,10 @@ class BackToStore extends Template
      */
     public function getBackToStoreLabel()
     {
-        return $this->_scopeConfig->getValue(self::CONFIG_PATH_BACK_TO_STORE_LABEL, ScopeInterface::SCOPE_STORE);
+        return $this->_scopeConfig->getValue(
+            self::CONFIG_PATH_BACK_TO_STORE_LABEL,
+            ScopeInterface::SCOPE_STORE
+        );
     }
 
     /**

@@ -8,7 +8,6 @@ namespace Rubic\CleanCheckout\Controller\Social;
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\App\ResponseInterface;
-use Magento\Framework\Exception\NotFoundException;
 use Rubic\CleanCheckout\Service\SocialLoginService;
 
 class Authenticate extends Action
@@ -32,7 +31,6 @@ class Authenticate extends Action
      * Authenticates the user using social media, then returns to the checkout.
      *
      * @return ResponseInterface
-     * @throws NotFoundException
      */
     public function execute()
     {
