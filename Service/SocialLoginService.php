@@ -12,6 +12,7 @@ use Magento\Customer\Model\CustomerFactory;
 use Magento\Customer\Model\ResourceModel\Customer as CustomerResource;
 use Magento\Customer\Model\Session\Proxy as CustomerSession;
 use Magento\Framework\App\Config\ScopeConfigInterface;
+use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\UrlInterface;
 use Magento\Store\Model\ScopeInterface;
 use Magento\Store\Model\StoreManagerInterface;
@@ -138,6 +139,7 @@ class SocialLoginService
      * Gets the current website ID.
      *
      * @return int
+     * @throws LocalizedException
      */
     private function getCurrentWebsiteId()
     {
@@ -188,6 +190,8 @@ class SocialLoginService
      * @param string $provider
      * @param Profile $profile
      * @return Customer
+     * @throws LocalizedException
+     * @throws \Exception
      */
     private function getCustomerForProfile($provider, Profile $profile)
     {
@@ -208,6 +212,8 @@ class SocialLoginService
      * Authenticates the user using social media, then returns to the checkout.
      *
      * @param string $provider
+     * @throws LocalizedException
+     * @throws \Exception
      */
     public function login($provider)
     {
