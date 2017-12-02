@@ -8,7 +8,7 @@ use Magento\Framework\Component\ComponentRegistrar;
 ComponentRegistrar::register(
     ComponentRegistrar::MODULE,
     'Rubic_CleanCheckout',
-    __DIR__
+    __DIR__ . '/src'
 );
 
 ComponentRegistrar::register(

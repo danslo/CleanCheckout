@@ -8,11 +8,23 @@
             "registration.php"
         ],
         "psr-4": {
-            "Rubic\\CleanCheckout\\": ""
+            "Rubic\\CleanCheckout\\": "src/"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "7.0.26"
         }
     },
     "require": {
         "geoip2/geoip2": "^2.0",
-        "hybridauth/hybridauth" : "^2.10"
-    }
+        "hybridauth/hybridauth" : "^2.10",
+        "magento/framework": ">=100.1.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^0.9.1"
+    },
+    "repositories": [
+        { "type": "composer", "url": "https://repo.magento.com/" }
+    ]
 }
