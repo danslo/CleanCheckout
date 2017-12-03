@@ -6,8 +6,7 @@
 namespace Rubic\CleanCheckout\Plugin;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
-use Magento\Framework\App\Request\Http;
-use Magento\Framework\App\RequestInterface;
+use Magento\Framework\App\Request\Http as HttpRequest;
 use Magento\Framework\View\Design\Theme\ThemeProviderInterface;
 use Magento\Store\Model\ScopeInterface;
 use Magento\Theme\Model\View\Design;
@@ -22,9 +21,9 @@ class ForceLumaCheckoutPlugin
     private $themeProvider;
 
     /**
-     * @var Http
+     * @var HttpRequest
      */
-    private $request;
+    private $httpRequest;
 
     /**
      * @var ScopeConfigInterface
@@ -34,15 +33,15 @@ class ForceLumaCheckoutPlugin
     /**
      * @param ScopeConfigInterface $scopeConfig
      * @param ThemeProviderInterface $themeProvider
-     * @param RequestInterface $request
+     * @param HttpRequest $httpRequest
      */
     public function __construct(
         ScopeConfigInterface $scopeConfig,
         ThemeProviderInterface $themeProvider,
-        RequestInterface $request
+        HttpRequest $httpRequest
     ) {
         $this->themeProvider = $themeProvider;
-        $this->request = $request;
+        $this->httpRequest = $httpRequest;
         $this->scopeConfig = $scopeConfig;
     }
 
@@ -56,7 +55,7 @@ class ForceLumaCheckoutPlugin
     }
 
     /**
-     * Forces the Luma theme when request is being handled by checkout.
+     * Forces the Luma theme when httpRequest is being handled by checkout.
      *
      * @param Design $subject
      * @param callable $proceed
@@ -67,8 +66,8 @@ class ForceLumaCheckoutPlugin
     {
         $forceLuma = $this->scopeConfig->getValue(self::CONFIG_PATH_FORCE_LUMA_CHECKOUT, ScopeInterface::SCOPE_STORE);
         if ($forceLuma &&
-            $this->request->getModuleName() === 'checkout' &&
-            $this->request->getControllerName() === 'index') {
+            $this->httpRequest->getModuleName() === 'checkout' &&
+            $this->httpRequest->getControllerName() === 'index') {
             return $this->getLumaThemeId();
         }
         return $proceed(...$args);

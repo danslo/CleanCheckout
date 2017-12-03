@@ -48,7 +48,7 @@ class CheckoutConfigProvider implements ConfigProviderInterface
     /**
      * Checks if social login provider is enabled in config.
      *
-     * @param $provider
+     * @param string $provider
      * @return bool
      */
     private function isProviderEnabled($provider)

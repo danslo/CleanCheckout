@@ -52,7 +52,7 @@ class RemoveContainersPlugin
      * See https://github.com/magento/magento2/pull/3907
      *
      * @param Layout $subject
-     * @param array $args
+     * @param array<int, mixed> $args
      * @return array
      */
     public function beforeRenderResult(Layout $subject, ...$args)

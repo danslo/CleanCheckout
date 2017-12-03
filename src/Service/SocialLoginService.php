@@ -6,7 +6,7 @@
 namespace Rubic\CleanCheckout\Service;
 
 use Hybridauth\HybridauthFactory;
-use Hybridauth\User\Profile;
+use Hybrid_User_Profile;
 use Magento\Customer\Model\Customer;
 use Magento\Customer\Model\CustomerFactory;
 use Magento\Customer\Model\ResourceModel\Customer as CustomerResource;
@@ -149,10 +149,10 @@ class SocialLoginService
     /**
      * Gets customer data for a hybrid auth profile.
      *
-     * @param Profile $profile
+     * @param Hybrid_User_Profile $profile
      * @return array
      */
-    private function getCustomerData(Profile $profile)
+    private function getCustomerData(Hybrid_User_Profile $profile)
     {
         $customerData = [];
         foreach (['firstName', 'lastName', 'email'] as $field) {
@@ -188,12 +188,12 @@ class SocialLoginService
      * Loads or creates a customer for a hybridauth profile.
      *
      * @param string $provider
-     * @param Profile $profile
+     * @param Hybrid_User_Profile $profile
      * @return Customer
      * @throws LocalizedException
      * @throws \Exception
      */
-    private function getCustomerForProfile($provider, Profile $profile)
+    private function getCustomerForProfile($provider, Hybrid_User_Profile $profile)
     {
         /** @var Customer $customer */
         $customer = $this->customerFactory->create();

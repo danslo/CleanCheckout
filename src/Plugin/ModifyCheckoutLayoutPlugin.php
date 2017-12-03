@@ -52,7 +52,7 @@ class ModifyCheckoutLayoutPlugin
     /**
      * Disables authentication modal.
      *
-     * @param $jsLayout
+     * @param array $jsLayout
      * @return array
      */
     private function disableAuthentication($jsLayout)
@@ -66,7 +66,7 @@ class ModifyCheckoutLayoutPlugin
     /**
      * Changes cart items to be above totals in the cart summary.
      *
-     * @param $jsLayout
+     * @param array $jsLayout
      * @return array
      */
     private function changeCartItemsSortOrder($jsLayout)
@@ -81,7 +81,7 @@ class ModifyCheckoutLayoutPlugin
     /**
      * Disables / reorders specific input fields in shipping address fieldset.
      *
-     * @param $jsLayout
+     * @param array $jsLayout
      * @return array
      */
     private function modifyShippingFields($jsLayout)
@@ -108,7 +108,7 @@ class ModifyCheckoutLayoutPlugin
     /**
      * Disables / reorders specific input fields in billing address fieldset.
      *
-     * @param $jsLayout
+     * @param array $jsLayout
      * @return array
      */
     private function modifyBillingFields($jsLayout)
@@ -139,7 +139,7 @@ class ModifyCheckoutLayoutPlugin
     /**
      * @param LayoutProcessor $layoutProcessor
      * @param callable $proceed
-     * @param array $args
+     * @param array<int, mixed> $args
      * @return array
      */
     public function aroundProcess(LayoutProcessor $layoutProcessor, callable $proceed, ...$args)
