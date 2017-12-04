@@ -21,7 +21,7 @@ class ForceLumaCheckoutPlugin
     private $themeProvider;
 
     /**
-     * @var HttpRequest
+     * @var HttpRequest\Proxy
      */
     private $httpRequest;
 
@@ -33,12 +33,12 @@ class ForceLumaCheckoutPlugin
     /**
      * @param ScopeConfigInterface $scopeConfig
      * @param ThemeProviderInterface $themeProvider
-     * @param HttpRequest $httpRequest
+     * @param HttpRequest\Proxy $httpRequest
      */
     public function __construct(
         ScopeConfigInterface $scopeConfig,
         ThemeProviderInterface $themeProvider,
-        HttpRequest $httpRequest
+        HttpRequest\Proxy $httpRequest
     ) {
         $this->themeProvider = $themeProvider;
         $this->httpRequest = $httpRequest;

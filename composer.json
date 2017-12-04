@@ -30,7 +30,8 @@
         "magento/module-theme": ">=100.1.0"
     },
     "require-dev": {
-        "phpstan/phpstan": "^0.9.1"
+        "phpstan/phpstan": "^0.9.1",
+	"magento/marketplace-eqp": "^1.0.5"
     },
     "repositories": [
         { "type": "composer", "url": "https://repo.magento.com/" }
