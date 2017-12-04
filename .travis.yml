@@ -1,0 +1,5 @@
+language: php
+php:
+  - '7.0'
+install: composer install
+script: ./vendor/bin/phpstan analyse -c phpstan.neon -l 5 src
