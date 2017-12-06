@@ -35,5 +35,7 @@
     },
     "repositories": [
         { "type": "composer", "url": "https://repo.magento.com/" }
-    ]
+    ],
+    "minimum-stability": "beta",
+    "prefer-stable": true
 }
