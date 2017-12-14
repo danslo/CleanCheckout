@@ -11,7 +11,7 @@ use Magento\Framework\Event\ObserverInterface;
 use Magento\Directory\Helper\Data as DirectoryHelper;
 use Magento\Quote\Model\Quote;
 use Magento\Store\Model\ScopeInterface;
-use Rubic\CleanCheckout\Model\CheckoutConfigProvider;
+use Rubic\CleanCheckout\ConfigProvider\CheckoutConfigProvider;
 
 class SetDefaultShippingObserver implements ObserverInterface
 {

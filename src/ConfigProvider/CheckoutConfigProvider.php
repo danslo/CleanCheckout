@@ -3,7 +3,7 @@
  * Copyright © 2017 Rubic. All rights reserved.
  * See LICENSE.txt for license details.
  */
-namespace Rubic\CleanCheckout\Model;
+namespace Rubic\CleanCheckout\ConfigProvider;
 
 use Magento\Checkout\Model\ConfigProviderInterface;
 use Magento\Framework\App\Config\ScopeConfigInterface;

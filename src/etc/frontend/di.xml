@@ -13,7 +13,7 @@
     <type name="Magento\Checkout\Model\CompositeConfigProvider">
         <arguments>
             <argument name="configProviders" xsi:type="array">
-                <item name="clean_checkout_config_provider" xsi:type="object">Rubic\CleanCheckout\Model\CheckoutConfigProvider</item>
+                <item name="clean_checkout_config_provider" xsi:type="object">Rubic\CleanCheckout\ConfigProvider\CheckoutConfigProvider</item>
             </argument>
         </arguments>
     </type>
