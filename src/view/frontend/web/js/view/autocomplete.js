@@ -17,6 +17,8 @@ define(
             streetFieldSelector: "input[name='street[0]']",
 
             fields: {
+                route: { long_name: "input[name='street[0]']" },
+                street_number: { short_name: "input[name='street[1]']"},
                 postal_code: { short_name: "input[name='postcode']" },
                 locality:    { long_name:  "input[name='city']" },
                 postal_town: { short_name: "input[name='city']" },
@@ -25,6 +27,7 @@ define(
             },
 
             initialize: function () {
+
                 if (window.checkoutConfig.autoComplete.enabled) {
                     async.load(
                         'https://maps.googleapis.com/maps/api/js?key=' + window.checkoutConfig.autoComplete.apiKey + '&libraries=places&callback=initAutocomplete',
@@ -60,6 +63,7 @@ define(
 
             fillAddressFields: function () {
                 var place = this.getPlace();
+                var streetNumber = false;
                 if (typeof place === 'undefined') {
                     return;
                 }
@@ -73,6 +77,13 @@ define(
                                 var form = $(this.e).closest('form');
                                 var field = form.find(selector);
                                 var value = this.c.findComponentValue(place, type, subtype);
+                                if (selector == this.c.fields.route.long_name) {
+                                    var address = value;
+                                }
+                                if (selector == this.c.fields.street_number.short_name) {
+                                    address += ' ' + value;
+                                    streetNumber = true;
+                                }
                                 if (value !== null) {
                                     if (field.length) {
                                         field.val(value).change();
@@ -87,6 +98,9 @@ define(
                             }
                         }
                     }
+                }
+                if (streetNumber === false) {
+                    form.find(this.c.fields.route.long_name).val(address).change();
                 }
             }
         });
