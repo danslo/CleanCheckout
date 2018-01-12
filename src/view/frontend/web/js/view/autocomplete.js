@@ -64,6 +64,7 @@ define(
             fillAddressFields: function () {
                 var place = this.getPlace();
                 var streetNumber = false;
+                var hasAddress = false;
                 if (typeof place === 'undefined') {
                     return;
                 }
@@ -77,13 +78,24 @@ define(
                                 var form = $(this.e).closest('form');
                                 var field = form.find(selector);
                                 var value = this.c.findComponentValue(place, type, subtype);
-                                if (selector == this.c.fields.route.long_name) {
+
+                                if (selector == this.c.fields.route.long_name && value !== null) {
                                     var address = value;
+                                    hasAddress = true;
                                 }
+
                                 if (selector == this.c.fields.street_number.short_name) {
-                                    address += ' ' + value;
-                                    streetNumber = true;
+                                    if (field.length) {
+                                        streetNumber = true;
+                                    } else {
+                                        address += ' ' + value;
+                                    }
+
+                                    if (value !== null) {
+                                        hasAddress == true;
+                                    }
                                 }
+
                                 if (value !== null) {
                                     if (field.length) {
                                         field.val(value).change();
@@ -99,8 +111,17 @@ define(
                         }
                     }
                 }
-                if (streetNumber === false) {
+
+                if (!streetNumber && hasAddress) {
                     form.find(this.c.fields.route.long_name).val(address).change();
+                }
+
+                if (!hasAddress) {
+                    form.find(this.c.fields.route.long_name).val('').change();
+                    if (streetNumber) {
+                        form.find(this.c.fields.street_number.short_name).val('').change();
+                        form.find(this.c.fields.postal_code.short_name).val('').change();
+                    }
                 }
             }
         });
