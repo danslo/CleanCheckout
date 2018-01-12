@@ -24,6 +24,7 @@ class CheckoutConfigProvider implements ConfigProviderInterface
     const CONFIG_PATH_STEP_TRANSITION_SPEED   = 'clean_checkout/general/step_transition_speed';
     const CONFIG_PATH_AUTO_COMPLETE_ENABLED   = 'clean_checkout/auto_complete/enabled';
     const CONFIG_PATH_AUTO_COMPLETE_API_KEY   = 'clean_checkout/auto_complete/api_key';
+    const CONFIG_PATH_AUTO_COMPLETE_SPLIT     = 'clean_checkout/auto_complete/split_street_fields';
 
     /**
      * @var ScopeConfigInterface
@@ -120,7 +121,11 @@ class CheckoutConfigProvider implements ConfigProviderInterface
                 'apiKey' => $this->scopeConfig->getValue(
                     self::CONFIG_PATH_AUTO_COMPLETE_API_KEY,
                     ScopeInterface::SCOPE_STORE
-                )
+                ),
+                'splitStreetFields' => $this->scopeConfig->getValue(
+                    self::CONFIG_PATH_AUTO_COMPLETE_SPLIT,
+                    ScopeInterface::SCOPE_STORE
+                ),
             ]
         ];
     }

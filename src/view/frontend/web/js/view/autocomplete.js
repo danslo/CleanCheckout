@@ -58,21 +58,32 @@ define(
                 return null;
             },
 
-            fillAddressFields: function () {
-                var place = this.getPlace();
-                if (typeof place === 'undefined') {
-                    return;
-                }
+            shouldSplitStreetFields: function () {
+                return window.checkoutConfig.autoComplete.splitStreetFields;
+            },
 
-                $(this.e).val(place.name).change();
-                for (var type in this.c.fields) {
-                    if (this.c.fields.hasOwnProperty(type)) {
-                        for (var subtype in this.c.fields[type]) {
-                            if (this.c.fields[type].hasOwnProperty(subtype)) {
-                                var selector = this.c.fields[type][subtype];
-                                var form = $(this.e).closest('form');
+            fillStreetFields: function (element, place) {
+                var streetNumberElement = $(element).closest('fieldset').find("input[name='street[1]']");
+                if (streetNumberElement.length && this.shouldSplitStreetFields()) {
+                    var route  = this.findComponentValue(place, 'route', 'long_name');
+                    var number = this.findComponentValue(place, 'street_number', 'short_name');
+                    $(element).val(route).change();
+                    streetNumberElement.val(number).change();
+                } else {
+                    $(element).val(place.name).change();
+                }
+            },
+
+            fillOtherFields: function (element, place) {
+                for (var type in this.fields) {
+                    if (this.fields.hasOwnProperty(type)) {
+                        for (var subtype in this.fields[type]) {
+                            if (this.fields[type].hasOwnProperty(subtype)) {
+                                var selector = this.fields[type][subtype];
+                                var form = $(element).closest('form');
                                 var field = form.find(selector);
-                                var value = this.c.findComponentValue(place, type, subtype);
+                                var value = this.findComponentValue(place, type, subtype);
+
                                 if (value !== null) {
                                     if (field.length) {
                                         field.val(value).change();
@@ -88,6 +99,15 @@ define(
                         }
                     }
                 }
+            },
+
+            fillAddressFields: function () {
+                var place = this.getPlace();
+                if (typeof place === 'undefined') {
+                    return;
+                }
+                this.c.fillStreetFields(this.e, place);
+                this.c.fillOtherFields(this.e, place);
             }
         });
     }

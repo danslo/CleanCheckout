@@ -51,6 +51,7 @@
             </social_login>
             <auto_complete>
                 <enabled>0</enabled>
+                <split_street_fields>1</split_street_fields>
             </auto_complete>
             <field_order>
                 <firstname>20</firstname>

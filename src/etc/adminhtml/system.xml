@@ -234,12 +234,19 @@
                     <label>Enabled</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
-                <field id="api_key" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                <field id="api_key" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Google Maps API Key</label>
                     <depends>
                         <field id="enabled">1</field>
                     </depends>
                     <comment><![CDATA[Find your API Key here: https://developers.google.com/maps/documentation/javascript/get-api-key]]></comment>
+                </field>
+                <field id="split_street_fields"  translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Split Street Fields</label>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                    <comment><![CDATA[When enabled, will attempt to split the street name and house number when multiple lines are detected. Behavior is unchanged with single address lines.]]></comment>
                 </field>
             </group>
             <group id="field_order" translate="label" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
