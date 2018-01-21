@@ -45,12 +45,6 @@
     padding-top: 10px;
 }
 
-
-.authentication-wrapper {
-    margin-top: -85px;
-    margin-right: -45px;
-}
-
 #welcome .actions-toolbar .primary {
     float: right;
     line-height: 2.2rem;
@@ -136,10 +130,11 @@
 
 .opc-wrapper .form-shipping-address {
     margin: 0px;
+    padding: 20px 0px;
 }
 
 .opc-wrapper .methods-shipping {
-    padding-top: 0px;
+    padding-top: 10px;
     margin-top: 0px;
 }
 

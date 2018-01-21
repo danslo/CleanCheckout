@@ -1,1 +1,4 @@
-<div class="clean-checkout-footer"><?php echo $block->getFooterContent(); ?></div>
+<?php $content = $block->getFooterContent(); ?>
+<?php if (!empty($content)): ?>
+<div class="clean-checkout-footer"><?php echo $content; ?></div>
+<?php endif; ?>

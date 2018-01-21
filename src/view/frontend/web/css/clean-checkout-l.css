@@ -120,7 +120,11 @@
     width: 50%;
 }
 
-.opc-wrapper .form-shipping-address {
-    margin-top: 28px;
-    margin-bottom: 28px;
+.authentication-wrapper {
+    margin-top: -85px;
+    margin-right: -45px;
+}
+
+.checkout-shipping-method .actions-toolbar .action.primary {
+    margin-top: 20px;
 }
