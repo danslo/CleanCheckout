@@ -34,10 +34,10 @@ define([
             },
 
             /**
-             * These steps don't set itself to visible on refresh.
+             * Backport of fix MAGETWO-83272, allow navigation between steps.
              */
-            navigate: function () {
-                this.visible(true);
+            navigate: function (step) {
+                step && step.isVisible(true);
             },
 
             /**

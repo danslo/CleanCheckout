@@ -44,6 +44,8 @@ define(
             navigate: function () {
                 if (customer.isLoggedIn()) {
                     this.navigateToNextStep();
+                } else {
+                    this.isVisible(true);
                 }
             },
 
