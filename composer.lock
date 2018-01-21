@@ -64,16 +64,16 @@
         },
         {
             "name": "geoip2/geoip2",
-            "version": "v2.7.0",
+            "version": "v2.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/maxmind/GeoIP2-php.git",
-                "reference": "ca9f9a244474d97eac1ef542aaced7cc944bafbe"
+                "reference": "63b0d87d47ee8c9431bff70244401db5ced82bd9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maxmind/GeoIP2-php/zipball/ca9f9a244474d97eac1ef542aaced7cc944bafbe",
-                "reference": "ca9f9a244474d97eac1ef542aaced7cc944bafbe",
+                "url": "https://api.github.com/repos/maxmind/GeoIP2-php/zipball/63b0d87d47ee8c9431bff70244401db5ced82bd9",
+                "reference": "63b0d87d47ee8c9431bff70244401db5ced82bd9",
                 "shasum": ""
             },
             "require": {
@@ -113,20 +113,20 @@
                 "geolocation",
                 "maxmind"
             ],
-            "time": "2017-10-27T19:20:22+00:00"
+            "time": "2018-01-18T21:30:24+00:00"
         },
         {
             "name": "hybridauth/hybridauth",
-            "version": "v3.0.0-beta.3",
+            "version": "v3.0.0-rc.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hybridauth/hybridauth.git",
-                "reference": "5b66cb907e20bc15ec28f3a9e8a74cd8fdd92bac"
+                "reference": "b42b10249f098304cec6bf71a4fa796dbe2e729d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hybridauth/hybridauth/zipball/5b66cb907e20bc15ec28f3a9e8a74cd8fdd92bac",
-                "reference": "5b66cb907e20bc15ec28f3a9e8a74cd8fdd92bac",
+                "url": "https://api.github.com/repos/hybridauth/hybridauth/zipball/b42b10249f098304cec6bf71a4fa796dbe2e729d",
+                "reference": "b42b10249f098304cec6bf71a4fa796dbe2e729d",
                 "shasum": ""
             },
             "require": {
@@ -170,16 +170,16 @@
                 "social",
                 "twitter"
             ],
-            "time": "2017-12-05T13:09:43+00:00"
+            "time": "2018-01-06T20:48:05+00:00"
         },
         {
             "name": "magento/framework",
-            "version": "100.1.10",
+            "version": "100.1.11",
             "dist": {
                 "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/framework/magento-framework-100.1.10.0.zip",
+                "url": "https://repo.magento.com/archives/magento/framework/magento-framework-100.1.11.0.zip",
                 "reference": null,
-                "shasum": "12cf782980e4bd3065819ddf54602ec5c75cb74e"
+                "shasum": "e520e64d359ab77d265b18c471525f7cdf6b127d"
             },
             "require": {
                 "ext-curl": "*",
@@ -247,12 +247,12 @@
         },
         {
             "name": "magento/module-backend",
-            "version": "100.1.5",
+            "version": "100.1.6",
             "dist": {
                 "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-backend/magento-module-backend-100.1.5.0.zip",
+                "url": "https://repo.magento.com/archives/magento/module-backend/magento-module-backend-100.1.6.0.zip",
                 "reference": null,
-                "shasum": "7b2eae9f23e2130f406ece36e5b6cce017cfdee2"
+                "shasum": "d954687ba59383838ab204717bac227d8fdc348e"
             },
             "require": {
                 "magento/framework": "100.1.*",
@@ -291,12 +291,12 @@
         },
         {
             "name": "magento/module-backup",
-            "version": "100.1.3",
+            "version": "100.1.4",
             "dist": {
                 "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-backup/magento-module-backup-100.1.3.0.zip",
+                "url": "https://repo.magento.com/archives/magento/module-backup/magento-module-backup-100.1.4.0.zip",
                 "reference": null,
-                "shasum": "2026b88f68e9e85b333df6c38e2b9f31671ef61d"
+                "shasum": "64b6de0fe748903cec45e4a3442918056c0683fe"
             },
             "require": {
                 "magento/framework": "100.1.*",
@@ -322,12 +322,12 @@
         },
         {
             "name": "magento/module-catalog",
-            "version": "101.0.10",
+            "version": "101.0.11",
             "dist": {
                 "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-catalog/magento-module-catalog-101.0.10.0.zip",
+                "url": "https://repo.magento.com/archives/magento/module-catalog/magento-module-catalog-101.0.11.0.zip",
                 "reference": null,
-                "shasum": "5bf942abd6607f107d61ccb61c4bae923353fb34"
+                "shasum": "0cedb7f7f4b51a29105f3b35c9f8a7265217d5ec"
             },
             "require": {
                 "magento/framework": "100.1.*",
@@ -377,12 +377,12 @@
         },
         {
             "name": "magento/module-catalog-import-export",
-            "version": "100.1.7",
+            "version": "100.1.8",
             "dist": {
                 "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-catalog-import-export/magento-module-catalog-import-export-100.1.7.0.zip",
+                "url": "https://repo.magento.com/archives/magento/module-catalog-import-export/magento-module-catalog-import-export-100.1.8.0.zip",
                 "reference": null,
-                "shasum": "1674b080b9f8f3b106718bb5f1a83ef0f9c745e8"
+                "shasum": "247fda23a12fffcc4f237577d7e7a448fed5732a"
             },
             "require": {
                 "ext-ctype": "*",
@@ -415,12 +415,12 @@
         },
         {
             "name": "magento/module-catalog-inventory",
-            "version": "100.1.6",
+            "version": "100.1.7",
             "dist": {
                 "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-catalog-inventory/magento-module-catalog-inventory-100.1.6.0.zip",
+                "url": "https://repo.magento.com/archives/magento/module-catalog-inventory/magento-module-catalog-inventory-100.1.7.0.zip",
                 "reference": null,
-                "shasum": "e1237294f6e4cddc2d24a5e8ecf79cfee7a8386f"
+                "shasum": "2dc573ee9fd18cc3517588f3e3ab6368b008fb16"
             },
             "require": {
                 "magento/framework": "100.1.*",
@@ -525,12 +525,12 @@
         },
         {
             "name": "magento/module-checkout",
-            "version": "100.1.9",
+            "version": "100.1.10",
             "dist": {
                 "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-checkout/magento-module-checkout-100.1.9.0.zip",
+                "url": "https://repo.magento.com/archives/magento/module-checkout/magento-module-checkout-100.1.10.0.zip",
                 "reference": null,
-                "shasum": "1548fde2b0d2987ca2ab83df4942a34adbdfcdd8"
+                "shasum": "93502898b5b9da43bb245db98ae3d3942e53e1c8"
             },
             "require": {
                 "magento/framework": "100.1.*",
@@ -574,12 +574,12 @@
         },
         {
             "name": "magento/module-cms",
-            "version": "101.0.8",
+            "version": "101.0.9",
             "dist": {
                 "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-cms/magento-module-cms-101.0.8.0.zip",
+                "url": "https://repo.magento.com/archives/magento/module-cms/magento-module-cms-101.0.9.0.zip",
                 "reference": null,
-                "shasum": "48f6c4c1335bc3123ee51a386ca7267f00ba8bb5"
+                "shasum": "3f5edabba87f449c44facf1d656bd71be78dd3d0"
             },
             "require": {
                 "magento/framework": "100.1.*",
@@ -645,12 +645,12 @@
         },
         {
             "name": "magento/module-config",
-            "version": "100.1.6",
+            "version": "100.1.7",
             "dist": {
                 "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-config/magento-module-config-100.1.6.0.zip",
+                "url": "https://repo.magento.com/archives/magento/module-config/magento-module-config-100.1.7.0.zip",
                 "reference": null,
-                "shasum": "6dd17fa55e0b3a2270297c525c17deefec2db475"
+                "shasum": "fde8d9a0665c1e590843d2fe466b4a42f95e5158"
             },
             "require": {
                 "magento/framework": "100.1.*",
@@ -746,12 +746,12 @@
         },
         {
             "name": "magento/module-customer",
-            "version": "100.1.9",
+            "version": "100.1.10",
             "dist": {
                 "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-customer/magento-module-customer-100.1.9.0.zip",
+                "url": "https://repo.magento.com/archives/magento/module-customer/magento-module-customer-100.1.10.0.zip",
                 "reference": null,
-                "shasum": "aa93175edd43220bfae6be3540dcd1ab17a5472c"
+                "shasum": "80244486e13a8efbe61c996876f3c47fe2da2976"
             },
             "require": {
                 "magento/framework": "100.1.*",
@@ -826,12 +826,12 @@
         },
         {
             "name": "magento/module-directory",
-            "version": "100.1.4",
+            "version": "100.1.5",
             "dist": {
                 "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-directory/magento-module-directory-100.1.4.0.zip",
+                "url": "https://repo.magento.com/archives/magento/module-directory/magento-module-directory-100.1.5.0.zip",
                 "reference": null,
-                "shasum": "f058ec409bedebb3f38f0cfda5e4488d8d1bb928"
+                "shasum": "08f0a1a5d7e26fb41a316eb1e911e3dc1a24bccf"
             },
             "require": {
                 "lib-libxml": "*",
@@ -905,12 +905,12 @@
         },
         {
             "name": "magento/module-eav",
-            "version": "100.1.7",
+            "version": "100.1.8",
             "dist": {
                 "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-eav/magento-module-eav-100.1.7.0.zip",
+                "url": "https://repo.magento.com/archives/magento/module-eav/magento-module-eav-100.1.8.0.zip",
                 "reference": null,
-                "shasum": "609d452685191067664cf1a23f43e7ff269a92e0"
+                "shasum": "f9d41759d65f52e049a22888cec12e1313ec356b"
             },
             "require": {
                 "magento/framework": "100.1.*",
@@ -1054,12 +1054,12 @@
         },
         {
             "name": "magento/module-import-export",
-            "version": "100.1.5",
+            "version": "100.1.6",
             "dist": {
                 "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-import-export/magento-module-import-export-100.1.5.0.zip",
+                "url": "https://repo.magento.com/archives/magento/module-import-export/magento-module-import-export-100.1.6.0.zip",
                 "reference": null,
-                "shasum": "09ac5a532df5bf1ae694c8809b6e7a6a29abd8a0"
+                "shasum": "5853aaf261749ee1acc8c68c22e280a0f7f20270"
             },
             "require": {
                 "ext-ctype": "*",
@@ -1087,12 +1087,12 @@
         },
         {
             "name": "magento/module-indexer",
-            "version": "100.1.4",
+            "version": "100.1.5",
             "dist": {
                 "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-indexer/magento-module-indexer-100.1.4.0.zip",
+                "url": "https://repo.magento.com/archives/magento/module-indexer/magento-module-indexer-100.1.5.0.zip",
                 "reference": null,
-                "shasum": "d4223e3ff1e252ca96de288513c067bb34fa7ffc"
+                "shasum": "26aca29befc2815d3ebd938e6b1dce527d708148"
             },
             "require": {
                 "magento/framework": "100.1.*",
@@ -1116,12 +1116,12 @@
         },
         {
             "name": "magento/module-integration",
-            "version": "100.1.5",
+            "version": "100.1.6",
             "dist": {
                 "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-integration/magento-module-integration-100.1.5.0.zip",
+                "url": "https://repo.magento.com/archives/magento/module-integration/magento-module-integration-100.1.6.0.zip",
                 "reference": null,
-                "shasum": "6a33dd09e5d22c1356e63532a558ca4e8323e588"
+                "shasum": "a49c299f0e92df28a05619f4737316df83f95237"
             },
             "require": {
                 "magento/framework": "100.1.*",
@@ -1219,12 +1219,12 @@
         },
         {
             "name": "magento/module-newsletter",
-            "version": "100.1.4",
+            "version": "100.1.5",
             "dist": {
                 "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-newsletter/magento-module-newsletter-100.1.4.0.zip",
+                "url": "https://repo.magento.com/archives/magento/module-newsletter/magento-module-newsletter-100.1.5.0.zip",
                 "reference": null,
-                "shasum": "269d08c37225446706afad27769490f2db8e0c26"
+                "shasum": "5e4635fb54839f904a83056236bfdfe7c2929dc7"
             },
             "require": {
                 "magento/framework": "100.1.*",
@@ -1287,12 +1287,12 @@
         },
         {
             "name": "magento/module-payment",
-            "version": "100.1.7",
+            "version": "100.1.8",
             "dist": {
                 "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-payment/magento-module-payment-100.1.7.0.zip",
+                "url": "https://repo.magento.com/archives/magento/module-payment/magento-module-payment-100.1.8.0.zip",
                 "reference": null,
-                "shasum": "696a9272b7b877528e29773c9e567107a3dcd5b5"
+                "shasum": "51d212f074a233dc0f174155298bf885fd561a02"
             },
             "require": {
                 "magento/framework": "100.1.*",
@@ -1353,12 +1353,12 @@
         },
         {
             "name": "magento/module-quote",
-            "version": "100.1.6",
+            "version": "100.1.7",
             "dist": {
                 "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-quote/magento-module-quote-100.1.6.0.zip",
+                "url": "https://repo.magento.com/archives/magento/module-quote/magento-module-quote-100.1.7.0.zip",
                 "reference": null,
-                "shasum": "90b4a74f5e763df19ccb1aa0d5e4f7d39c24446f"
+                "shasum": "485daa51eca9a02bb3f14428fd961c12322a957f"
             },
             "require": {
                 "magento/framework": "100.1.*",
@@ -1395,12 +1395,12 @@
         },
         {
             "name": "magento/module-reports",
-            "version": "100.1.5",
+            "version": "100.1.6",
             "dist": {
                 "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-reports/magento-module-reports-100.1.5.0.zip",
+                "url": "https://repo.magento.com/archives/magento/module-reports/magento-module-reports-100.1.6.0.zip",
                 "reference": null,
-                "shasum": "cd0b4a9fcb81245dc17ebf7e73583d7c1a7a51be"
+                "shasum": "5b34a2854eb55a80e0f765d563898b34c3cbd740"
             },
             "require": {
                 "magento/framework": "100.1.*",
@@ -1538,12 +1538,12 @@
         },
         {
             "name": "magento/module-rule",
-            "version": "100.1.6",
+            "version": "100.1.7",
             "dist": {
                 "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-rule/magento-module-rule-100.1.6.0.zip",
+                "url": "https://repo.magento.com/archives/magento/module-rule/magento-module-rule-100.1.7.0.zip",
                 "reference": null,
-                "shasum": "32bb505b89f27d6013df0d81d15c0f04510fc1bb"
+                "shasum": "fbe43df341c6a1eb251b0427d3a0c08cae6ba599"
             },
             "require": {
                 "lib-libxml": "*",
@@ -1571,12 +1571,12 @@
         },
         {
             "name": "magento/module-sales",
-            "version": "100.1.9",
+            "version": "100.1.10",
             "dist": {
                 "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-sales/magento-module-sales-100.1.9.0.zip",
+                "url": "https://repo.magento.com/archives/magento/module-sales/magento-module-sales-100.1.10.0.zip",
                 "reference": null,
-                "shasum": "649f6974333f08591d34c90a1da89ce2a29c7f45"
+                "shasum": "24fc5ecc4f94fa2224f58c4df9d72b4345fc9cf3"
             },
             "require": {
                 "magento/framework": "100.1.*",
@@ -1625,12 +1625,12 @@
         },
         {
             "name": "magento/module-sales-rule",
-            "version": "100.1.5",
+            "version": "100.1.6",
             "dist": {
                 "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-sales-rule/magento-module-sales-rule-100.1.5.0.zip",
+                "url": "https://repo.magento.com/archives/magento/module-sales-rule/magento-module-sales-rule-100.1.6.0.zip",
                 "reference": null,
-                "shasum": "9ea494e0f9d0707740452d137beefff5e660e258"
+                "shasum": "1e108aabb3806a25f869bb716e5ff7f48580589e"
             },
             "require": {
                 "magento/framework": "100.1.*",
@@ -1733,12 +1733,12 @@
         },
         {
             "name": "magento/module-shipping",
-            "version": "100.1.4",
+            "version": "100.1.5",
             "dist": {
                 "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-shipping/magento-module-shipping-100.1.4.0.zip",
+                "url": "https://repo.magento.com/archives/magento/module-shipping/magento-module-shipping-100.1.5.0.zip",
                 "reference": null,
-                "shasum": "b5e532a93588d79b962c477f6f9266a1450d2acc"
+                "shasum": "be38afe80c02704c9e5cfee39e04f2d8fa613f64"
             },
             "require": {
                 "ext-gd": "*",
@@ -1779,12 +1779,12 @@
         },
         {
             "name": "magento/module-store",
-            "version": "100.1.8",
+            "version": "100.1.9",
             "dist": {
                 "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-store/magento-module-store-100.1.8.0.zip",
+                "url": "https://repo.magento.com/archives/magento/module-store/magento-module-store-100.1.9.0.zip",
                 "reference": null,
-                "shasum": "b9c4c2d0a587dddd6827fd352932dd3bac28832d"
+                "shasum": "8314e71677308b7901a714812405b1fe9869b8e4"
             },
             "require": {
                 "magento/framework": "100.1.*",
@@ -1815,12 +1815,12 @@
         },
         {
             "name": "magento/module-tax",
-            "version": "100.1.3",
+            "version": "100.1.4",
             "dist": {
                 "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-tax/magento-module-tax-100.1.3.0.zip",
+                "url": "https://repo.magento.com/archives/magento/module-tax/magento-module-tax-100.1.4.0.zip",
                 "reference": null,
-                "shasum": "42c5ceac2cad2e83148f6327f2d516222eac82fc"
+                "shasum": "50e0923bfe49e6b53467f1e77203ff660d4969ba"
             },
             "require": {
                 "magento/framework": "100.1.*",
@@ -1859,12 +1859,12 @@
         },
         {
             "name": "magento/module-theme",
-            "version": "100.1.8",
+            "version": "100.1.9",
             "dist": {
                 "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-theme/magento-module-theme-100.1.8.0.zip",
+                "url": "https://repo.magento.com/archives/magento/module-theme/magento-module-theme-100.1.9.0.zip",
                 "reference": null,
-                "shasum": "ccb358207ba36387f8606c0d9a3181951f41bb30"
+                "shasum": "edccdc45191c9caea8fdc18866278219c9f70096"
             },
             "require": {
                 "magento/framework": "100.1.*",
@@ -1902,12 +1902,12 @@
         },
         {
             "name": "magento/module-translation",
-            "version": "100.1.3",
+            "version": "100.1.4",
             "dist": {
                 "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-translation/magento-module-translation-100.1.3.0.zip",
+                "url": "https://repo.magento.com/archives/magento/module-translation/magento-module-translation-100.1.4.0.zip",
                 "reference": null,
-                "shasum": "942971fe9e2288b842dbf54ca1f7639c0eded25a"
+                "shasum": "d8d777419569bebb74aa31f237d086fb19185eb3"
             },
             "require": {
                 "magento/framework": "100.1.*",
@@ -1937,12 +1937,12 @@
         },
         {
             "name": "magento/module-ui",
-            "version": "100.1.8",
+            "version": "100.1.9",
             "dist": {
                 "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-ui/magento-module-ui-100.1.8.0.zip",
+                "url": "https://repo.magento.com/archives/magento/module-ui/magento-module-ui-100.1.9.0.zip",
                 "reference": null,
-                "shasum": "51390ad37313d4dbb0ee2771a021123c360c2bdb"
+                "shasum": "caebd9576073293d2ba73821afb949be5302ae31"
             },
             "require": {
                 "magento/framework": "100.1.*",
@@ -2003,12 +2003,12 @@
         },
         {
             "name": "magento/module-user",
-            "version": "100.1.3",
+            "version": "100.1.4",
             "dist": {
                 "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/module-user/magento-module-user-100.1.3.0.zip",
+                "url": "https://repo.magento.com/archives/magento/module-user/magento-module-user-100.1.4.0.zip",
                 "reference": null,
-                "shasum": "cbcec4149800c86614ee6436ecece787250dee16"
+                "shasum": "73fe9fa824fc7546b90386d046e18531e239bee1"
             },
             "require": {
                 "magento/framework": "100.1.*",
@@ -2254,16 +2254,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v2.8.32",
+            "version": "v2.8.33",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "d25449e031f600807949aab7cadbf267712f4eee"
+                "reference": "ea3226daa3c6789efa39570bfc6e5d55f7561a0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/d25449e031f600807949aab7cadbf267712f4eee",
-                "reference": "d25449e031f600807949aab7cadbf267712f4eee",
+                "url": "https://api.github.com/repos/symfony/process/zipball/ea3226daa3c6789efa39570bfc6e5d55f7561a0a",
+                "reference": "ea3226daa3c6789efa39570bfc6e5d55f7561a0a",
                 "shasum": ""
             },
             "require": {
@@ -2299,7 +2299,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2017-11-05T15:25:56+00:00"
+            "time": "2018-01-03T07:36:31+00:00"
         },
         {
             "name": "zendframework/zend-escaper",
@@ -3140,16 +3140,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v3.1.2",
+            "version": "v3.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "08131e7ff29de6bb9f12275c7d35df71f25f4d89"
+                "reference": "579f4ce846734a1cf55d6a531d00ca07a43e3cda"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/08131e7ff29de6bb9f12275c7d35df71f25f4d89",
-                "reference": "08131e7ff29de6bb9f12275c7d35df71f25f4d89",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/579f4ce846734a1cf55d6a531d00ca07a43e3cda",
+                "reference": "579f4ce846734a1cf55d6a531d00ca07a43e3cda",
                 "shasum": ""
             },
             "require": {
@@ -3187,7 +3187,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2017-11-04T11:48:34+00:00"
+            "time": "2017-12-26T14:43:21+00:00"
         },
         {
             "name": "ocramius/package-versions",
@@ -3465,16 +3465,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v3.3.14",
+            "version": "v3.3.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "55497618e68845b6f92a66d13187138ac3d7750e"
+                "reference": "56f07f63c80baeb43ab259abc42c6cecf6461fae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/55497618e68845b6f92a66d13187138ac3d7750e",
-                "reference": "55497618e68845b6f92a66d13187138ac3d7750e",
+                "url": "https://api.github.com/repos/symfony/console/zipball/56f07f63c80baeb43ab259abc42c6cecf6461fae",
+                "reference": "56f07f63c80baeb43ab259abc42c6cecf6461fae",
                 "shasum": ""
             },
             "require": {
@@ -3529,20 +3529,20 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2017-11-29T12:25:49+00:00"
+            "time": "2018-01-03T07:37:11+00:00"
         },
         {
             "name": "symfony/debug",
-            "version": "v3.4.1",
+            "version": "v3.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "fb2001e5d85f95d8b6ab94ae3be5d2672df128fd"
+                "reference": "603b95dda8b00020e4e6e60dc906e7b715b1c245"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/fb2001e5d85f95d8b6ab94ae3be5d2672df128fd",
-                "reference": "fb2001e5d85f95d8b6ab94ae3be5d2672df128fd",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/603b95dda8b00020e4e6e60dc906e7b715b1c245",
+                "reference": "603b95dda8b00020e4e6e60dc906e7b715b1c245",
                 "shasum": ""
             },
             "require": {
@@ -3585,20 +3585,20 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2017-11-21T09:01:46+00:00"
+            "time": "2018-01-03T17:14:19+00:00"
         },
         {
             "name": "symfony/finder",
-            "version": "v3.4.1",
+            "version": "v3.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "dac8d7db537bac7ad8143eb11360a8c2231f251a"
+                "reference": "613e26310776f49a1773b6737c6bd554b8bc8c6f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/dac8d7db537bac7ad8143eb11360a8c2231f251a",
-                "reference": "dac8d7db537bac7ad8143eb11360a8c2231f251a",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/613e26310776f49a1773b6737c6bd554b8bc8c6f",
+                "reference": "613e26310776f49a1773b6737c6bd554b8bc8c6f",
                 "shasum": ""
             },
             "require": {
@@ -3634,7 +3634,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2017-11-05T16:10:10+00:00"
+            "time": "2018-01-03T07:37:34+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
