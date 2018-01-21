@@ -136,6 +136,7 @@
 .opc-wrapper .methods-shipping {
     padding-top: 10px;
     margin-top: 0px;
+    overflow: hidden;
 }
 
 .opc-wrapper .methods-shipping {
