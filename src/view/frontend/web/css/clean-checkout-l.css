@@ -124,3 +124,9 @@
     margin-top: -85px;
     margin-right: -45px;
 }
+
+@media (min-width: 768px) {
+    .table-checkout-shipping-method {
+        width: 100%;
+    }
+}
