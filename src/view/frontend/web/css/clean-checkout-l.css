@@ -125,6 +125,6 @@
     margin-right: -45px;
 }
 
-.checkout-shipping-method .actions-toolbar .action.primary {
-    margin-top: 20px;
+#checkout-shipping-method-load {
+    margin-bottom: 20px;
 }
