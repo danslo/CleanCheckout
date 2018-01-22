@@ -137,10 +137,8 @@
     padding-top: 10px;
     margin-top: 0px;
     overflow: hidden;
-}
-
-.opc-wrapper .methods-shipping {
     border-bottom: 0px;
+    padding-bottom: 0px;
 }
 
 .columns .column.main {
@@ -198,4 +196,23 @@
 
 .form-login .hidden-fields .actions-toolbar button.login {
     margin-right: 0px;
+}
+
+@media only screen
+and (max-device-width : 350px)
+and (orientation : portrait) {
+    .fieldset.address .field .control {
+        width: 55%;
+    }
+    .fieldset.address .field .label {
+        width: 45%;
+    }
+}
+
+.methods-shipping .actions-toolbar .action.primary {
+    margin: 0px;
+}
+
+#checkout-shipping-method-load {
+    margin-bottom: 20px;
 }
