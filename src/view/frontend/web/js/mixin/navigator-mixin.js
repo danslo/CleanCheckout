@@ -4,8 +4,9 @@
  */
 define([
     'jquery',
-    'Magento_Customer/js/model/customer'
-], function ($, customer) {
+    'Magento_Customer/js/model/customer',
+    'Magento_Checkout/js/model/quote'
+], function ($, customer, quote) {
     'use strict';
 
     /**
@@ -13,6 +14,13 @@ define([
      * - Stop jerky animations between steps by removing body animations.
      */
     return function (target) {
+        var getDefaultStep = function () {
+            if (!customer.isLoggedIn()) {
+                return 'welcome';
+            }
+            return quote.isVirtual() ? 'payment' : 'shipping';
+        };
+
         target.navigateTo = function (code, scrollToElementId) {
             if (customer.isLoggedIn() && code === 'welcome') {
                 return;
@@ -27,6 +35,17 @@ define([
                 element.isVisible(element.code === code);
             });
         };
+
+        var originalHandleHash = target.handleHash;
+        target.handleHash = function () {
+            var hashString = window.location.hash.replace('#', '');
+            if (hashString === '') {
+                target.navigateTo(getDefaultStep());
+                return true;
+            }
+            return originalHandleHash.bind(target)();
+        };
+
         return target;
     };
 });

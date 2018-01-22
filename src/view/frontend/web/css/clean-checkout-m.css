@@ -209,10 +209,15 @@ and (orientation : portrait) {
     }
 }
 
+.opc-wrapper .action-show-popup,
 .methods-shipping .actions-toolbar .action.primary {
     margin: 0px;
 }
 
 #checkout-shipping-method-load {
     margin-bottom: 20px;
+}
+
+.opc-wrapper .shipping-address-items {
+    margin-top: 20px;
 }
