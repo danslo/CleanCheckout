@@ -39,9 +39,6 @@ var config = {
             },
             'Magento_Checkout/js/model/shipping-rates-validator': {
                 'Rubic_CleanCheckout/js/mixin/shipping-rates-validator-mixin': true
-            },
-            'Magento_Checkout/js/action/select-shipping-method': {
-                'Rubic_CleanCheckout/js/mixin/select-shipping-method-mixin': true
             }
         }
     }
