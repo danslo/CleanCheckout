@@ -3,8 +3,11 @@
  * See LICENSE.txt for license details.
  */
 define([
-    'Magento_Checkout/js/action/set-shipping-information'
-], function (setShippingInformationAction) {
+    'Magento_Checkout/js/model/quote',
+    'Magento_Checkout/js/model/resource-url-manager',
+    'mage/storage',
+    'Magento_Checkout/js/model/full-screen-loader'
+], function (quote, resourceUrlManager, storage, fullScreenLoader) {
     'use strict';
 
     /**
@@ -13,7 +16,30 @@ define([
     return function (target) {
         return function (shippingMethod) {
             target(shippingMethod);
-            setShippingInformationAction();
+
+            var payload = {
+                addressInformation: {
+                    'shipping_address': quote.shippingAddress(),
+                    'shipping_method_code': quote.shippingMethod()['method_code'],
+                    'shipping_carrier_code': quote.shippingMethod()['carrier_code']
+                }
+            };
+
+            fullScreenLoader.startLoader();
+
+            return storage.post(
+                resourceUrlManager.getUrlForSetShippingInformation(quote),
+                JSON.stringify(payload)
+            ).done(
+                function (response) {
+                    quote.setTotals(response.totals);
+                    fullScreenLoader.stopLoader();
+                }
+            ).fail(
+                function () {
+                    fullScreenLoader.stopLoader();
+                }
+            );
         };
     }
 });
