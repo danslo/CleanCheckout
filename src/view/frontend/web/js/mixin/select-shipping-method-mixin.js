@@ -3,11 +3,12 @@
  * See LICENSE.txt for license details.
  */
 define([
+    'uiRegistry',
     'Magento_Checkout/js/model/quote',
     'Magento_Checkout/js/model/resource-url-manager',
     'mage/storage',
     'Magento_Checkout/js/model/full-screen-loader'
-], function (quote, resourceUrlManager, storage, fullScreenLoader) {
+], function (registry, quote, resourceUrlManager, storage, fullScreenLoader) {
     'use strict';
 
     /**
@@ -16,6 +17,16 @@ define([
     return function (target) {
         return function (shippingMethod) {
             target(shippingMethod);
+
+            /**
+             * No need to update shipping information when we're only dealing with a single rate.
+             *
+             * We are forced to use registry here because requiring shippingService would create a circular dependency.
+             */
+            var rates = registry.get('checkout.steps.shipping-step.shippingAddress').rates();
+            if (rates.length <= 1) {
+                return;
+            }
 
             var payload = {
                 addressInformation: {
