@@ -31,7 +31,7 @@
 
 <li id="opc-shipping_method"
     class="checkout-shipping-method"
-    data-bind="fadeVisible: visible(), blockLoader: isLoading"
+    data-bind="fadeVisible: visible(), blockLoader: !shouldHideShipping() && isLoading"
     role="presentation">
     <div class="checkout-shipping-method">
 

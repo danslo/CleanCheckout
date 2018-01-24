@@ -29,6 +29,9 @@ define([
              */
             visible: ko.observable(customer.isLoggedIn() && !quote.isVirtual()),
 
+            /**
+             * Determines if we should completely hide shipping block.
+             */
             shouldHideShipping: function () {
                 return window.checkoutConfig.hideShippingMethods && this.rates().length === 1;
             },
