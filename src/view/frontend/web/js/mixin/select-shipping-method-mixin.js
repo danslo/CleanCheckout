@@ -3,12 +3,13 @@
  * See LICENSE.txt for license details.
  */
 define([
+    'underscore',
     'uiRegistry',
     'Magento_Checkout/js/model/quote',
     'Magento_Checkout/js/model/resource-url-manager',
     'mage/storage',
     'Magento_Checkout/js/model/full-screen-loader'
-], function (registry, quote, resourceUrlManager, storage, fullScreenLoader) {
+], function (_, registry, quote, resourceUrlManager, storage, fullScreenLoader) {
     'use strict';
 
     /**
@@ -16,6 +17,16 @@ define([
      */
     return function (target) {
         return function (shippingMethod) {
+            /**
+             * No need to update if shipping estimate is already accurate.
+             */
+            if (_.isEqual(quote.shippingMethod(), shippingMethod)) {
+                return;
+            }
+
+            /**
+             * Update the quote.
+             */
             target(shippingMethod);
 
             /**
@@ -31,8 +42,8 @@ define([
             var payload = {
                 addressInformation: {
                     'shipping_address': quote.shippingAddress(),
-                    'shipping_method_code': quote.shippingMethod()['method_code'],
-                    'shipping_carrier_code': quote.shippingMethod()['carrier_code']
+                    'shipping_method_code': shippingMethod['method_code'],
+                    'shipping_carrier_code': shippingMethod['carrier_code']
                 }
             };
 
