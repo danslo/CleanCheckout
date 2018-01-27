@@ -34,8 +34,8 @@ define([
              *
              * We are forced to use registry here because requiring shippingService would create a circular dependency.
              */
-            var rates = registry.get('checkout.steps.shipping-step.shippingAddress').rates();
-            if (rates.length <= 1) {
+            var shippingAddress = registry.get('checkout.steps.shipping-step.shippingAddress');
+            if (typeof shippingAddress === 'undefined' || shippingAddress.rates().length <= 1) {
                 return;
             }
 
