@@ -46,6 +46,16 @@ class RemoveContainersPlugin
     }
 
     /**
+     * Gets elements that should be disabled in layout.
+     *
+     * @return array
+     */
+    public function getDisabledElements()
+    {
+        return self::DISABLE_ELEMENTS;
+    }
+
+    /**
      * Preferably we would use a 'layout_render_before_checkout_index_index' event for this, but in 2.1, the
      * layout is rendered *before* this event is fired.
      *
@@ -59,7 +69,7 @@ class RemoveContainersPlugin
     {
         if ($this->httpRequest->getFullActionName() === 'checkout_index_index') {
             $layout = $subject->getLayout();
-            foreach (self::DISABLE_ELEMENTS as $type => $elements) {
+            foreach ($this->getDisabledElements() as $type => $elements) {
                 $configPath = sprintf(self::CONFIG_DISABLE_PATH, $type);
                 if ($this->scopeConfig->getValue($configPath, ScopeInterface::SCOPE_STORE)) {
                     foreach ($elements as $element) {
