@@ -28,7 +28,7 @@ define(
 
         return Component.extend({
             defaults: {
-                template: 'Rubic_CleanCheckout/welcome'
+                template: 'Rubic_CleanCheckout/email'
             },
 
             loginFormSelector: 'form[data-role=email-with-possible-login]',
@@ -37,7 +37,7 @@ define(
 
             initialize: function () {
                 this._super();
-                stepNavigator.registerStep('welcome', null, $t('Welcome'), this.isVisible, _.bind(this.navigate, this), 5);
+                stepNavigator.registerStep('email', null, $t('Email'), this.isVisible, _.bind(this.navigate, this), 5);
                 return this;
             },
 

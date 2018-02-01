@@ -54,8 +54,8 @@
                             <item name="children" xsi:type="array">
                                 <item name="steps" xsi:type="array">
                                     <item name="children" xsi:type="array">
-                                        <item name="welcome-step" xsi:type="array">
-                                            <item name="component" xsi:type="string">Rubic_CleanCheckout/js/view/welcome</item>
+                                        <item name="email-step" xsi:type="array">
+                                            <item name="component" xsi:type="string">Rubic_CleanCheckout/js/view/email</item>
                                             <item name="sortOrder" xsi:type="string">0</item>
                                             <item name="children" xsi:type="array">
                                                 <item name="customer-email" xsi:type="array">

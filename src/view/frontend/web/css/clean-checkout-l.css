@@ -37,7 +37,7 @@
     font: normal normal normal 20px/1 FontAwesome;
 }
 
-.opc-progress-bar-item > span.opc-progress-bar-item-welcome:after {
+.opc-progress-bar-item > span.opc-progress-bar-item-email:after {
     content: "\f007";
 }
 

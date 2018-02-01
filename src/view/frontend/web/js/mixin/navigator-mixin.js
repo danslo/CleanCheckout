@@ -10,19 +10,19 @@ define([
     'use strict';
 
     /**
-     * - Disallow going back to Welcome step when we're logged in.
+     * - Disallow going back to Email step when we're logged in.
      * - Stop jerky animations between steps by removing body animations.
      */
     return function (target) {
         var getDefaultStep = function () {
             if (!customer.isLoggedIn()) {
-                return 'welcome';
+                return 'email';
             }
             return quote.isVirtual() ? 'payment' : 'shipping';
         };
 
         target.navigateTo = function (code, scrollToElementId) {
-            if (customer.isLoggedIn() && code === 'welcome') {
+            if (customer.isLoggedIn() && code === 'email') {
                 return;
             }
             var sortedItems = target.steps.sort(this.sortItems);
