@@ -31,13 +31,16 @@ define([
 
         /**
          * Backported handleHash from 2.2 to pass element in element.navigate call.
-         * No changes were made.
          */
         target.handleHash = function () {
             var hashString = window.location.hash.replace('#', ''),
                 isRequestedStepVisible;
 
             if (hashString === '') {
+                if (!customer.isLoggedIn()) {
+                    target.navigateTo('email');
+                }
+                target.navigateTo(quote.isVirtual() ? 'payment' : 'shipping');
                 return false;
             }
 
