@@ -9,18 +9,11 @@ define([
 ], function ($, customer, quote) {
     'use strict';
 
-    /**
-     * - Disallow going back to Email step when we're logged in.
-     * - Stop jerky animations between steps by removing body animations.
-     */
     return function (target) {
-        var getDefaultStep = function () {
-            if (!customer.isLoggedIn()) {
-                return 'email';
-            }
-            return quote.isVirtual() ? 'payment' : 'shipping';
-        };
-
+        /**
+         * Disallow going back to Email step when we're logged in.
+         * Stop jerky animations between steps by removing body animations.
+         */
         target.navigateTo = function (code, scrollToElementId) {
             if (customer.isLoggedIn() && code === 'email') {
                 return;
@@ -36,14 +29,43 @@ define([
             });
         };
 
-        var originalHandleHash = target.handleHash;
+        /**
+         * Backported handleHash from 2.2 to pass element in element.navigate call.
+         * No changes were made.
+         */
         target.handleHash = function () {
-            var hashString = window.location.hash.replace('#', '');
+            var hashString = window.location.hash.replace('#', ''),
+                isRequestedStepVisible;
+
             if (hashString === '') {
-                target.navigateTo(getDefaultStep());
-                return true;
+                return false;
             }
-            return originalHandleHash.bind(target)();
+
+            if ($.inArray(hashString, this.validCodes) === -1) {
+                window.location.href = window.checkoutConfig.pageNotFoundUrl;
+
+                return false;
+            }
+
+            isRequestedStepVisible = target.steps.sort(this.sortItems).some(function (element) {
+                return (element.code == hashString || element.alias == hashString) && element.isVisible(); //eslint-disable-line
+            });
+
+            //if requested step is visible, then we don't need to load step data from server
+            if (isRequestedStepVisible) {
+                return false;
+            }
+
+            target.steps.sort(this.sortItems).forEach(function (element) {
+                if (element.code == hashString || element.alias == hashString) { //eslint-disable-line eqeqeq
+                    element.navigate(element);
+                } else {
+                    element.isVisible(false);
+                }
+
+            });
+
+            return false;
         };
 
         return target;
