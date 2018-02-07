@@ -1,4 +1,8 @@
 <?xml version="1.0"?>
+<!--
+    Copyright © 2018 Rubic. All rights reserved.
+    See LICENSE.txt for license details.
+-->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
     <event name="checkout_cart_add_product_complete">
         <observer name="redirect_to_checkout" instance="Rubic\CleanCheckout\Observer\RedirectToCheckoutObserver" />
