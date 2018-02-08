@@ -39,6 +39,10 @@ $ composer require rubic/magento2-module-clean-checkout
 
 You can find a demo environment [here](https://demo.cleancheckout.com/). Please note that it may not be running the latest version of this module at all times.
 
+## Frequently Asked Questions
+
+See [this](https://github.com/danslo/CleanCheckout/wiki/Frequently-Asked-Questions) wiki page.
+
 ## Reporting Issues
 
 Before you create an issue, ensure that the incorrect behavior you are encountering doesn't also appear without this module.  This ensures it's not a configuration issue or Magento 2 bug.
