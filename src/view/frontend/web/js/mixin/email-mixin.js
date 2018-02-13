@@ -2,7 +2,9 @@
  * Copyright © 2018 Rubic. All rights reserved.
  * See LICENSE.txt for license details.
  */
-define(['Magento_Checkout/js/checkout-data'], function (checkoutData) {
+define([
+    'Magento_Checkout/js/checkout-data'
+], function (checkoutData) {
     'use strict';
 
     /**
