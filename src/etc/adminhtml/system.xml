@@ -111,15 +111,15 @@
                 <label>Colors</label>
                 <field id="checkout_background" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Checkout Background Color</label>
-                    <frontend_model>Rubic\CleanCheckout\Block\Adminhtml\Colorpicker</frontend_model>
+                    <frontend_class>colorpicker-text</frontend_class>
                 </field>
                 <field id="checkout_border" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Checkout Border Color</label>
-                    <frontend_model>Rubic\CleanCheckout\Block\Adminhtml\Colorpicker</frontend_model>
+                    <frontend_class>colorpicker-text</frontend_class>
                 </field>
                 <field id="body_background" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Body Background Color</label>
-                    <frontend_model>Rubic\CleanCheckout\Block\Adminhtml\Colorpicker</frontend_model>
+                    <frontend_class>colorpicker-text</frontend_class>
                 </field>
                 <field id="custom_css" translate="label" type="textarea" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Custom CSS</label>
