@@ -44,4 +44,15 @@ class Customizer extends Template
             ScopeInterface::SCOPE_STORE
         );
     }
+
+    /**
+     * @return string
+     */
+    public function getCustomCss()
+    {
+        return $this->_scopeConfig->getValue(
+            sprintf(self::CONFIG_PATH_COLORS, 'custom_css'),
+            ScopeInterface::SCOPE_STORE
+        );
+    }
 }

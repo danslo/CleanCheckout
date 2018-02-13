@@ -17,3 +17,10 @@
         background-color: <?php echo $this->getBodyBackgroundColor(); ?>;
     }
 </style>
+
+<?php $customCss = $this->getCustomCss(); ?>
+<?php if ($customCss): ?>
+<style type="text/css">
+    <?php echo $customCss; ?>
+</style>
+<?php endif; ?>

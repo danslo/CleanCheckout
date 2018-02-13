@@ -121,6 +121,9 @@
                     <label>Body Background Color</label>
                     <frontend_model>Rubic\CleanCheckout\Block\Adminhtml\Colorpicker</frontend_model>
                 </field>
+                <field id="custom_css" translate="label" type="textarea" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Custom CSS</label>
+                </field>
             </group>
             <group id="geo_ip" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Geo IP</label>
