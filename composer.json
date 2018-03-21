@@ -1,5 +1,5 @@
 {
-    "name": "rubic/magento2-module-clean-checkout",
+    "name": "raphael96/magento2-module-clean-checkout",
     "description": "A drop-in replacement for the Magento 2 checkout.",
     "type": "magento2-module",
     "license": "MIT",
@@ -18,7 +18,7 @@
     },
     "require": {
         "geoip2/geoip2": "^2.0",
-        "hybridauth/hybridauth" : "^3.0",
+        "hybridauth/hybridauth" : "^2.1.0",
         "magento/module-checkout": ">=100.1.0",
         "magento/module-config": ">=100.1.0",
         "magento/module-customer": ">=100.1.0",
