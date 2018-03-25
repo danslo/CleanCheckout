@@ -89,6 +89,11 @@
                     <comment><![CDATA[Disables the login pop-up in the top-right corner of checkout.
                                       Existing customers can still login when providing their e-mail in the checkout, regardless of this setting.]]></comment>
                 </field>
+                <field id="disable_discount" translate="label" type="select" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Disable Discount</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Disables the discount code option in the final step of the checkout.</comment>
+                </field>
             </group>
             <group id="shipping" translate="label" type="text" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Shipping</label>

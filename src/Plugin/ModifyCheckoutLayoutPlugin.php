@@ -11,10 +11,11 @@ use Magento\Store\Model\ScopeInterface;
 
 class ModifyCheckoutLayoutPlugin
 {
-    const CONFIG_DISABLE_LOGIN_PATH = 'clean_checkout/cleanup/disable_login_popup';
-    const CONFIG_DISABLE_FIELD_PATH = 'clean_checkout/cleanup/disable_%s';
-    const CONFIG_MOVE_CART_ITEMS    = 'clean_checkout/general/move_cart_items';
-    const CONFIG_PATH_FIELD_ORDER   = 'clean_checkout/field_order';
+    const CONFIG_DISABLE_LOGIN_PATH    = 'clean_checkout/cleanup/disable_login_popup';
+    const CONFIG_DISABLE_FIELD_PATH    = 'clean_checkout/cleanup/disable_%s';
+    const CONFIG_DISABLE_DISCOUNT_PATH = 'clean_checkout/cleanup/disable_discount';
+    const CONFIG_MOVE_CART_ITEMS_PATH  = 'clean_checkout/general/move_cart_items';
+    const CONFIG_PATH_FIELD_ORDER_PATH = 'clean_checkout/field_order';
 
     /**
      * Shipping address fields that can be disabled by backend configuration.
@@ -46,7 +47,7 @@ class ModifyCheckoutLayoutPlugin
      */
     private function getFieldOrder()
     {
-        return $this->scopeConfig->getValue(self::CONFIG_PATH_FIELD_ORDER, ScopeInterface::SCOPE_STORE);
+        return $this->scopeConfig->getValue(self::CONFIG_PATH_FIELD_ORDER_PATH, ScopeInterface::SCOPE_STORE);
     }
 
     /**
@@ -71,7 +72,7 @@ class ModifyCheckoutLayoutPlugin
      */
     private function changeCartItemsSortOrder($jsLayout)
     {
-        if ($this->scopeConfig->getValue(self::CONFIG_MOVE_CART_ITEMS, ScopeInterface::SCOPE_STORE)) {
+        if ($this->scopeConfig->getValue(self::CONFIG_MOVE_CART_ITEMS_PATH, ScopeInterface::SCOPE_STORE)) {
             $jsLayout['components']['checkout']['children']['sidebar']['children']['summary']['children']['cart_items']
                 ['sortOrder'] = 0;
         }
@@ -137,6 +138,21 @@ class ModifyCheckoutLayoutPlugin
     }
 
     /**
+     * Disables the discount component after payment step.
+     *
+     * @param array $jsLayout
+     * @return array
+     */
+    private function disableDiscountComponent($jsLayout)
+    {
+        if ($this->scopeConfig->getValue(self::CONFIG_DISABLE_DISCOUNT_PATH, ScopeInterface::SCOPE_STORE)) {
+            unset($jsLayout['components']['checkout']['children']['steps']['children']['billing-step']['children']
+                ['payment']['children']['afterMethods']['children']['discount']);
+        }
+        return $jsLayout;
+    }
+
+    /**
      * @param LayoutProcessor $layoutProcessor
      * @param callable $proceed
      * @param array<int, mixed> $args
@@ -150,6 +166,7 @@ class ModifyCheckoutLayoutPlugin
         $jsLayout = $this->modifyShippingFields($jsLayout);
         $jsLayout = $this->modifyBillingFields($jsLayout);
         $jsLayout = $this->changeCartItemsSortOrder($jsLayout);
+        $jsLayout = $this->disableDiscountComponent($jsLayout);
 
         return $jsLayout;
     }

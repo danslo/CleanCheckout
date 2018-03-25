@@ -23,6 +23,7 @@
                 <disable_copyright>1</disable_copyright>
                 <display_logo>1</display_logo>
                 <disable_login_popup>1</disable_login_popup>
+                <disable_discount>0</disable_discount>
             </cleanup>
             <shipping>
                 <hide_shipping_methods>1</hide_shipping_methods>
