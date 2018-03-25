@@ -25,6 +25,11 @@
                     </depends>
                     <comment><![CDATA[When totals full mode is enabled, this shipping method will be used to make the initial shipping amount estimate.]]></comment>
                 </field>
+                <field id="default_payment_method" translate="label" type="select" sortOrder="17" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Default Payment Method</label>
+                    <source_model>Magento\Payment\Model\Config\Source\Allmethods</source_model>
+                    <comment>Which payment method to select by default.</comment>
+                </field>
                 <field id="move_cart_items" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Move Cart Items</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
