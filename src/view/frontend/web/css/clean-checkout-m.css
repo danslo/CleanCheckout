@@ -61,6 +61,10 @@
     border-bottom: none;
 }
 
+.opc-block-summary .items-in-cart {
+    margin-bottom: 20px;
+}
+
 .opc-block-summary .table-totals {
     border-top: none;
 }
