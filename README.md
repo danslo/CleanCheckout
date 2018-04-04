@@ -31,6 +31,8 @@ All of these features are highly customizable from the backend.
 $ composer require rubic/magento2-module-clean-checkout
 ```
 
+Note: getting an error while installing? Look [here](https://github.com/danslo/CleanCheckout/issues/5#issuecomment-349649361) for a temporary workaround.
+
 ## Screenshot
 
 ![Image of Clean Checkout](https://i.imgur.com/Fs7So1d.png)
