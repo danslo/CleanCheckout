@@ -2,8 +2,6 @@
 
 A drop-in replacement for the Magento 2 checkout.
 
-[![Build Status](https://travis-ci.org/danslo/CleanCheckout.svg?branch=master)](https://travis-ci.org/danslo/CleanCheckout)
-
 ## Features
 
 - Overall checkout improvements, such as;
