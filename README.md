@@ -31,6 +31,18 @@ $ composer require rubic/magento2-module-clean-checkout
 
 Note: getting an error while installing? Look [here](https://github.com/danslo/CleanCheckout/issues/5#issuecomment-349649361) for a temporary workaround.
 
+## Modules
+
+The project is divided into several modules:
+
+* [magento2-module-clean-checkout-core](https://github.com/danslo/CleanCheckoutCore)
+* [magento2-module-clean-checkout-onestep](https://github.com/danslo/CleanCheckoutOnestep)
+* [magento2-module-clean-checkout-autocomplete](https://github.com/danslo/CleanCheckoutAutocomplete)
+* [magento2-module-clean-checkout-newsletter](https://github.com/danslo/CleanCheckoutNewsletter)
+* [magento2-module-clean-checkout-social](https://github.com/danslo/CleanCheckoutSocial)
+* [magento2-module-clean-checkout-theme](https://github.com/danslo/CleanCheckoutTheme)
+* [magento2-module-clean-checkout-geo](https://github.com/danslo/CleanCheckoutGeo)
+
 ## Screenshot
 
 ![Image of Clean Checkout](https://i.imgur.com/Fs7So1d.png)
