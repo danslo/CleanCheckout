@@ -25,9 +25,9 @@ The project is divided into several modules:
 - [Newsletter](https://github.com/danslo/CleanCheckoutNewsletter): Lets customers immediately subscribe to the newsletter from the final step in the checkout.
 - [Address Autocompletion]((https://github.com/danslo/CleanCheckoutAutocomplete)): Using the [Google Maps Autocomplete API](https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform), we can significantly reduce the number of fields required by the customer.
 - Field Order: Allow administrators to choose their own order of checkout fields.
-- [Onestep Module](https://github.com/danslo/CleanCheckoutOnestep): Checkout in one step
+- [A simple but effective default theme](https://github.com/danslo/CleanCheckoutTheme)
+
 All of these features are highly customizable from the backend.
-- [Themeing](https://github.com/danslo/CleanCheckoutTheme)
 
 
 ## Installation
